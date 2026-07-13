@@ -5,18 +5,19 @@
 #include "../GUI/GUI_Paint.h"
 #include "settings.h"
 #include "types/colour.h"
+#include "types/fixed-point.h"
 #include "types/vector.h"
 #include "types/matrix.h"
 #include "viewport.h"
 
-float edge_function(vec4f *a, vec4f *b, vec3f *p)
+int16_t edge_function(vec4f *a, vec4f *b, vec3ub *p)
 {
-    vec3f ab = { b->x - a->x, b->y - a->y, 0};
-    vec3f ap = { p->x - a->x, p->y - a->y, 0 };
+    vec3s16 ab = { b->x - a->x, b->y - a->y, 0};
+    vec3s16 ap = { p->x - a->x, p->y - a->y, 0 };
     return ab.x * ap.y - ab.y * ap.x;
 }
 
-void draw(viewport const *viewport, draw_command const *cmd)
+void draw(draw_command const *cmd)
 {
     // Loop through each triangle in the mesh
     for (uint16_t vertex_idx = 0; vertex_idx + 2 < cmd->mesh.vertex_count; vertex_idx += 3) {
@@ -39,25 +40,30 @@ void draw(viewport const *viewport, draw_command const *cmd)
         vec4f v2 = mat_vec_mult4f(&cmd->transform, &v2_no_trans);;
 
         // Now, send the x, y, z values from [-1, 1] to the viewport's dimension
-        v0 = apply(viewport, v0);
-        v1 = apply(viewport, v1);
-        v2 = apply(viewport, v2);
+        // v0 = ndc_to_screen(viewport, v0);
+        // v1 = ndc_to_screen(viewport, v1);
+        // v2 = ndc_to_screen(viewport, v2);
 
         // Bounding boxes
 
         // First, account for the possibility that the viewport is not entirely
         // on the screen
-        uint16_t min_x = (uint16_t)fmaxf(viewport->xmin, 0);
-        uint16_t max_x = (uint16_t)fminf(viewport->xmax, Paint.Width) - 1;
-        uint16_t min_y = (uint16_t)fmaxf(viewport->ymin, 0);
-        uint16_t max_y = (uint16_t)fminf(viewport->ymax, Paint.Height) - 1;
-
+        // uint16_t min_x = (uint16_t)fmaxf(viewport->xmin, 0);
+        // uint16_t max_x = (uint16_t)fminf(viewport->xmax, Paint.Width) - 1;
+        // uint16_t min_y = (uint16_t)fmaxf(viewport->ymin, 0);
+        // uint16_t max_y = (uint16_t)fminf(viewport->ymax, Paint.Height) - 1;
+        //
         // Then create bounding boxes around the vertices, accounting for the
         // possibility that the vertices are not in the viewport
-        min_x = (uint16_t)fmaxf(min_x, fminf(v2.x, fminf(v0.x, v1.x)));
-        max_x = (uint16_t)fminf(max_x, fmaxf(v2.x, fmaxf(v0.x, v1.x)));
-        min_y = (uint16_t)fmaxf(min_y, fminf(v2.y, fminf(v0.y, v1.y)));
-        max_y = (uint16_t)fminf(max_y, fmaxf(v2.y, fmaxf(v0.y, v1.y)));
+        // min_x = (uint16_t)fmaxf(min_x, fminf(v2.x, fminf(v0.x, v1.x)));
+        // max_x = (uint16_t)fminf(max_x, fmaxf(v2.x, fmaxf(v0.x, v1.x)));
+        // min_y = (uint16_t)fmaxf(min_y, fminf(v2.y, fminf(v0.y, v1.y)));
+        // max_y = (uint16_t)fminf(max_y, fmaxf(v2.y, fmaxf(v0.y, v1.y)));
+
+        uint16_t min_x = (uint16_t)fminf(v2.x, fminf(v0.x, v1.x));
+        uint16_t max_x = (uint16_t)fmaxf(v2.x, fmaxf(v0.x, v1.x));
+        uint16_t min_y = (uint16_t)fminf(v2.y, fminf(v0.y, v1.y));
+        uint16_t max_y = (uint16_t)fmaxf(v2.y, fmaxf(v0.y, v1.y));
 
         // Make sure triangle is counterclockwise (ccw)
         int det012 = (v1.x - v0.x) * (v2.y - v0.y) - (v1.y - v0.y) * (v2.x - v0.x);
@@ -100,12 +106,12 @@ void draw(viewport const *viewport, draw_command const *cmd)
         // Assign a colour for each pixel in the box
         for (uint16_t y = min_y; y <= max_y; y++) {
             for (uint16_t x = min_x; x <= max_x; x++) {
-                vec3f p = {x, y, 0};
+                vec3ub p = {x, y, 0};
 
                 // Compute unnormalised Barycentric weights
-                float det12p = edge_function(&v1, &v2, &p);
-                float det20p = edge_function(&v2, &v0, &p);
-                float det01p = edge_function(&v0, &v1, &p);
+                int16_t det12p = edge_function(&v1, &v2, &p);
+                int16_t det20p = edge_function(&v2, &v0, &p);
+                int16_t det01p = edge_function(&v0, &v1, &p);
 
                 // If p inside triangle, draw pixel
                 // Typically, you'd check that p is to the 
@@ -117,14 +123,15 @@ void draw(viewport const *viewport, draw_command const *cmd)
                 if (det12p >= 0 && det20p >= 0 && det01p >= 0) {
 
                     // Compute Barycentric weights
-                    float const w0 = det12p / det012;
-                    float const w1 = det20p / det012;
-                    float const w2 = det01p / det012;
+                    // TODO: wi \in [-1, 1], so we can optimise this by using a smaller type
+                    fix16 const w0 = (fix16) (det12p << SHIFT_AMT) / det012;
+                    fix16 const w1 = (fix16) (det20p << SHIFT_AMT) / det012;
+                    fix16 const w2 = (fix16) (det01p << SHIFT_AMT) / det012;
 
                     col3ub interpolated_col;
-                    interpolated_col.r = w0 * (float) c0.r + w1 * (float) c1.r + w2 * (float) c2.r;
-                    interpolated_col.g = w0 * (float) c0.g + w1 * (float) c1.g + w2 * (float) c2.g;
-                    interpolated_col.b = w0 * (float) c0.b + w1 * (float) c1.b + w2 * (float) c2.b;
+                    interpolated_col.r = (uint8_t) ((w0 * c0.r + w1 * c1.r + w2 * c2.r) >> SHIFT_AMT);
+                    interpolated_col.g = (uint8_t) ((w0 * c0.g + w1 * c1.g + w2 * c2.g) >> SHIFT_AMT);
+                    interpolated_col.b = (uint8_t) ((w0 * c0.b + w1 * c1.b + w2 * c2.b) >> SHIFT_AMT);
                     Paint_SetPixel(x, y, col3_to_hex(interpolated_col));
                 }
             }

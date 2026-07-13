@@ -6,7 +6,7 @@
 #include "colour.h"
 
 typedef struct {
-    vec3f pos;
+    vec3ub pos;
     col3ub col;
 } vertex;
 

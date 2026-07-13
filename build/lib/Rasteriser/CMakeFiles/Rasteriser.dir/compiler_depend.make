@@ -2593,10 +2593,10 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: /home/alexander/Program
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/rasteriser.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/settings.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/colour.h \
+  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/matrix.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/misc.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/vector.h \
-  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/viewport.h \
   /usr/arm-none-eabi/include/_ansi.h \
   /usr/arm-none-eabi/include/_newlib_version.h \
   /usr/arm-none-eabi/include/assert.h \
@@ -2620,6 +2620,8 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: /home/alexander/Program
 
 
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/vector.h:
+
+/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h:
 
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/rasteriser.h:
 
@@ -2778,8 +2780,6 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: /home/alexander/Program
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h:
 
 /usr/arm-none-eabi/include/machine/types.h:
-
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/viewport.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/include/pico/runtime_init.h:
 

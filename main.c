@@ -131,22 +131,21 @@ void triforce(uint16_t *FBuffer, viewport *vp)
     // };
 
     vertex vertices[3] = {
-        (vertex) {(vec3f) {0, 0.5f}, (col3ub) {255, 0, 0}},
-        (vertex) {(vec3f) {-0.5f, -0.5f}, (col3ub) {0, 255, 0}},
-        (vertex) {(vec3f) {0.5f, -0.5f}, (col3ub) {0, 0, 255}},
+        (vertex) {(vec3ub) {0, 0}, (col3ub) {255, 0, 0}},
+        (vertex) {(vec3ub) {40, 0}, (col3ub) {0, 255, 0}},
+        (vertex) {(vec3ub) {0, 40}, (col3ub) {0, 0, 255}},
     };
 
     /* Rasterise the triangles */
     for (uint8_t i = 0; i < 16; i++)
-        draw(vp,
-            &(draw_command) {
+        draw(&(draw_command) {
                 .mesh = {
                     .vertices = vertices,
                     .vertex_count = 3,
                 },
                 .cull_mode = NO_CULL,
-                .transform = mat4_id()
-                // .transform = homog_id_xy(40 + 40*(i%4), 40 + 40*(i/4))
+                // .transform = mat4_id()
+                .transform = homog_id_xy(40 + 40*(i%4), 40 + 40*(i/4))
              }
         );
     // Push the framebuffer to the display

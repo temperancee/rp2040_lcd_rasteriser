@@ -9,7 +9,7 @@ typedef struct {
     uint8_t xmin, ymin, xmax, ymax;
 } viewport;
 
-inline vec4f apply(viewport const *vp, vec4f v)
+inline vec4f ndc_to_screen(viewport const *vp, vec4f v)
 {
     v.x = vp->xmin + (vp->xmax - vp->xmin)*(0.5f + 0.5f*v.x);
     v.y = vp->ymin + (vp->ymax - vp->ymin)*(0.5f + 0.5f*v.y);
