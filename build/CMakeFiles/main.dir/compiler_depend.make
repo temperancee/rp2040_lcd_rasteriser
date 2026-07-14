@@ -4053,15 +4053,14 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/GUI_Paint.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/LCD_1in28.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/draw_command.h \
-  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/image_view.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/mesh.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/rasteriser.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/settings.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/colour.h \
+  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/matrix.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/misc.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/vector.h \
-  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/viewport.h \
   generated/pico_base/pico/config_autogen.h \
   generated/pico_base/pico/version.h \
   /usr/arm-none-eabi/include/_ansi.h \
@@ -4091,11 +4090,11 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/viewport.h:
-
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/misc.h:
 
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/matrix.h:
+
+/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h:
 
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/colour.h:
 
@@ -4124,8 +4123,6 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_usb_reset_interface_headers/include/pico/usb_reset_interface.h:
-
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/image_view.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c:
 

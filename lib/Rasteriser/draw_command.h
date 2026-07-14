@@ -8,7 +8,7 @@
 typedef struct {
     mesh mesh;
     enum CullMode cull_mode;
-    matrix4f transform;
+    matrix4q16 transform;
 } draw_command;
 
 #endif  // _DRAW_COMMAND_H_

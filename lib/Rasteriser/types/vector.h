@@ -1,7 +1,12 @@
 #ifndef _VECTOR_H_
 #define _VECTOR_H_
 
+#include "fixed-point.h"
 #include <stdint.h>
+
+typedef struct {
+    q16 x, y, z;
+} vec3q16;
 
 typedef struct {
     uint8_t x, y, z;
@@ -12,19 +17,23 @@ typedef struct {
 } vec3s16;
 
 typedef struct {
-    float x, y, z, w;
-} vec4f;
+    q16 x, y, z, w;
+} vec4q16;
+
+typedef struct {
+    uint8_t x, y, z, w;
+} vec4ub;
 
 // Convert a 3 vector to a 4 vector with the final element = 0
-inline vec4f as_vector(vec3ub const *v)
+static inline vec4q16 as_vector(vec3q16 const *v)
 {
-    return (vec4f) {v->x, v->y, v->z, 0.f};
+    return (vec4q16) {v->x, v->y, v->z, (q16) 0};
 }
 
 // Convert a 3 vector to a 4 vector with the final element = 1
-inline vec4f as_point(vec3ub const *v)
+static inline vec4q16 as_point(vec3q16 const *v)
 {
-    return (vec4f) {v->x, v->y, v->z, 1.f};
+    return (vec4q16) {v->x, v->y, v->z, (q16) (1 << 16)};
 }
 
 

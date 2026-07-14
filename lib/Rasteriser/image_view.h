@@ -10,7 +10,7 @@ typedef struct {
     uint8_t height;
 } image_view;
 
-inline void initialise_image_view(image_view *iv)
+static inline void initialise_image_view(image_view *iv)
 {
     iv->pixels = NULL;
     // width and heigh initialised to 0 by default

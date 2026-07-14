@@ -7,7 +7,7 @@ typedef struct {
     uint8_t r, g, b;
 } col3ub;
 
-inline col3ub hex_to_col3(uint16_t hex)
+static inline col3ub hex_to_col3(uint16_t hex)
 {
     // Extract the 5 red bits, 6 green bits, and 5 blue bits
     uint8_t r = hex >> 11;
@@ -23,7 +23,7 @@ inline col3ub hex_to_col3(uint16_t hex)
 }
 
 
-inline uint16_t col3_to_hex(col3ub col)
+static inline uint16_t col3_to_hex(col3ub col)
 {
     uint8_t r = (col.r*31)/255;
     uint8_t g = (col.g*63)/255;

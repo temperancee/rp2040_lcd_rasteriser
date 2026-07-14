@@ -1,4 +1,3 @@
-#include <math.h>
 #include <stdint.h>
 
 #include "rasteriser.h"
@@ -8,14 +7,6 @@
 #include "types/fixed-point.h"
 #include "types/vector.h"
 #include "types/matrix.h"
-#include "viewport.h"
-
-int16_t edge_function(vec4f *a, vec4f *b, vec3ub *p)
-{
-    vec3s16 ab = { b->x - a->x, b->y - a->y, 0};
-    vec3s16 ap = { p->x - a->x, p->y - a->y, 0 };
-    return ab.x * ap.y - ab.y * ap.x;
-}
 
 void draw(draw_command const *cmd)
 {
@@ -28,21 +19,21 @@ void draw(draw_command const *cmd)
         col3ub c2 = cmd->mesh.vertices[vertex_idx+2].col;
 
         // First, turn the vertex positions to 4D homogenous points 
-        vec4f v0_no_trans = as_point(&cmd->mesh.vertices[vertex_idx].pos);
-        vec4f v1_no_trans = as_point(&cmd->mesh.vertices[vertex_idx+1].pos);
-        vec4f v2_no_trans = as_point(&cmd->mesh.vertices[vertex_idx+2].pos);
+        vec4q16 v0 = as_point(&cmd->mesh.vertices[vertex_idx].pos);
+        vec4q16 v1 = as_point(&cmd->mesh.vertices[vertex_idx+1].pos);
+        vec4q16 v2 = as_point(&cmd->mesh.vertices[vertex_idx+2].pos);
         
         // Now apply the transform (note, we can't take the address of the return 
         // value from as_point directly, because it _has no address_. Thus we had
         // to instantiate the above variables first)
-        vec4f v0 = mat_vec_mult4f(&cmd->transform, &v0_no_trans);
-        vec4f v1 = mat_vec_mult4f(&cmd->transform, &v1_no_trans);
-        vec4f v2 = mat_vec_mult4f(&cmd->transform, &v2_no_trans);;
+        v0 = mat_vec_mult4q16(&cmd->transform, &v0);
+        v1 = mat_vec_mult4q16(&cmd->transform, &v1);
+        v2 = mat_vec_mult4q16(&cmd->transform, &v2);
 
-        // Now, send the x, y, z values from [-1, 1] to the viewport's dimension
-        // v0 = ndc_to_screen(viewport, v0);
-        // v1 = ndc_to_screen(viewport, v1);
-        // v2 = ndc_to_screen(viewport, v2);
+        // Now, send the x, y, z values from [-1, 1] to the viewport's dimension: integers
+        v0 = ndc_to_screen(v0);
+        v1 = ndc_to_screen(v1);
+        v2 = ndc_to_screen(v2);
 
         // Bounding boxes
 
@@ -60,13 +51,13 @@ void draw(draw_command const *cmd)
         // min_y = (uint16_t)fmaxf(min_y, fminf(v2.y, fminf(v0.y, v1.y)));
         // max_y = (uint16_t)fminf(max_y, fmaxf(v2.y, fmaxf(v0.y, v1.y)));
 
-        uint16_t min_x = (uint16_t)fminf(v2.x, fminf(v0.x, v1.x));
-        uint16_t max_x = (uint16_t)fmaxf(v2.x, fmaxf(v0.x, v1.x));
-        uint16_t min_y = (uint16_t)fminf(v2.y, fminf(v0.y, v1.y));
-        uint16_t max_y = (uint16_t)fmaxf(v2.y, fmaxf(v0.y, v1.y));
+        int32_t min_x = q16_to_int(minq16(v2.x, minq16(v0.x, v1.x)));
+        int32_t max_x = q16_to_int(maxq16(v2.x, maxq16(v0.x, v1.x)));
+        int32_t min_y = q16_to_int(minq16(v2.y, minq16(v0.y, v1.y)));
+        int32_t max_y = q16_to_int(maxq16(v2.y, maxq16(v0.y, v1.y)));
 
         // Make sure triangle is counterclockwise (ccw)
-        int det012 = (v1.x - v0.x) * (v2.y - v0.y) - (v1.y - v0.y) * (v2.x - v0.x);
+        q16 det012 = q16_mul((v1.x - v0.x), (v2.y - v0.y)) - q16_mul((v1.y - v0.y), (v2.x - v0.x));
         bool const cw = (det012 < 0);
 
         // Determine what to do with this triangle given the backface
@@ -93,10 +84,10 @@ void draw(draw_command const *cmd)
         // we need to make them counterclockwise for our triangle
         // rasterisation algorithm to work
         if (cw) {
-            det012 *= -1;
+            det012 = -det012;
             // Swap vertices
-            float tempx = v1.x;
-            float tempy = v1.y;
+            q16 tempx = v1.x;
+            q16 tempy = v1.y;
             v1.x = v2.x;
             v1.y = v2.y;
             v2.x = tempx;
@@ -106,12 +97,12 @@ void draw(draw_command const *cmd)
         // Assign a colour for each pixel in the box
         for (uint16_t y = min_y; y <= max_y; y++) {
             for (uint16_t x = min_x; x <= max_x; x++) {
-                vec3ub p = {x, y, 0};
+                vec3q16 p = {int_to_q16((int32_t) x) + Q16_HALF, int_to_q16((int32_t) y) + Q16_HALF, 0};
 
                 // Compute unnormalised Barycentric weights
-                int16_t det12p = edge_function(&v1, &v2, &p);
-                int16_t det20p = edge_function(&v2, &v0, &p);
-                int16_t det01p = edge_function(&v0, &v1, &p);
+                q16 det12p = edge_function(&v1, &v2, &p);
+                q16 det20p = edge_function(&v2, &v0, &p);
+                q16 det01p = edge_function(&v0, &v1, &p);
 
                 // If p inside triangle, draw pixel
                 // Typically, you'd check that p is to the 
@@ -123,15 +114,16 @@ void draw(draw_command const *cmd)
                 if (det12p >= 0 && det20p >= 0 && det01p >= 0) {
 
                     // Compute Barycentric weights
-                    // TODO: wi \in [-1, 1], so we can optimise this by using a smaller type
-                    fix16 const w0 = (fix16) (det12p << SHIFT_AMT) / det012;
-                    fix16 const w1 = (fix16) (det20p << SHIFT_AMT) / det012;
-                    fix16 const w2 = (fix16) (det01p << SHIFT_AMT) / det012;
+                    // TODO: w_i \in [-1, 1], so we can optimise this by using a smaller type
+                    // BUG: These aren't being computed correctly
+                    q16 const w0 = q16_div(det12p, det012);
+                    q16 const w1 = q16_div(det20p, det012);
+                    q16 const w2 = q16_div(det01p, det012);
 
                     col3ub interpolated_col;
-                    interpolated_col.r = (uint8_t) ((w0 * c0.r + w1 * c1.r + w2 * c2.r) >> SHIFT_AMT);
-                    interpolated_col.g = (uint8_t) ((w0 * c0.g + w1 * c1.g + w2 * c2.g) >> SHIFT_AMT);
-                    interpolated_col.b = (uint8_t) ((w0 * c0.b + w1 * c1.b + w2 * c2.b) >> SHIFT_AMT);
+                    interpolated_col.r = (uint8_t) q16_to_int(w0 * c0.r + w1 * c1.r + w2 * c2.r);
+                    interpolated_col.g = (uint8_t) q16_to_int(w0 * c0.g + w1 * c1.g + w2 * c2.g);
+                    interpolated_col.b = (uint8_t) q16_to_int(w0 * c0.b + w1 * c1.b + w2 * c2.b);
                     Paint_SetPixel(x, y, col3_to_hex(interpolated_col));
                 }
             }

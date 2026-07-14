@@ -13,7 +13,7 @@ typedef struct {
 } mesh;
 
 // NOTE: This is currently unused and probably unnecessary
-inline void initialise_mesh(mesh *m)
+static inline void initialise_mesh(mesh *m)
 {
     m->vertices = NULL;
     m->vertex_count = 0;

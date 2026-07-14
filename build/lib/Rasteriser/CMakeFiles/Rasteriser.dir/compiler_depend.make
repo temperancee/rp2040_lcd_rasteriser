@@ -2588,7 +2588,6 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: /home/alexander/Program
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Fonts/fonts.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/GUI_Paint.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/draw_command.h \
-  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/image_view.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/mesh.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/rasteriser.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/settings.h \
@@ -2601,19 +2600,14 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: /home/alexander/Program
   /usr/arm-none-eabi/include/_newlib_version.h \
   /usr/arm-none-eabi/include/assert.h \
   /usr/arm-none-eabi/include/machine/_default_types.h \
-  /usr/arm-none-eabi/include/machine/_types.h \
   /usr/arm-none-eabi/include/machine/ieeefp.h \
-  /usr/arm-none-eabi/include/math.h \
   /usr/arm-none-eabi/include/newlib.h \
   /usr/arm-none-eabi/include/stdint.h \
   /usr/arm-none-eabi/include/sys/_intsup.h \
   /usr/arm-none-eabi/include/sys/_stdint.h \
-  /usr/arm-none-eabi/include/sys/_types.h \
   /usr/arm-none-eabi/include/sys/cdefs.h \
   /usr/arm-none-eabi/include/sys/config.h \
   /usr/arm-none-eabi/include/sys/features.h \
-  /usr/arm-none-eabi/include/sys/lock.h \
-  /usr/arm-none-eabi/include/sys/reent.h \
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h \
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
@@ -2920,8 +2914,6 @@ generated/pico_base/pico/version.h:
 /usr/arm-none-eabi/include/sys/features.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h:
-
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/image_view.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h:
 

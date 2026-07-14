@@ -4,9 +4,10 @@
 #include "images.h"
 #include <stdint.h>
 #include "rasteriser.h"
+#include "types/fixed-point.h"
 #include "types/matrix.h"
 #include "types/misc.h"
-#include "viewport.h"
+#include "types/vector.h"
 
 uint16_t *init(void)
 {
@@ -92,31 +93,37 @@ void swagaholic(uint16_t *FBuffer)
     }
 }
 
-// void simple_triangle(uint16_t *FBuffer)
-// {
-//
-//     vertex vertices[3] = {
-//         (vertex) {(vec3f) {0, 0}, (col3ub) {255, 0, 0}},
-//         (vertex) {(vec3f) {0, 40}, (col3ub) {0, 255, 0}},
-//         (vertex) {(vec3f) {40, 0}, (col3ub) {0, 0, 255}},
-//     };
-//
-//     /* Rasterise the triangle */
-//     draw(&(draw_command) {
-//             .mesh = {
-//                 .vertices = vertices,
-//                 .vertex_count = 3,
-//             },
-//             .cull_mode = NO_CULL,
-//             .transform = mat4_id()
-//          }
-//     );
-//     // Push the framebuffer to the display
-//     LCD_1IN28_Display(FBuffer);
-//     DEV_Delay_ms(1000000);
-// }
+void simple_triangle(uint16_t *FBuffer)
+{
+    // {217, 63, 36}
+    // {105, 47, 35}
+    // {52, 35, 49}
 
-void triforce(uint16_t *FBuffer, viewport *vp)
+    vertex vertices[3] = {
+        // (vertex) {(vec3q16) {0, Q16_HALF}, (col3ub) {255, 0, 0}},
+        // (vertex) {(vec3q16) {-Q16_HALF, -Q16_HALF}, (col3ub) {0, 255, 0}},
+        // (vertex) {(vec3q16) {Q16_HALF, -Q16_HALF}, (col3ub) {0, 0, 255}},
+        (vertex) {(vec3q16) {0, Q16_ONE}, (col3ub) {255, 0, 0}},
+        (vertex) {(vec3q16) {-Q16_ONE, -Q16_ONE}, (col3ub) {255, 0, 0}},
+        (vertex) {(vec3q16) {Q16_ONE, -Q16_ONE}, (col3ub) {0, 255, 0}},
+    };
+
+    /* Rasterise the triangle */
+    draw(&(draw_command) {
+            .mesh = {
+                .vertices = vertices,
+                .vertex_count = 3,
+            },
+            .cull_mode = NO_CULL,
+            .transform = mat4_id()
+         }
+    );
+    // Push the framebuffer to the display
+    LCD_1IN28_Display(FBuffer);
+    DEV_Delay_ms(1000000);
+}
+
+void triangle_board(uint16_t *FBuffer)
 {
     // vec3f vertices[9] = {
     //     (vec3f) {40, 189},
@@ -131,9 +138,9 @@ void triforce(uint16_t *FBuffer, viewport *vp)
     // };
 
     vertex vertices[3] = {
-        (vertex) {(vec3ub) {0, 0}, (col3ub) {255, 0, 0}},
-        (vertex) {(vec3ub) {40, 0}, (col3ub) {0, 255, 0}},
-        (vertex) {(vec3ub) {0, 40}, (col3ub) {0, 0, 255}},
+        (vertex) {(vec3q16) {0x00004ccc, 0x00004ccc}, (col3ub) {217, 63, 36}},
+        (vertex) {(vec3q16) {0x00004ccc, 0xffff4ccd}, (col3ub) {105, 47, 35}},
+        (vertex) {(vec3q16) {0xffff4ccd, 0x00004ccc}, (col3ub) {52, 35, 49}},
     };
 
     /* Rasterise the triangles */
@@ -141,11 +148,11 @@ void triforce(uint16_t *FBuffer, viewport *vp)
         draw(&(draw_command) {
                 .mesh = {
                     .vertices = vertices,
-                    .vertex_count = 3,
+                    .vertex_count = 3*16,
                 },
                 .cull_mode = NO_CULL,
-                // .transform = mat4_id()
-                .transform = homog_id_xy(40 + 40*(i%4), 40 + 40*(i/4))
+                // NOTE: 22932 is 0.35 in Q16.16 (but expressed in denary)
+                .transform = homog_id_xy(22938*(i%4), 22938*(i/4))
              }
         );
     // Push the framebuffer to the display
@@ -164,16 +171,10 @@ int main(void)
 
     // Initialise scene 
     uint16_t *fb = init();
-    viewport vp = {
-        .xmin = 0,
-        .ymin = 0,
-        .xmax = Paint.Width,
-        .ymax = Paint.Height
-    };
 
     // Draw function
-    triforce(fb, &vp);
-    // simple_triangle(fb);
+    // triangle_board(fb);
+    simple_triangle(fb);
     
     
     /* Module Exit */
