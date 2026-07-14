@@ -56,8 +56,17 @@ void draw(draw_command const *cmd)
         int32_t min_y = q16_to_int(minq16(v2.y, minq16(v0.y, v1.y)));
         int32_t max_y = q16_to_int(maxq16(v2.y, maxq16(v0.y, v1.y)));
 
+        // From now on, work only with integer vertices, to prevent overflow
+        vec4int v0_int = vecq16_to_vec4int(&v0);
+        vec4int v1_int = vecq16_to_vec4int(&v1);
+        vec4int v2_int = vecq16_to_vec4int(&v2);
+
+        int32_t det012 = ((v1_int.x - v0_int.x) * (v2_int.y - v0_int.y)) - ((v1_int.y - v0_int.y) * (v2_int.x - v0_int.x));
+
+        // Guard against 0 area triangles
+        if (det012 == 0) return;
+
         // Make sure triangle is counterclockwise (ccw)
-        q16 det012 = q16_mul((v1.x - v0.x), (v2.y - v0.y)) - q16_mul((v1.y - v0.y), (v2.x - v0.x));
         bool const cw = (det012 < 0);
 
         // Determine what to do with this triangle given the backface
@@ -86,23 +95,28 @@ void draw(draw_command const *cmd)
         if (cw) {
             det012 = -det012;
             // Swap vertices
-            q16 tempx = v1.x;
-            q16 tempy = v1.y;
-            v1.x = v2.x;
-            v1.y = v2.y;
-            v2.x = tempx;
-            v2.y = tempy;
+            int32_t tempx = v1_int.x;
+            int32_t tempy = v1_int.y;
+            v1_int.x = v2_int.x;
+            v1_int.y = v2_int.y;
+            v2_int.x = tempx;
+            v2_int.y = tempy;
         }
+
+        // Pre compute the reciprocal of det012 for faster Barycentric
+        // coordinate computation (divisions are slow on Cortex-M0+)
+        // Use Q1.31
+        uint32_t inv_det = (uint32_t)((1ULL << 31) / (uint32_t)det012);
 
         // Assign a colour for each pixel in the box
         for (uint16_t y = min_y; y <= max_y; y++) {
             for (uint16_t x = min_x; x <= max_x; x++) {
-                vec3q16 p = {int_to_q16((int32_t) x) + Q16_HALF, int_to_q16((int32_t) y) + Q16_HALF, 0};
+                vec3s32 p = {x, y, 0};
 
                 // Compute unnormalised Barycentric weights
-                q16 det12p = edge_function(&v1, &v2, &p);
-                q16 det20p = edge_function(&v2, &v0, &p);
-                q16 det01p = edge_function(&v0, &v1, &p);
+                int32_t det12p = edge_function(&v1_int, &v2_int, &p);
+                int32_t det20p = edge_function(&v2_int, &v0_int, &p);
+                int32_t det01p = edge_function(&v0_int, &v1_int, &p);
 
                 // If p inside triangle, draw pixel
                 // Typically, you'd check that p is to the 
@@ -115,10 +129,10 @@ void draw(draw_command const *cmd)
 
                     // Compute Barycentric weights
                     // TODO: w_i \in [-1, 1], so we can optimise this by using a smaller type
-                    // BUG: These aren't being computed correctly
-                    q16 const w0 = q16_div(det12p, det012);
-                    q16 const w1 = q16_div(det20p, det012);
-                    q16 const w2 = q16_div(det01p, det012);
+                    // inv_det is in Q1.31, so a shift >> 15 moves us to Q16.16
+                    q16 const w0 = (q16) (((uint64_t) det12p * inv_det) >> 15);
+                    q16 const w1 = (q16) (((uint64_t) det20p * inv_det) >> 15);
+                    q16 const w2 = (q16) (((uint64_t) det01p * inv_det) >> 15);
 
                     col3ub interpolated_col;
                     interpolated_col.r = (uint8_t) q16_to_int(w0 * c0.r + w1 * c1.r + w2 * c2.r);

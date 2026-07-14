@@ -24,11 +24,11 @@ static inline vec4q16 ndc_to_screen(vec4q16 v)
     return v;
 }
 
-static inline q16 edge_function(vec4q16 *a, vec4q16 *b, vec3q16 *p)
+static inline int32_t edge_function(vec4int *a, vec4int *b, vec3s32 *p)
 {
-    vec3q16 ab = { b->x - a->x, b->y - a->y, 0};
-    vec3q16 ap = { p->x - a->x, p->y - a->y, 0};
-    return q16_mul(ab.x, ap.y) - q16_mul(ab.y, ap.x);
+    vec3s32 ab = { b->x - a->x, b->y - a->y, 0};
+    vec3s32 ap = { p->x - a->x, p->y - a->y, 0};
+    return (ab.x * ap.y) - (ab.y * ap.x);
 }
 
 void draw(draw_command const *cmd);

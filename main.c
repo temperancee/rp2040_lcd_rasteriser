@@ -103,9 +103,12 @@ void simple_triangle(uint16_t *FBuffer)
         // (vertex) {(vec3q16) {0, Q16_HALF}, (col3ub) {255, 0, 0}},
         // (vertex) {(vec3q16) {-Q16_HALF, -Q16_HALF}, (col3ub) {0, 255, 0}},
         // (vertex) {(vec3q16) {Q16_HALF, -Q16_HALF}, (col3ub) {0, 0, 255}},
-        (vertex) {(vec3q16) {0, Q16_ONE}, (col3ub) {255, 0, 0}},
-        (vertex) {(vec3q16) {-Q16_ONE, -Q16_ONE}, (col3ub) {255, 0, 0}},
-        (vertex) {(vec3q16) {Q16_ONE, -Q16_ONE}, (col3ub) {0, 255, 0}},
+        // (vertex) {(vec3q16) {0, Q16_ONE}, (col3ub) {255, 0, 0}},
+        // (vertex) {(vec3q16) {-Q16_ONE, -Q16_ONE}, (col3ub) {255, 0, 0}},
+        // (vertex) {(vec3q16) {Q16_ONE, -Q16_ONE}, (col3ub) {0, 255, 0}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.7)}, (col3ub) {217, 63, 36}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.35)}, (col3ub) {105, 47, 35}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.35), FLOAT_TO_Q16(-0.7)}, (col3ub) {52, 35, 49}},
     };
 
     /* Rasterise the triangle */
@@ -138,9 +141,9 @@ void triangle_board(uint16_t *FBuffer)
     // };
 
     vertex vertices[3] = {
-        (vertex) {(vec3q16) {0x00004ccc, 0x00004ccc}, (col3ub) {217, 63, 36}},
-        (vertex) {(vec3q16) {0x00004ccc, 0xffff4ccd}, (col3ub) {105, 47, 35}},
-        (vertex) {(vec3q16) {0xffff4ccd, 0x00004ccc}, (col3ub) {52, 35, 49}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.7)}, (col3ub) {217, 63, 36}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.35)}, (col3ub) {105, 47, 35}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.35), FLOAT_TO_Q16(-0.7)}, (col3ub) {52, 35, 49}},
     };
 
     /* Rasterise the triangles */
@@ -148,11 +151,11 @@ void triangle_board(uint16_t *FBuffer)
         draw(&(draw_command) {
                 .mesh = {
                     .vertices = vertices,
-                    .vertex_count = 3*16,
+                    .vertex_count = 3,
                 },
                 .cull_mode = NO_CULL,
-                // NOTE: 22932 is 0.35 in Q16.16 (but expressed in denary)
-                .transform = homog_id_xy(22938*(i%4), 22938*(i/4))
+                .transform = homog_id_xy(FLOAT_TO_Q16(0.35)*(i%4), FLOAT_TO_Q16(0.35)*(i/4))
+                // .transform = homog_id_xy(0, 0)
              }
         );
     // Push the framebuffer to the display
@@ -173,8 +176,8 @@ int main(void)
     uint16_t *fb = init();
 
     // Draw function
-    // triangle_board(fb);
-    simple_triangle(fb);
+    triangle_board(fb);
+    // simple_triangle(fb);
     
     
     /* Module Exit */
