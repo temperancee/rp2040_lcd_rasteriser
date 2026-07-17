@@ -4,7 +4,7 @@ This project runs a 3D software rasteriser on the [Waveshare RP2040-Touch-LCD-1.
 
 Here is a demo of a cube spinning in 3D space, viewed under an orthographic projection:
 
-![Rasteriser Demo](rp2040_rasteriser_cube_spin.mp4)
+![Rasteriser Demo](rp2040_rasteriser_cube_spin.gif)
 
 ## Running
 
