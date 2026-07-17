@@ -1,6 +1,6 @@
 # 3D Rasteriser for the RP2040
 
-This project runs a 3D software rasteriser on the [Waveshare RP2040-Touch-LCD-1.28](https://www.waveshare.com/wiki/RP2040-Touch-LCD-1.28#GUI_API_Details), a 240$\times$240 LCD screen controlled by a RP2040 microcontroller. The rasteriser is written in C using the Pico C/C++ SDK. The driver for the LCD is the one included by the manufacturer, with some slight modifications to readability.
+This project runs a 3D software rasteriser on the [Waveshare RP2040-Touch-LCD-1.28](https://www.waveshare.com/wiki/RP2040-Touch-LCD-1.28#GUI_API_Details), a $240 \times 240$ LCD screen controlled by a RP2040 microcontroller. The rasteriser is written in C using the Pico C/C++ SDK. The driver for the LCD is the one included by the manufacturer, with some slight modifications to readability.
 
 Here is a demo of a cube spinning in 3D space, viewed under an orthographic projection:
 
