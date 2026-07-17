@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Rasteriser.dir/cube.c.o"
+  "CMakeFiles/Rasteriser.dir/cube.c.o.d"
   "CMakeFiles/Rasteriser.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o"
   "CMakeFiles/Rasteriser.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o.d"
   "CMakeFiles/Rasteriser.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o"

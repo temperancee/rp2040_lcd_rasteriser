@@ -4051,11 +4051,13 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Config/DEV_Config.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Fonts/fonts.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/GUI_Paint.h \
-  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/LCD_1in28.h \
+  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/lcd.h \
+  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/cube.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/draw_command.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/mesh.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/rasteriser.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/settings.h \
+  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/angles.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/colour.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/matrix.h \
@@ -4071,6 +4073,7 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
   /usr/arm-none-eabi/include/machine/_types.h \
   /usr/arm-none-eabi/include/machine/ieeefp.h \
   /usr/arm-none-eabi/include/machine/stdlib.h \
+  /usr/arm-none-eabi/include/math.h \
   /usr/arm-none-eabi/include/newlib.h \
   /usr/arm-none-eabi/include/stdint.h \
   /usr/arm-none-eabi/include/stdio.h \
@@ -4097,6 +4100,8 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h:
 
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/colour.h:
+
+/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/angles.h:
 
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/settings.h:
 
@@ -4438,6 +4443,8 @@ generated/pico_base/pico/version.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_debug.h:
 
+/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/lcd.h:
+
 /usr/arm-none-eabi/include/sys/cdefs.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd.h:
@@ -4445,8 +4452,6 @@ generated/pico_base/pico/version.h:
 /usr/arm-none-eabi/include/sys/_pthreadtypes.h:
 
 /usr/arm-none-eabi/include/sys/reent.h:
-
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/LCD_1in28.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_rtc/include/hardware/rtc.h:
 
@@ -4609,6 +4614,8 @@ generated/pico_base/pico/version.h:
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c:
+
+/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/cube.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_rtc/rtc.c:
 

@@ -14,9 +14,18 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/misc.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/vector.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h \
+ /usr/arm-none-eabi/include/math.h /usr/arm-none-eabi/include/sys/reent.h \
+ /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
+ /usr/arm-none-eabi/include/sys/config.h \
+ /usr/arm-none-eabi/include/machine/ieeefp.h \
+ /usr/arm-none-eabi/include/sys/cdefs.h \
+ /usr/arm-none-eabi/include/sys/_types.h \
+ /usr/arm-none-eabi/include/machine/_types.h \
+ /usr/arm-none-eabi/include/sys/lock.h /usr/arm-none-eabi/include/_ansi.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/colour.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/settings.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/matrix.h \
+ /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/angles.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/fixed-point.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/vector.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/../GUI/GUI_Paint.h \
@@ -26,10 +35,7 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h \
- /usr/arm-none-eabi/include/assert.h /usr/arm-none-eabi/include/_ansi.h \
- /usr/arm-none-eabi/include/newlib.h \
- /usr/arm-none-eabi/include/sys/config.h \
- /usr/arm-none-eabi/include/machine/ieeefp.h \
+ /usr/arm-none-eabi/include/assert.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/generated/pico_base/pico/version.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/generated/pico_base/pico/config_autogen.h \
@@ -38,7 +44,6 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
- /usr/arm-none-eabi/include/sys/cdefs.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \

@@ -11,18 +11,29 @@
 void draw(draw_command const *cmd)
 {
     // Loop through each triangle in the mesh
-    for (uint16_t vertex_idx = 0; vertex_idx + 2 < cmd->mesh.vertex_count; vertex_idx += 3) {
+    for (uint16_t vertex_idx = 0; vertex_idx + 2 < cmd->mesh.count; vertex_idx += 3) {
+
+        uint32_t i0 = vertex_idx + 0;
+        uint32_t i1 = vertex_idx + 1;
+        uint32_t i2 = vertex_idx + 2;
+
+        // If we are using index based vertex selection
+        if (cmd->mesh.indices) {
+            i0 = cmd->mesh.indices[i0];
+            i1 = cmd->mesh.indices[i1];
+            i2 = cmd->mesh.indices[i2];
+        }
 
         // Get the colours (get at the same time as vertices for efficiency)
-        col3ub c0 = cmd->mesh.vertices[vertex_idx].col;
-        col3ub c1 = cmd->mesh.vertices[vertex_idx+1].col;
-        col3ub c2 = cmd->mesh.vertices[vertex_idx+2].col;
+        col3ub c0 = cmd->mesh.vertices[i0].col;
+        col3ub c1 = cmd->mesh.vertices[i1].col;
+        col3ub c2 = cmd->mesh.vertices[i2].col;
 
         // First, turn the vertex positions to 4D homogenous points 
-        vec4q16 v0 = as_point(&cmd->mesh.vertices[vertex_idx].pos);
-        vec4q16 v1 = as_point(&cmd->mesh.vertices[vertex_idx+1].pos);
-        vec4q16 v2 = as_point(&cmd->mesh.vertices[vertex_idx+2].pos);
-        
+        vec4q16 v0 = as_point(&cmd->mesh.vertices[i0].pos);
+        vec4q16 v1 = as_point(&cmd->mesh.vertices[i1].pos);
+        vec4q16 v2 = as_point(&cmd->mesh.vertices[i2].pos);
+    
         // Now apply the transform (note, we can't take the address of the return 
         // value from as_point directly, because it _has no address_. Thus we had
         // to instantiate the above variables first)
@@ -30,7 +41,7 @@ void draw(draw_command const *cmd)
         v1 = mat_vec_mult4q16(&cmd->transform, &v1);
         v2 = mat_vec_mult4q16(&cmd->transform, &v2);
 
-        // Now, send the x, y, z values from [-1, 1] to the viewport's dimension: integers
+        // Now, send the x, y, z values from [-1, 1] to the viewport's dimension
         v0 = ndc_to_screen(v0);
         v1 = ndc_to_screen(v1);
         v2 = ndc_to_screen(v2);
@@ -57,14 +68,16 @@ void draw(draw_command const *cmd)
         int32_t max_y = q16_to_int(maxq16(v2.y, maxq16(v0.y, v1.y)));
 
         // From now on, work only with integer vertices, to prevent overflow
-        vec4int v0_int = vecq16_to_vec4int(&v0);
-        vec4int v1_int = vecq16_to_vec4int(&v1);
-        vec4int v2_int = vecq16_to_vec4int(&v2);
+        // This function adds 0.5 to the x y z coordinates to centre on the pixel
+        // centre before conversion to integers
+        vec4int v0_int = integerise_vertices(&v0);
+        vec4int v1_int = integerise_vertices(&v1);
+        vec4int v2_int = integerise_vertices(&v2);
 
         int32_t det012 = ((v1_int.x - v0_int.x) * (v2_int.y - v0_int.y)) - ((v1_int.y - v0_int.y) * (v2_int.x - v0_int.x));
 
         // Guard against 0 area triangles
-        if (det012 == 0) return;
+        if (det012 == 0) continue;
 
         // Make sure triangle is counterclockwise (ccw)
         bool const cw = (det012 < 0);
@@ -94,13 +107,15 @@ void draw(draw_command const *cmd)
         // rasterisation algorithm to work
         if (cw) {
             det012 = -det012;
-            // Swap vertices
-            int32_t tempx = v1_int.x;
-            int32_t tempy = v1_int.y;
-            v1_int.x = v2_int.x;
-            v1_int.y = v2_int.y;
-            v2_int.x = tempx;
-            v2_int.y = tempy;
+            // Swap vertices 
+            vec4int tempv = v1_int;
+            v1_int = v2_int;
+            v2_int = tempv;
+            // Swap colours
+            col3ub tempc = c1;
+            c1 = c2;
+            c2 = tempc;
+            
         }
 
         // Pre compute the reciprocal of det012 for faster Barycentric
@@ -128,7 +143,6 @@ void draw(draw_command const *cmd)
                 if (det12p >= 0 && det20p >= 0 && det01p >= 0) {
 
                     // Compute Barycentric weights
-                    // TODO: w_i \in [-1, 1], so we can optimise this by using a smaller type
                     // inv_det is in Q1.31, so a shift >> 15 moves us to Q16.16
                     q16 const w0 = (q16) (((uint64_t) det12p * inv_det) >> 15);
                     q16 const w1 = (q16) (((uint64_t) det20p * inv_det) >> 15);

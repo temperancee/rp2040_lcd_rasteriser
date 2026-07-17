@@ -1,13 +1,17 @@
-﻿#include "DEV_Config.h"
-#include "GUI_Paint.h"
-#include "LCD_1in28.h"
-#include "images.h"
+﻿#include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
+
+#include "DEV_Config.h"
+#include "GUI_Paint.h"
+#include "lcd.h"
 #include "rasteriser.h"
+#include "settings.h"
 #include "types/fixed-point.h"
 #include "types/matrix.h"
 #include "types/misc.h"
 #include "types/vector.h"
+#include "cube.h"
 
 uint16_t *init(void)
 {
@@ -37,85 +41,26 @@ uint16_t *init(void)
     return FBuffer;
 }
 
-void draw_pippa(uint16_t *FBuffer)
+void simple_square(uint16_t *FBuffer)
 {
-    Paint_DrawPoint(50, 41, BLACK, DOT_PIXEL_1X1, DOT_FILL_RIGHTUP); // 240 240
-    Paint_DrawPoint(50, 46, BLACK, DOT_PIXEL_2X2, DOT_FILL_RIGHTUP);
-    Paint_DrawPoint(50, 51, BLACK, DOT_PIXEL_3X3, DOT_FILL_RIGHTUP);
-    Paint_DrawPoint(50, 56, BLACK, DOT_PIXEL_4X4, DOT_FILL_RIGHTUP);
-    Paint_DrawPoint(50, 61, BLACK, DOT_PIXEL_5X5, DOT_FILL_RIGHTUP);
+    vertex vertices[] = {
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.7)}, (col3ub) {255, 0, 0}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.35)}, (col3ub) {0, 255, 0}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.35), FLOAT_TO_Q16(-0.7)}, (col3ub) {0, 0, 255}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.35), FLOAT_TO_Q16(-0.35)}, (col3ub) {255, 255, 255}},
+    };
 
-    Paint_DrawLine(60, 40, 90, 70, MAGENTA, DOT_PIXEL_2X2, LINE_STYLE_SOLID);
-    Paint_DrawLine(60, 70, 90, 40, MAGENTA, DOT_PIXEL_2X2, LINE_STYLE_SOLID);
-
-    Paint_DrawRectangle(60, 40, 90, 70, RED, DOT_PIXEL_2X2, DRAW_FILL_EMPTY);
-    Paint_DrawRectangle(100, 40, 130, 70, BLUE, DOT_PIXEL_2X2, DRAW_FILL_FULL);
-
-    Paint_DrawLine(135, 55, 165, 55, CYAN, DOT_PIXEL_1X1, LINE_STYLE_DOTTED);
-    Paint_DrawLine(150, 40, 150, 70, CYAN, DOT_PIXEL_1X1, LINE_STYLE_DOTTED);
-
-    Paint_DrawCircle(150, 55, 15, GREEN, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
-    Paint_DrawCircle(185, 55, 15, GREEN, DOT_PIXEL_1X1, DRAW_FILL_FULL);
-
-    Paint_DrawNum(50, 80, 9.87654321, &Font20, 3, WHITE, BLACK);
-    Paint_DrawString_EN(50, 161, "I be movin' chicken nugget", &Font16, RED, WHITE);
-    LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(5000);
-
-    /* Draw Pippa */
-    // This command draws the image to the framebuffer
-    Paint_DrawImage(pippa_square, 0, 0, PIPPA_SQUARE_WIDTH, PIPPA_SQUARE_HEIGHT);
-    Paint_DrawString_EN(50, 161, "I love you <3", &Font16, RED, WHITE);
-    // This prints the framebuffer to the LCD
-    LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(1000);
-
-    /* Add butterfly */
-    Paint_DrawImage(butterfly, 4, 70, BUTTERFLY_WIDTH, BUTTERFLY_HEIGHT);
-    LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(1000);
-
-}
-
-void swagaholic(uint16_t *FBuffer)
-{
-    // DRAW
-    while (true) {
-        Paint_DrawImage(skeleton, 0, 0, SKELETON_WIDTH, SKELETON_HEIGHT);
-        LCD_1IN28_Display(FBuffer);
-        DEV_Delay_ms(1000);
-        Paint_DrawString_EN(88, 20, "SWAG", &Font24, RED, BLACK);
-        LCD_1IN28_Display(FBuffer);
-        DEV_Delay_ms(1000);
-        Paint_DrawString_EN(75, 175, "AHOLIC", &Font24, RED, BLACK);
-        LCD_1IN28_Display(FBuffer);
-        DEV_Delay_ms(1000);
-    }
-}
-
-void simple_triangle(uint16_t *FBuffer)
-{
-    // {217, 63, 36}
-    // {105, 47, 35}
-    // {52, 35, 49}
-
-    vertex vertices[3] = {
-        // (vertex) {(vec3q16) {0, Q16_HALF}, (col3ub) {255, 0, 0}},
-        // (vertex) {(vec3q16) {-Q16_HALF, -Q16_HALF}, (col3ub) {0, 255, 0}},
-        // (vertex) {(vec3q16) {Q16_HALF, -Q16_HALF}, (col3ub) {0, 0, 255}},
-        // (vertex) {(vec3q16) {0, Q16_ONE}, (col3ub) {255, 0, 0}},
-        // (vertex) {(vec3q16) {-Q16_ONE, -Q16_ONE}, (col3ub) {255, 0, 0}},
-        // (vertex) {(vec3q16) {Q16_ONE, -Q16_ONE}, (col3ub) {0, 255, 0}},
-        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.7)}, (col3ub) {217, 63, 36}},
-        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.35)}, (col3ub) {105, 47, 35}},
-        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.35), FLOAT_TO_Q16(-0.7)}, (col3ub) {52, 35, 49}},
+    uint32_t indices[] = {
+        0, 1, 2,
+        3, 2, 1
     };
 
     /* Rasterise the triangle */
     draw(&(draw_command) {
             .mesh = {
                 .vertices = vertices,
-                .vertex_count = 3,
+                .indices = indices,
+                .count = 6,
             },
             .cull_mode = NO_CULL,
             .transform = mat4_id()
@@ -128,17 +73,6 @@ void simple_triangle(uint16_t *FBuffer)
 
 void triangle_board(uint16_t *FBuffer)
 {
-    // vec3f vertices[9] = {
-    //     (vec3f) {40, 189},
-    //     (vec3f) {120, 189},
-    //     (vec3f) {80, 120},
-    //     (vec3f) {200, 189},
-    //     (vec3f) {120, 189},
-    //     (vec3f) {160, 120},
-    //     (vec3f) {80, 120},
-    //     (vec3f) {120, 51},
-    //     (vec3f) {160, 120},
-    // };
 
     vertex vertices[3] = {
         (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.7)}, (col3ub) {217, 63, 36}},
@@ -147,22 +81,112 @@ void triangle_board(uint16_t *FBuffer)
     };
 
     /* Rasterise the triangles */
-    for (uint8_t i = 0; i < 16; i++)
+    for (uint8_t i = 0; i < 16; i++) {
+        vec3q16 translation = {FLOAT_TO_Q16(0.35)*(i%4), FLOAT_TO_Q16(0.35)*(i/4)};
         draw(&(draw_command) {
                 .mesh = {
                     .vertices = vertices,
-                    .vertex_count = 3,
+                    .count = 3,
                 },
                 .cull_mode = NO_CULL,
-                .transform = homog_id_xy(FLOAT_TO_Q16(0.35)*(i%4), FLOAT_TO_Q16(0.35)*(i/4))
-                // .transform = homog_id_xy(0, 0)
+                .transform = translate(&translation)
              }
         );
+    }
     // Push the framebuffer to the display
     LCD_1IN28_Display(FBuffer);
     DEV_Delay_ms(1000000);
 }
 
+
+void spin_rectangle(uint16_t *FBuffer)
+{
+    vertex vertices[] = {
+        // (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.5), FLOAT_TO_Q16(-0.5)}, (col3ub) {230, 39, 120}},
+        // (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.5), FLOAT_TO_Q16(0.5)}, (col3ub) {214, 25, 146}},
+        // (vertex) {(vec3q16) {FLOAT_TO_Q16(0.5), FLOAT_TO_Q16(-0.5)}, (col3ub) {223, 209, 208}},
+        // (vertex) {(vec3q16) {FLOAT_TO_Q16(0.5), FLOAT_TO_Q16(0.5)}, (col3ub) {244, 236, 230}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.5), FLOAT_TO_Q16(-0.5)}, (col3ub) {255, 0, 0}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.5), FLOAT_TO_Q16(0.5)}, (col3ub) {0, 255, 0}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(0.5), FLOAT_TO_Q16(-0.5)}, (col3ub) {0, 0, 255}},
+        (vertex) {(vec3q16) {FLOAT_TO_Q16(0.5), FLOAT_TO_Q16(0.5)}, (col3ub) {255, 255, 255}},
+    };
+
+    uint32_t indices[] = {
+        0, 1, 2,
+        3, 2, 1
+    };
+
+    int time = 0;
+
+    while (1) {
+
+        matrix4q16 xz_rot = rotateXZ(time);
+        matrix4q16 xy_rot = rotateXY(90);
+        matrix4q16 transform = mat_mat_multq16(&xz_rot, &xy_rot);
+
+        /* Clear the screen */
+        Paint_Clear(WHITE);
+
+        /* Rasterise */
+        draw(&(draw_command) {
+                .mesh = {
+                    .vertices = vertices,
+                    .indices = indices,
+                    .count = 6,
+                },
+                .cull_mode = NO_CULL,
+                .transform = transform
+             }
+        );
+
+        /* Push the framebuffer to the display */
+        LCD_1IN28_Display(FBuffer);
+
+        if (time == 720) {
+            time = 1;
+        }
+
+        time += 2;
+    }
+}
+
+
+void spin_cube(uint16_t *FBuffer)
+{
+
+    int time = 0;
+
+    while (1) {
+
+        matrix4q16 xz_rot = rotateXZ(time);
+        matrix4q16 xy_rot = rotateXY(time * 2);
+        matrix4q16 scale = scale_by_scalar(Q16_HALF);
+
+        matrix4q16 intermediate = mat_mat_multq16(&xz_rot, &xy_rot);
+        matrix4q16 transform = mat_mat_multq16(&scale, &intermediate);
+
+        /* Clear the screen */
+        Paint_Clear(WHITE);
+
+        /* Rasterise */
+        draw(&(draw_command) {
+                .mesh = cube,
+                .cull_mode = CW,
+                .transform = transform
+             }
+        );
+
+        /* Push the framebuffer to the display */
+        LCD_1IN28_Display(FBuffer);
+
+        if (time == 720) {
+            time = 2;
+        }
+
+        time += 2;
+    }
+}
 
 int main(void)
 {
@@ -176,8 +200,10 @@ int main(void)
     uint16_t *fb = init();
 
     // Draw function
-    triangle_board(fb);
+    // triangle_board(fb);
     // simple_triangle(fb);
+    spin_cube(fb);
+    // spin_rectangle(fb);
     
     
     /* Module Exit */

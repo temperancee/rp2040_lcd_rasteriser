@@ -130,6 +130,30 @@ Rasteriser/fast:
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/build
 .PHONY : Rasteriser/fast
 
+cube.o: cube.c.o
+.PHONY : cube.o
+
+# target to build an object file
+cube.c.o:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/cube.c.o
+.PHONY : cube.c.o
+
+cube.i: cube.c.i
+.PHONY : cube.i
+
+# target to preprocess a source file
+cube.c.i:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/cube.c.i
+.PHONY : cube.c.i
+
+cube.s: cube.c.s
+.PHONY : cube.s
+
+# target to generate assembly for a file
+cube.c.s:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/cube.c.s
+.PHONY : cube.c.s
+
 home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.o: home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o
 .PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.o
 
@@ -1531,6 +1555,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Rasteriser"
+	@echo "... cube.o"
+	@echo "... cube.i"
+	@echo "... cube.s"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.o"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.s"

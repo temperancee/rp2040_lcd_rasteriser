@@ -9,14 +9,9 @@
 
 typedef struct {
     vertex const *vertices;
-    uint16_t vertex_count;
+    uint32_t const *indices;
+    uint32_t count; // If indices is non NULL, this specified the no. of indices, otherwise, it is the number of vertices in vertices
 } mesh;
 
-// NOTE: This is currently unused and probably unnecessary
-static inline void initialise_mesh(mesh *m)
-{
-    m->vertices = NULL;
-    m->vertex_count = 0;
-}
 
 #endif // !_MESH_H_

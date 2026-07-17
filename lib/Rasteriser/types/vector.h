@@ -46,4 +46,10 @@ static inline vec4int vecq16_to_vec4int(vec4q16 const *v)
     return (vec4int) {q16_to_int(v->x), q16_to_int(v->y), q16_to_int(v->z), q16_to_int(v->w)};
 }
 
+// Convert a q16 4 vector to an int32_t 4 vector, with added 0.5 to move to pixel centres
+static inline vec4int integerise_vertices(vec4q16 const *v)
+{
+    return (vec4int) {q16_to_int(v->x + Q16_HALF), q16_to_int(v->y + Q16_HALF), q16_to_int(v->z + Q16_HALF), q16_to_int(v->w)};
+}
+
 #endif  // _VECTOR_H_

@@ -9,13 +9,9 @@
 #define BUTTERFLY_HEIGHT 70
 #define BUTTERFLY_WIDTH 70
 
-#define PIPPA_SQUARE_HEIGHT 240
-#define PIPPA_SQUARE_WIDTH 240
-
 #define SKELETON_HEIGHT 240
 #define SKELETON_WIDTH 240
 
-extern const uint8_t pippa_square[115200];
 extern const uint8_t nasa_pfp[110400];
 extern const uint8_t nasa_bw[6900];
 extern const uint8_t butterfly[9800];
