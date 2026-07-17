@@ -6,11 +6,17 @@ Here is a demo of a cube spinning in 3D space, viewed under an orthographic proj
 
 ![Rasteriser Demo](rp2040_rasteriser_cube_spin.gif)
 
-## Running
+# Details
+
+The RP2040 has two Cortex-M0+ processor cores, which lack floating point units (FPUs). This means floating point computations must be done in software, which can be very expensive. The libraries baked into the firmware of the Cortex-M0+ includes some instructions for speeding up floating point computations, but it still isn't as good as having a dedicated FPU. To get around this, I opted to write a small library of functions for Q16.16 (in [ARM notation](https://en.wikipedia.org/wiki/Fixed-point_arithmetic#Notations)) [fixed-point arithmetic](https://en.wikipedia.org/wiki/Fixed-point_arithmetic) instead. These were a little complicated to implement, but they paid off in speeding up the rendering significantly.
+
+Currently, the engine is capable of rendering triangles using Barycentric coordinates, and interpolating vertex colours across each triangle. Meshes can be manipulated using homogenous transformations as seen above, where the cube has had two rotations applied: one around the Y axis, and one around the Z axis, at a different rate.
+
+# Running
 
 Once you have cloned the repository, you can upload the current `main.uf2` file by using `picotool` to flash your own Waveshare RP2040 1.28 LCD Display.
 
-## Building 
+# Building 
 
 If you want to modify the code and build your changes, navigate to `build/` and run `cmake -DPICO_BOARD=waveshare_rp2040_touch_lcd_1.28 ..`, then run `make`. This will generate a new `main.uf2` which you can flash, again by using `picotool`.
 
