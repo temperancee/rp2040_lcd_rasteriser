@@ -64,7 +64,6 @@ lib/GUI/CMakeFiles/GUI.dir/GUI_Paint.c.o: \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
- /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/../Fonts/fonts.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/../Config/Debug.h \
  /usr/arm-none-eabi/include/stdio.h \
  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdarg.h \

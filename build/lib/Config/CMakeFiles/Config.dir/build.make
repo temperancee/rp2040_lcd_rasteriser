@@ -984,6 +984,20 @@ lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
+lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: lib/Config/CMakeFiles/Config.dir/flags.make
+lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: lib/Config/CMakeFiles/Config.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+
+lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c > CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
 # Object files for target Config
 Config_OBJECTS = \
 "CMakeFiles/Config.dir/DEV_Config.c.o" \
@@ -1051,7 +1065,8 @@ Config_OBJECTS = \
 "CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o" \
 "CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
 "CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" \
-"CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+"CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" \
+"CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
 
 # External object files for target Config
 Config_EXTERNAL_OBJECTS =
@@ -1122,6 +1137,7 @@ lib/Config/libConfig.a: lib/Config/CMakeFiles/Config.dir/home/alexander/Programm
 lib/Config/libConfig.a: lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 lib/Config/libConfig.a: lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 lib/Config/libConfig.a: lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+lib/Config/libConfig.a: lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 lib/Config/libConfig.a: lib/Config/CMakeFiles/Config.dir/build.make
 lib/Config/libConfig.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/memmap_default.ld
 lib/Config/libConfig.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/script_include/memory_psram.incl
@@ -1169,7 +1185,7 @@ lib/Config/libConfig.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_comm
 lib/Config/libConfig.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_stack.incl
 lib/Config/libConfig.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/set_memory_locations.incl
 lib/Config/libConfig.a: lib/Config/CMakeFiles/Config.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Linking CXX static library libConfig.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking CXX static library libConfig.a"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config && $(CMAKE_COMMAND) -P CMakeFiles/Config.dir/cmake_clean_target.cmake
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Config.dir/link.txt --verbose=$(VERBOSE)
 

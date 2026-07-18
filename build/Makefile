@@ -221,19 +221,6 @@ Config/fast:
 .PHONY : Config/fast
 
 #=============================================================================
-# Target rules for targets named Fonts
-
-# Build rule for target.
-Fonts: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Fonts
-.PHONY : Fonts
-
-# fast build rule for target.
-Fonts/fast:
-	$(MAKE) $(MAKESILENT) -f lib/Fonts/CMakeFiles/Fonts.dir/build.make lib/Fonts/CMakeFiles/Fonts.dir/build
-.PHONY : Fonts/fast
-
-#=============================================================================
 # Target rules for targets named GUI
 
 # Build rule for target.
@@ -297,19 +284,6 @@ QMI8658: cmake_check_build_system
 QMI8658/fast:
 	$(MAKE) $(MAKESILENT) -f lib/QMI8658/CMakeFiles/QMI8658.dir/build.make lib/QMI8658/CMakeFiles/QMI8658.dir/build
 .PHONY : QMI8658/fast
-
-#=============================================================================
-# Target rules for targets named examples
-
-# Build rule for target.
-examples: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples
-.PHONY : examples
-
-# fast build rule for target.
-examples/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/examples.dir/build.make examples/CMakeFiles/examples.dir/build
-.PHONY : examples/fast
 
 home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o: home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/audio/audio_device.c.o
 .PHONY : home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o
@@ -1110,6 +1084,30 @@ home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divid
 home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.S.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 .PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.o: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.o
+
+# target to build an object file
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.s: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
 
 home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.o: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
 .PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.o
@@ -2316,7 +2314,6 @@ help:
 	@echo "... pico_status_led_ws2812_pio_h"
 	@echo "... pioasmBuild"
 	@echo "... Config"
-	@echo "... Fonts"
 	@echo "... GUI"
 	@echo "... LCD"
 	@echo "... QMI8658"
@@ -2324,7 +2321,6 @@ help:
 	@echo "... Touch"
 	@echo "... bs2_default"
 	@echo "... bs2_default_library"
-	@echo "... examples"
 	@echo "... main"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/audio/audio_device.o"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/audio/audio_device.i"
@@ -2426,6 +2422,9 @@ help:
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.o"
+	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.o"
+	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.i"
+	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.s"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.o"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.i"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.s"

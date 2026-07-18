@@ -35,7 +35,7 @@ static inline matrix4q16 mat_mat_multq16(matrix4q16 const *m1, matrix4q16 const 
 
 static inline vec4q16 mat_vec_mult4q16(matrix4q16 const *m, vec4q16 const *v)
 {
-    vec4q16 res;
+    vec4q16 res = {0};
 
     res.x = q16_mul(m->elements[ 0], v->x) + q16_mul(m->elements[ 1], v->y) + q16_mul(m->elements[ 2], v->z) + q16_mul(m->elements[ 3], v->w);
     res.y = q16_mul(m->elements[ 4], v->x) + q16_mul(m->elements[ 5], v->y) + q16_mul(m->elements[ 6], v->z) + q16_mul(m->elements[ 7], v->w);

@@ -5,7 +5,7 @@ examples/CMakeFiles/examples.dir/ImageData.c.o: /home/alexander/Programming/rp2x
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/examples/ImageData.h
 
 examples/CMakeFiles/examples.dir/LCD_1in28_test.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/examples/LCD_1in28_test.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -97,7 +97,7 @@ examples/CMakeFiles/examples.dir/LCD_1in28_test.c.o: /home/alexander/Programming
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/include/hardware/claim.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -135,7 +135,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -179,7 +179,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -222,7 +222,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/mutex.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/mutex.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -268,7 +268,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/sem.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/sem.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -312,7 +312,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/time.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/time.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -383,7 +383,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/timeout_helper.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/timeout_helper.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -424,7 +424,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/datetime.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/datetime.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -482,7 +482,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/fixed_bitset.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/fixed_bitset.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -517,7 +517,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/pheap.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/pheap.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -562,7 +562,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/queue.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/queue.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -617,7 +617,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/platform.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/platform.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -653,7 +653,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -709,7 +709,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -746,7 +746,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -802,8 +802,59 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
+examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/include/hardware/claim.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma_debug.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  generated/pico_base/pico/config_autogen.h \
+  generated/pico_base/pico/version.h \
+  /usr/arm-none-eabi/include/_ansi.h \
+  /usr/arm-none-eabi/include/_newlib_version.h \
+  /usr/arm-none-eabi/include/assert.h \
+  /usr/arm-none-eabi/include/machine/_default_types.h \
+  /usr/arm-none-eabi/include/machine/_types.h \
+  /usr/arm-none-eabi/include/machine/ieeefp.h \
+  /usr/arm-none-eabi/include/newlib.h \
+  /usr/arm-none-eabi/include/stdint.h \
+  /usr/arm-none-eabi/include/stdio.h \
+  /usr/arm-none-eabi/include/sys/_intsup.h \
+  /usr/arm-none-eabi/include/sys/_stdint.h \
+  /usr/arm-none-eabi/include/sys/_types.h \
+  /usr/arm-none-eabi/include/sys/cdefs.h \
+  /usr/arm-none-eabi/include/sys/config.h \
+  /usr/arm-none-eabi/include/sys/features.h \
+  /usr/arm-none-eabi/include/sys/lock.h \
+  /usr/arm-none-eabi/include/sys/reent.h \
+  /usr/arm-none-eabi/include/sys/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdarg.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
+
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -855,7 +906,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -907,7 +958,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/include/hardware/claim.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -961,7 +1012,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1006,7 +1057,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_rtc/rtc.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_rtc/rtc.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1059,7 +1110,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1105,7 +1156,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/sync.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/sync.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/include/hardware/claim.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -1143,7 +1194,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1180,7 +1231,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_ticks/ticks.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1219,7 +1270,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_timer/timer.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_timer/timer.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/include/hardware/claim.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
@@ -1268,7 +1319,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_uart/uart.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_uart/uart.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1318,7 +1369,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_vreg/vreg.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1356,7 +1407,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1414,7 +1465,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/xosc.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1456,7 +1507,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_atomic/atomic.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_atomic/atomic.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1505,7 +1556,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/boot_picobin_headers/include/boot/picobin.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/boot_picoboot_headers/include/boot/picoboot_constants.h \
@@ -1556,7 +1607,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1596,7 +1647,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1631,7 +1682,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1702,7 +1753,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1752,7 +1803,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1803,7 +1854,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_math.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_math.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1843,7 +1894,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_flash/flash.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_flash/flash.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1886,7 +1937,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1938,7 +1989,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_math.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_math.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -1979,7 +2030,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_malloc/malloc.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2021,7 +2072,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/common.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/common.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2057,7 +2108,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2112,7 +2163,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_printf/printf.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_printf/printf.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2155,7 +2206,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime/runtime.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2191,7 +2242,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2246,7 +2297,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2307,7 +2358,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2345,7 +2396,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2384,7 +2435,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/stdio.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2450,7 +2501,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2515,7 +2566,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2580,7 +2631,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
 examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c \
-  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -2644,8 +2695,6 @@ examples/CMakeFiles/examples.dir/images.c.o: /home/alexander/Programming/rp2xxx/
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/include/pico/thread_local.h:
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h:
-
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/defs.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_binary_info/include/pico/binary_info/code.h:
@@ -2704,6 +2753,8 @@ examples/CMakeFiles/examples.dir/images.c.o: /home/alexander/Programming/rp2xxx/
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:
 
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c:
+
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom_lock.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_atomic/include/stdatomic.h:
@@ -2734,8 +2785,6 @@ examples/CMakeFiles/examples.dir/images.c.o: /home/alexander/Programming/rp2xxx/
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/sync.c:
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c:
-
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_rtc/rtc.c:
@@ -2745,6 +2794,20 @@ examples/CMakeFiles/examples.dir/images.c.o: /home/alexander/Programming/rp2xxx/
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma_debug.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/include/hardware/clocks.h:
 
@@ -2922,39 +2985,9 @@ generated/pico_base/pico/version.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/adc.h:
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h:
-
-/usr/arm-none-eabi/include/sys/_types.h:
-
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_stack_guard.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/cxa_guard.c:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/include/pico/util/queue.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/usb.h:
-
-/usr/arm-none-eabi/include/sys/unistd.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h:
-
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Config/Debug.h:
-
-/usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/timeout_helper.c:
 
@@ -2975,6 +3008,34 @@ generated/pico_base/pico/version.h:
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/usb_dpram.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/include/hardware/xosc.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/include/pico/util/queue.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/usb.h:
+
+/usr/arm-none-eabi/include/sys/unistd.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h:
+
+/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Config/Debug.h:
+
+/usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/nvic.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h:
+
+/usr/arm-none-eabi/include/sys/_types.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h:
 

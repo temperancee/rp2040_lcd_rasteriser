@@ -1,28 +1,27 @@
 CMakeFiles/main.dir/main.c.o: \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/main.c \
- /usr/arm-none-eabi/include/stdio.h /usr/arm-none-eabi/include/_ansi.h \
- /usr/arm-none-eabi/include/newlib.h \
- /usr/arm-none-eabi/include/_newlib_version.h \
- /usr/arm-none-eabi/include/sys/config.h \
- /usr/arm-none-eabi/include/machine/ieeefp.h \
- /usr/arm-none-eabi/include/sys/features.h \
- /usr/arm-none-eabi/include/sys/cdefs.h \
+ /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h \
+ /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \
+ /usr/arm-none-eabi/include/sys/features.h \
+ /usr/arm-none-eabi/include/_newlib_version.h \
+ /usr/arm-none-eabi/include/sys/_intsup.h \
+ /usr/arm-none-eabi/include/sys/_stdint.h \
+ /usr/arm-none-eabi/include/stdlib.h \
+ /usr/arm-none-eabi/include/machine/ieeefp.h \
+ /usr/arm-none-eabi/include/_ansi.h /usr/arm-none-eabi/include/newlib.h \
+ /usr/arm-none-eabi/include/sys/config.h \
  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
- /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdarg.h \
  /usr/arm-none-eabi/include/sys/reent.h \
  /usr/arm-none-eabi/include/_ansi.h \
+ /usr/arm-none-eabi/include/sys/cdefs.h \
  /usr/arm-none-eabi/include/sys/_types.h \
  /usr/arm-none-eabi/include/machine/_types.h \
  /usr/arm-none-eabi/include/sys/lock.h \
- /usr/arm-none-eabi/include/sys/stdio.h \
- /usr/arm-none-eabi/include/stdlib.h \
  /usr/arm-none-eabi/include/machine/stdlib.h \
- /usr/arm-none-eabi/include/alloca.h \
- /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h \
- /usr/arm-none-eabi/include/stdint.h \
- /usr/arm-none-eabi/include/sys/_intsup.h \
- /usr/arm-none-eabi/include/sys/_stdint.h \
+ /usr/arm-none-eabi/include/alloca.h /usr/arm-none-eabi/include/stdio.h \
+ /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdarg.h \
+ /usr/arm-none-eabi/include/sys/stdio.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/Config/DEV_Config.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
@@ -75,7 +74,6 @@ CMakeFiles/main.dir/main.c.o: \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/GUI/GUI_Paint.h \
- /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/GUI/../Fonts/fonts.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/LCD/lcd.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/Rasteriser/rasteriser.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/Rasteriser/draw_command.h \

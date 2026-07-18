@@ -3,6 +3,6 @@
 
 #include "mesh.h"
 
-extern const mesh cube;
+extern mesh const cube;
 
 #endif // _CUBE_H_

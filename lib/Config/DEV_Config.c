@@ -29,7 +29,6 @@
 #include "DEV_Config.h"
 #include "hardware/pwm.h"
 #include "hardware/adc.h"
-// #include "hardware/dma.h"
 #include <hardware/spi.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -209,8 +208,6 @@ uint8_t DEV_Module_Init(void)
     gpio_set_function(DEV_SCL_PIN, GPIO_FUNC_I2C);
     gpio_pull_up(DEV_SDA_PIN);
     gpio_pull_up(DEV_SCL_PIN);
-    // DMA Config
-    // const uint dma = dma_claim_unused_channel(true);
 
     printf("DEV_Module_Init OK \r\n");
     return 0;

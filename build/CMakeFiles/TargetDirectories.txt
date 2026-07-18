@@ -212,9 +212,6 @@
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config/CMakeFiles/Config.dir
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config/CMakeFiles/edit_cache.dir
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config/CMakeFiles/rebuild_cache.dir
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Fonts/CMakeFiles/Fonts.dir
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Fonts/CMakeFiles/edit_cache.dir
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Fonts/CMakeFiles/rebuild_cache.dir
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI/CMakeFiles/GUI.dir
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI/CMakeFiles/edit_cache.dir
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI/CMakeFiles/rebuild_cache.dir
@@ -230,6 +227,3 @@
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658/CMakeFiles/QMI8658.dir
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658/CMakeFiles/edit_cache.dir
 /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658/CMakeFiles/rebuild_cache.dir
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples/CMakeFiles/examples.dir
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples/CMakeFiles/edit_cache.dir
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples/CMakeFiles/rebuild_cache.dir

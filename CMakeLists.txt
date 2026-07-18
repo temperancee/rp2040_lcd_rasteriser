@@ -6,20 +6,20 @@ pico_sdk_init()
 
 #添加编译子目录
 add_subdirectory(./lib/Config)
-add_subdirectory(./lib/Fonts)
+# add_subdirectory(./lib/Fonts)
 add_subdirectory(./lib/GUI)
 add_subdirectory(./lib/LCD)
 add_subdirectory(./lib/Rasteriser)
 add_subdirectory(./lib/Touch)
 add_subdirectory(./lib/QMI8658)
-add_subdirectory(./examples)
+# add_subdirectory(./examples)
 
 
 
 #添加头文件目录
-include_directories(./examples)
+# include_directories(./examples)
 include_directories(./lib/Config)
-include_directories(./lib/Fonts)
+# include_directories(./lib/Fonts)
 include_directories(./lib/GUI)
 include_directories(./lib/LCD)
 include_directories(./lib/Rasteriser)
@@ -40,4 +40,4 @@ pico_enable_stdio_uart(main 1)
 # create map/bin/hex/uf2 file etc.
 pico_add_extra_outputs(main)
 
-target_link_libraries(main examples LCD Touch QMI8658 GUI Fonts Rasteriser Config pico_stdlib hardware_spi hardware_i2c )
+target_link_libraries(main LCD Touch QMI8658 GUI Rasteriser Config pico_stdlib hardware_spi hardware_i2c ) # examples Fonts

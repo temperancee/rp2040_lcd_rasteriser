@@ -146,9 +146,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.3.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.3.4/CMakeSystem.cmake"
   "pico-sdk/src/rp2_common/pico_cyw43_driver/pioasm/tmp/pioasmBuild-mkdirs.cmake"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/examples/CMakeLists.txt"
   "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Config/CMakeLists.txt"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Fonts/CMakeLists.txt"
   "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/CMakeLists.txt"
   "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/CMakeLists.txt"
   "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/QMI8658/CMakeLists.txt"
@@ -313,13 +311,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/src/rp2_common/pico_stdlib/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/Config/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/Fonts/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/GUI/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/LCD/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/Rasteriser/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/Touch/CMakeFiles/CMakeDirectoryInformation.cmake"
   "lib/QMI8658/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -332,11 +328,9 @@ set(CMAKE_DEPEND_INFO_FILES
   "pico-sdk/src/rp2_common/pico_cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/pico_status_led/CMakeFiles/pico_status_led_ws2812_pio_h.dir/DependInfo.cmake"
   "lib/Config/CMakeFiles/Config.dir/DependInfo.cmake"
-  "lib/Fonts/CMakeFiles/Fonts.dir/DependInfo.cmake"
   "lib/GUI/CMakeFiles/GUI.dir/DependInfo.cmake"
   "lib/LCD/CMakeFiles/LCD.dir/DependInfo.cmake"
   "lib/Rasteriser/CMakeFiles/Rasteriser.dir/DependInfo.cmake"
   "lib/Touch/CMakeFiles/Touch.dir/DependInfo.cmake"
   "lib/QMI8658/CMakeFiles/QMI8658.dir/DependInfo.cmake"
-  "examples/CMakeFiles/examples.dir/DependInfo.cmake"
   )

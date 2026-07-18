@@ -80,5 +80,4 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
- /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/../GUI/../Fonts/fonts.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/types/colour.h

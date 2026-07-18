@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h
+/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/boot_picobin_headers/include/boot/picobin.h
 stdbool.h
@@ -357,7 +357,7 @@ pico/runtime.h
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/include/pico/pico/runtime.h
 
 generated/pico_base/pico/config_autogen.h
-/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h
+/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h
 -
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h
 -

@@ -984,6 +984,20 @@ lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_co
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
+lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: lib/GUI/CMakeFiles/GUI.dir/flags.make
+lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: lib/GUI/CMakeFiles/GUI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+
+lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c > CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
 # Object files for target GUI
 GUI_OBJECTS = \
 "CMakeFiles/GUI.dir/GUI_Paint.c.o" \
@@ -1051,7 +1065,8 @@ GUI_OBJECTS = \
 "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o" \
 "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
 "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" \
-"CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+"CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" \
+"CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
 
 # External object files for target GUI
 GUI_EXTERNAL_OBJECTS =
@@ -1122,6 +1137,7 @@ lib/GUI/libGUI.a: lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/p
 lib/GUI/libGUI.a: lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 lib/GUI/libGUI.a: lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 lib/GUI/libGUI.a: lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+lib/GUI/libGUI.a: lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 lib/GUI/libGUI.a: lib/GUI/CMakeFiles/GUI.dir/build.make
 lib/GUI/libGUI.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/memmap_default.ld
 lib/GUI/libGUI.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/script_include/memory_psram.incl
@@ -1169,7 +1185,7 @@ lib/GUI/libGUI.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pic
 lib/GUI/libGUI.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_stack.incl
 lib/GUI/libGUI.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/set_memory_locations.incl
 lib/GUI/libGUI.a: lib/GUI/CMakeFiles/GUI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Linking CXX static library libGUI.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking CXX static library libGUI.a"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI && $(CMAKE_COMMAND) -P CMakeFiles/GUI.dir/cmake_clean_target.cmake
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GUI.dir/link.txt --verbose=$(VERBOSE)
 

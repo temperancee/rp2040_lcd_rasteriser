@@ -10,6 +10,16 @@ typedef struct {
     col3ub col;
 } vertex;
 
+static inline int minint(int x, int y)
+{
+    return (x < y ? x : y);
+}
+
+static inline int maxint(int x, int y)
+{
+    return (x < y ? y : x);
+}
+
 #endif  // _MISC_H_
 
 

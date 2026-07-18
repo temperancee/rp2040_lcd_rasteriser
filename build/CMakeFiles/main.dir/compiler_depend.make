@@ -1702,6 +1702,57 @@ CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/ha
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
   /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
 
+CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/include/hardware/claim.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/assert.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/error.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/types.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/platform_defs.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/addressmap.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/intctrl.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma_debug.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/include/hardware/sync/spin_lock.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
+  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
+  generated/pico_base/pico/config_autogen.h \
+  generated/pico_base/pico/version.h \
+  /usr/arm-none-eabi/include/_ansi.h \
+  /usr/arm-none-eabi/include/_newlib_version.h \
+  /usr/arm-none-eabi/include/assert.h \
+  /usr/arm-none-eabi/include/machine/_default_types.h \
+  /usr/arm-none-eabi/include/machine/_types.h \
+  /usr/arm-none-eabi/include/machine/ieeefp.h \
+  /usr/arm-none-eabi/include/newlib.h \
+  /usr/arm-none-eabi/include/stdint.h \
+  /usr/arm-none-eabi/include/stdio.h \
+  /usr/arm-none-eabi/include/sys/_intsup.h \
+  /usr/arm-none-eabi/include/sys/_stdint.h \
+  /usr/arm-none-eabi/include/sys/_types.h \
+  /usr/arm-none-eabi/include/sys/cdefs.h \
+  /usr/arm-none-eabi/include/sys/config.h \
+  /usr/arm-none-eabi/include/sys/features.h \
+  /usr/arm-none-eabi/include/sys/lock.h \
+  /usr/arm-none-eabi/include/sys/reent.h \
+  /usr/arm-none-eabi/include/sys/stdio.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdarg.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
+  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h
+
 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
@@ -4047,9 +4098,7 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
   /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/include/pico/platform/panic.h \
   /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_sections/include/pico/platform/sections.h \
-  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/examples/images.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Config/DEV_Config.h \
-  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Fonts/fonts.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/GUI_Paint.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/lcd.h \
   /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/cube.h \
@@ -4155,6 +4204,14 @@ CMakeFiles/main.dir/main.c.o: /home/alexander/Programming/rp2xxx/rp2040_touch_lc
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/include/pico/float.h:
 
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include/pico/fix/rp2040_usb_device_enumeration.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_flash/flash.c:
+
+/usr/arm-none-eabi/include/math.h:
+
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/fixed_bitset.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/sem.c:
@@ -4203,12 +4260,6 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c:
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/include/picotls.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/include/pico/sync.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/usb.h:
-
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h:
 
 /usr/arm-none-eabi/include/sys/unistd.h:
@@ -4246,8 +4297,6 @@ generated/pico_base/pico/config_autogen.h:
 /usr/arm-none-eabi/include/sys/lock.h:
 
 /usr/arm-none-eabi/include/sys/_types.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/ssi.h:
 
 /usr/arm-none-eabi/include/strings.h:
 
@@ -4327,8 +4376,6 @@ generated/pico_base/pico/config_autogen.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c:
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h:
-
 /usr/arm-none-eabi/include/c++/16.1.0/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h:
@@ -4403,8 +4450,6 @@ generated/pico_base/pico/version.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h:
 
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/examples/images.h:
-
 /usr/arm-none-eabi/include/sys/_intsup.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h:
@@ -4456,8 +4501,6 @@ generated/pico_base/pico/version.h:
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_rtc/include/hardware/rtc.h:
 
 /usr/arm-none-eabi/include/machine/ieeefp.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/include/pico/fix/rp2040_usb_device_enumeration.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_verify.h:
 
@@ -4535,8 +4578,6 @@ generated/pico_base/pico/version.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/include/pico/util/fixed_bitset.h:
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c:
-
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/error.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_util/include/pico/util/queue.h:
@@ -4575,6 +4616,32 @@ generated/pico_base/pico/version.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h:
 
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/ssi.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/include/pico/platform/common.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h:
+
+/usr/arm-none-eabi/include/machine/time.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma_debug.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/include/picotls.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/include/pico/sync.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/usb.h:
+
+/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h:
+
 /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd_control.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_qspi.h:
@@ -4599,8 +4666,6 @@ generated/pico_base/pico/version.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c:
 
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h:
-
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_resets/include/hardware/resets.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/midi/midi_device.c:
@@ -4620,10 +4685,6 @@ generated/pico_base/pico/version.h:
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_rtc/rtc.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/rtc.h:
-
-/usr/arm-none-eabi/include/machine/time.h:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c:
 
@@ -4685,8 +4746,6 @@ generated/pico_base/pico/version.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c:
 
-/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Fonts/fonts.h:
-
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_printf/include/pico/printf.h:
 
 /usr/arm-none-eabi/include/sys/stat.h:
@@ -4716,7 +4775,3 @@ generated/pico_base/pico/version.h:
 /usr/arm-none-eabi/include/newlib.h:
 
 /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c:
-
-/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_flash/flash.c:
-
-/usr/arm-none-eabi/include/math.h:

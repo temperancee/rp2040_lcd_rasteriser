@@ -1334,6 +1334,20 @@ CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/ha
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
 	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
+CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+
+CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c > CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
+	/usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
 # Object files for target main
 main_OBJECTS = \
 "CMakeFiles/main.dir/main.c.o" \
@@ -1426,7 +1440,8 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o" \
 "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
 "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" \
-"CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+"CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" \
+"CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
@@ -1522,14 +1537,13 @@ main.elf: CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2
 main.elf: CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 main.elf: CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 main.elf: CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+main.elf: CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 main.elf: CMakeFiles/main.dir/build.make
 main.elf: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/bs2_default_padded_checksummed.S.o
-main.elf: examples/libexamples.a
 main.elf: lib/LCD/libLCD.a
 main.elf: lib/Touch/libTouch.a
 main.elf: lib/QMI8658/libQMI8658.a
 main.elf: lib/GUI/libGUI.a
-main.elf: lib/Fonts/libFonts.a
 main.elf: lib/Rasteriser/libRasteriser.a
 main.elf: lib/Config/libConfig.a
 main.elf: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/memmap_default.ld
@@ -1578,7 +1592,7 @@ main.elf: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standa
 main.elf: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_stack.incl
 main.elf: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/set_memory_locations.incl
 main.elf: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Linking CXX executable main.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Linking CXX executable main.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objdump -h /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/main.elf > main.dis
 	/usr/bin/arm-none-eabi-objdump -d /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/main.elf >> main.dis

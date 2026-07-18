@@ -67,6 +67,12 @@ void draw(draw_command const *cmd)
         int32_t min_y = q16_to_int(minq16(v2.y, minq16(v0.y, v1.y)));
         int32_t max_y = q16_to_int(maxq16(v2.y, maxq16(v0.y, v1.y)));
 
+        // Guard against drawing off the screen
+        min_x = maxint(min_x, 0);
+        min_y = maxint(min_y, 0);
+        max_x = minint(max_x, 240);
+        max_y = minint(max_y, 240);
+
         // From now on, work only with integer vertices, to prevent overflow
         // This function adds 0.5 to the x y z coordinates to centre on the pixel
         // centre before conversion to integers

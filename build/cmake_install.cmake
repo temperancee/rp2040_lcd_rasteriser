@@ -41,13 +41,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/pico-sdk/cmake_install.cmake")
   include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Config/cmake_install.cmake")
-  include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Fonts/cmake_install.cmake")
   include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/GUI/cmake_install.cmake")
   include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/LCD/cmake_install.cmake")
   include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Rasteriser/cmake_install.cmake")
   include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/Touch/cmake_install.cmake")
   include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658/cmake_install.cmake")
-  include("/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples/cmake_install.cmake")
 
 endif()
 

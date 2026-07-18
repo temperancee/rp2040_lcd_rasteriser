@@ -1012,6 +1012,20 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
+examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: examples/CMakeFiles/examples.dir/flags.make
+examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: examples/CMakeFiles/examples.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+
+examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c > CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
 # Object files for target examples
 examples_OBJECTS = \
 "CMakeFiles/examples.dir/ImageData.c.o" \
@@ -1081,7 +1095,8 @@ examples_OBJECTS = \
 "CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o" \
 "CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
 "CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" \
-"CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+"CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" \
+"CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
 
 # External object files for target examples
 examples_EXTERNAL_OBJECTS =
@@ -1154,6 +1169,7 @@ examples/libexamples.a: examples/CMakeFiles/examples.dir/home/alexander/Programm
 examples/libexamples.a: examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 examples/libexamples.a: examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 examples/libexamples.a: examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+examples/libexamples.a: examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 examples/libexamples.a: examples/CMakeFiles/examples.dir/build.make
 examples/libexamples.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/memmap_default.ld
 examples/libexamples.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/script_include/memory_psram.incl
@@ -1201,7 +1217,7 @@ examples/libexamples.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_comm
 examples/libexamples.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_stack.incl
 examples/libexamples.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/set_memory_locations.incl
 examples/libexamples.a: examples/CMakeFiles/examples.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking CXX static library libexamples.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Linking CXX static library libexamples.a"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples && $(CMAKE_COMMAND) -P CMakeFiles/examples.dir/cmake_clean_target.cmake
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/examples.dir/link.txt --verbose=$(VERBOSE)
 

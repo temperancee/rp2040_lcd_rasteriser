@@ -25,7 +25,7 @@ examples/CMakeFiles/examples.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/generated/pico_base/pico/version.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/generated/pico_base/pico/config_autogen.h \
- /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h \
+ /home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/include/pico/platform.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_compiler/include/pico/platform/compiler.h \

@@ -984,6 +984,20 @@ lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/sr
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c -o CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.s
 
+lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: lib/QMI8658/CMakeFiles/QMI8658.dir/flags.make
+lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o: lib/QMI8658/CMakeFiles/QMI8658.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -MF CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d -o CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o -c /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c
+
+lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c > CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s"
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658 && /usr/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c -o CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
 # Object files for target QMI8658
 QMI8658_OBJECTS = \
 "CMakeFiles/QMI8658.dir/QMI8658.c.o" \
@@ -1051,7 +1065,8 @@ QMI8658_OBJECTS = \
 "CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o" \
 "CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o" \
 "CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" \
-"CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o"
+"CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" \
+"CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
 
 # External object files for target QMI8658
 QMI8658_EXTERNAL_OBJECTS =
@@ -1122,6 +1137,7 @@ lib/QMI8658/libQMI8658.a: lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Prog
 lib/QMI8658/libQMI8658.a: lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
 lib/QMI8658/libQMI8658.a: lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
 lib/QMI8658/libQMI8658.a: lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+lib/QMI8658/libQMI8658.a: lib/QMI8658/CMakeFiles/QMI8658.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
 lib/QMI8658/libQMI8658.a: lib/QMI8658/CMakeFiles/QMI8658.dir/build.make
 lib/QMI8658/libQMI8658.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/memmap_default.ld
 lib/QMI8658/libQMI8658.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/script_include/memory_psram.incl
@@ -1169,7 +1185,7 @@ lib/QMI8658/libQMI8658.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_co
 lib/QMI8658/libQMI8658.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/sections_stack.incl
 lib/QMI8658/libQMI8658.a: /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_link/script_include/set_memory_locations.incl
 lib/QMI8658/libQMI8658.a: lib/QMI8658/CMakeFiles/QMI8658.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Linking CXX static library libQMI8658.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking CXX static library libQMI8658.a"
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658 && $(CMAKE_COMMAND) -P CMakeFiles/QMI8658.dir/cmake_clean_target.cmake
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/lib/QMI8658 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QMI8658.dir/link.txt --verbose=$(VERBOSE)
 

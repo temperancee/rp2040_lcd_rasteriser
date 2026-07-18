@@ -1,6 +1,13 @@
 lib/LCD/CMakeFiles/LCD.dir/lcd.c.o: \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/lcd.c \
- /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/LCD_1in28.h \
+ /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/lcd.h \
+ /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h \
+ /usr/arm-none-eabi/include/stdint.h \
+ /usr/arm-none-eabi/include/machine/_default_types.h \
+ /usr/arm-none-eabi/include/sys/features.h \
+ /usr/arm-none-eabi/include/_newlib_version.h \
+ /usr/arm-none-eabi/include/sys/_intsup.h \
+ /usr/arm-none-eabi/include/sys/_stdint.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/LCD/../Config/DEV_Config.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico.h \
@@ -9,15 +16,8 @@ lib/LCD/CMakeFiles/LCD.dir/lcd.c.o: \
  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h \
  /usr/arm-none-eabi/include/assert.h /usr/arm-none-eabi/include/_ansi.h \
  /usr/arm-none-eabi/include/newlib.h \
- /usr/arm-none-eabi/include/_newlib_version.h \
  /usr/arm-none-eabi/include/sys/config.h \
  /usr/arm-none-eabi/include/machine/ieeefp.h \
- /usr/arm-none-eabi/include/sys/features.h \
- /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdint.h \
- /usr/arm-none-eabi/include/stdint.h \
- /usr/arm-none-eabi/include/machine/_default_types.h \
- /usr/arm-none-eabi/include/sys/_intsup.h \
- /usr/arm-none-eabi/include/sys/_stdint.h \
  /usr/lib/gcc/arm-none-eabi/16.1.0/include/stddef.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/generated/pico_base/pico/version.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_base_headers/include/pico/config.h \
@@ -64,13 +64,7 @@ lib/LCD/CMakeFiles/LCD.dir/lcd.c.o: \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
- /usr/arm-none-eabi/include/stdlib.h \
- /usr/arm-none-eabi/include/sys/reent.h \
- /usr/arm-none-eabi/include/_ansi.h \
- /usr/arm-none-eabi/include/sys/_types.h \
- /usr/arm-none-eabi/include/machine/_types.h \
- /usr/arm-none-eabi/include/sys/lock.h \
- /usr/arm-none-eabi/include/machine/stdlib.h \
- /usr/arm-none-eabi/include/alloca.h /usr/arm-none-eabi/include/stdio.h \
- /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdarg.h \
- /usr/arm-none-eabi/include/sys/stdio.h
+ /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/include/hardware/dma.h \
+ /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma.h \
+ /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dma.h \
+ /home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/dma_debug.h

@@ -32,6 +32,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+  "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+  "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o"

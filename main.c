@@ -1,6 +1,7 @@
-﻿#include <stdio.h>
+﻿#include <stdint.h>
 #include <stdlib.h>
-#include <stdint.h>
+#include <stdio.h>
+
 
 #include "DEV_Config.h"
 #include "GUI_Paint.h"
@@ -13,6 +14,23 @@
 #include "types/vector.h"
 #include "cube.h"
 
+
+// static uint16_t FBuffer[LCD_1IN28_WIDTH * LCD_1IN28_HEIGHT] = {0};
+//
+// void init(void)
+// {
+//     LCD_1IN28_Init(HORIZONTAL);
+//     LCD_1IN28_Clear(WHITE);
+//
+//     DEV_SET_PWM(100);
+//     /*1.Create a new image cache named IMAGE_RGB and fill it with white*/
+//     Paint_NewImage((uint8_t *)FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT, ROTATE_0, WHITE);
+//     // Use 65k colour
+//     Paint_SetScale(65);
+//     // Set background to white
+//     Paint_Clear(WHITE);
+// }
+
 uint16_t *init(void)
 {
     LCD_1IN28_Init(HORIZONTAL);
@@ -21,7 +39,6 @@ uint16_t *init(void)
     DEV_SET_PWM(100);
     // This is a 16bit colour depth LCD, so 2 bytes per pixel
     uint32_t Imagesize = LCD_1IN28_HEIGHT * LCD_1IN28_WIDTH * 2;
-    // uint32_t Imagesize = (LCD_1IN28_HEIGHT * LCD_1IN28_WIDTH) >> 8;
     // This is our framebuffer
     uint16_t *FBuffer;
     if ((FBuffer = (uint16_t *)malloc(Imagesize)) == NULL)
@@ -29,15 +46,13 @@ uint16_t *init(void)
         printf("Framebuffer malloc failed! Not enough memory.");
         exit(0);
     }
+
     /*1.Create a new image cache named IMAGE_RGB and fill it with white*/
     Paint_NewImage((uint8_t *)FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT, ROTATE_0, WHITE);
     // Use 65k colour
     Paint_SetScale(65);
     // Set background to white
     Paint_Clear(WHITE);
-    // Push the framebuffer to the display
-    LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(1000);
     return FBuffer;
 }
 
@@ -156,11 +171,12 @@ void spin_cube(uint16_t *FBuffer)
 {
 
     int time = 0;
+    int time_incr = 1;
 
     while (1) {
 
         matrix4q16 xz_rot = rotateXZ(time);
-        matrix4q16 xy_rot = rotateXY(time * 2);
+        matrix4q16 xy_rot = rotateXY(time * 5);
         matrix4q16 scale = scale_by_scalar(Q16_HALF);
 
         matrix4q16 intermediate = mat_mat_multq16(&xz_rot, &xy_rot);
@@ -181,10 +197,10 @@ void spin_cube(uint16_t *FBuffer)
         LCD_1IN28_Display(FBuffer);
 
         if (time == 720) {
-            time = 2;
+            time = time_incr;
         }
 
-        time += 2;
+        time += time_incr;
     }
 }
 
@@ -198,17 +214,26 @@ int main(void)
 
     // Initialise scene 
     uint16_t *fb = init();
+    // init();
+
+
+    // Wait, so we can reflash in case of errors
+    DEV_Delay_ms(1000);
+
+    // Push the framebuffer to the display
+    LCD_1IN28_Display(fb);
+    DEV_Delay_ms(1000);
 
     // Draw function
-    // triangle_board(fb);
-    // simple_triangle(fb);
+    // triangle_board(FBuffer);
+    // simple_square(fb);
     spin_cube(fb);
-    // spin_rectangle(fb);
+    // spin_rectangle(FBuffer);
     
     
     /* Module Exit */
-    free(fb);
-    fb = NULL;
+    // free(FBuffer);
+    // FBuffer = NULL;
     DEV_Module_Exit();
     return 0;
 }

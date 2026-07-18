@@ -143,6 +143,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/include"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pwm/include"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/include"
+  "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/include"
   )
 
 # The set of dependency files which are needed:
@@ -163,6 +164,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o" "gcc" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o" "gcc" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_boot_lock/boot_lock.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o" "gcc" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d"
+  "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o" "gcc" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" "gcc" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o" "gcc" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c.o" "gcc" "lib/Config/CMakeFiles/Config.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c.o.d"

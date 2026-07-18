@@ -3,7 +3,7 @@
 #include "types/colour.h"
 #include "types/vector.h"
 
-vertex vertices[] = {
+vertex const vertices[] = {
     // -X face
     (vertex) { (vec3q16) {-Q16_HALF, -Q16_HALF, -Q16_HALF}, (col3ub) {0, 255, 255} },
     (vertex) { (vec3q16) {-Q16_HALF,  Q16_HALF, -Q16_HALF}, (col3ub) {0, 255, 255} },
@@ -41,7 +41,7 @@ vertex vertices[] = {
     (vertex) { (vec3q16) { Q16_HALF,  Q16_HALF,  Q16_HALF}, (col3ub) {0, 0, 255} },
 };
 
-uint32_t cube_indices[] = {
+uint32_t const cube_indices[] = {
     // -X face
      0,  2,  1,
      1,  2,  3,
@@ -68,7 +68,7 @@ uint32_t cube_indices[] = {
 };
 
 
-const mesh cube = {
+mesh const cube = {
     .vertices = vertices,
     .indices = cube_indices,
     .count = 36,

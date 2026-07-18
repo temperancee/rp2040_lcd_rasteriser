@@ -522,6 +522,30 @@ home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divid
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 .PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
 
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.o: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.o
+
+# target to build an object file
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.i: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.i
+
+# target to preprocess a source file
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.i
+
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.s: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.s
+
+# target to generate assembly for a file
+home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/Rasteriser/CMakeFiles/Rasteriser.dir/build.make lib/Rasteriser/CMakeFiles/Rasteriser.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+.PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.s
+
 home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.o: home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
 .PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.o
 
@@ -1604,6 +1628,9 @@ help:
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.i"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.s"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.o"
+	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.o"
+	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.i"
+	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.s"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.o"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.i"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.s"

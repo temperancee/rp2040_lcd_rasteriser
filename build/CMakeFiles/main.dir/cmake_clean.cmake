@@ -66,6 +66,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o"
   "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o.d"
   "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_divider/divider.S.o"
+  "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o"
+  "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_dma/dma.c.o.d"
   "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o"
   "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o.d"
   "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o"
