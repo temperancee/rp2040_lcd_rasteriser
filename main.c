@@ -13,8 +13,6 @@
 #include "cube.h"
 
 static uint16_t FBuffer[LCD_SCREEN_SIZE] = {0};
-volatile static uint16_t SFBuffer[LCD_SCREEN_SIZE] = {0};
-
 
 void pixel_test()
 {

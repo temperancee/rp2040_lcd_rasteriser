@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdbool.h>
 
 #include "rasteriser.h"
 #include "../GUI/GUI_Paint.h"

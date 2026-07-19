@@ -7,6 +7,7 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/rasteriser.c.o: \
  /usr/arm-none-eabi/include/_newlib_version.h \
  /usr/arm-none-eabi/include/sys/_intsup.h \
  /usr/arm-none-eabi/include/sys/_stdint.h \
+ /usr/lib/gcc/arm-none-eabi/16.1.0/include/stdbool.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/rasteriser.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/draw_command.h \
  /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/Rasteriser/mesh.h \
