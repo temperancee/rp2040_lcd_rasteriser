@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GUI.dir/GUI_Paint.c.o"
   "CMakeFiles/GUI.dir/GUI_Paint.c.o.d"
+  "CMakeFiles/GUI.dir/GUI_Paint_BAK.c.o"
+  "CMakeFiles/GUI.dir/GUI_Paint_BAK.c.o.d"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o.d"
   "CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o"

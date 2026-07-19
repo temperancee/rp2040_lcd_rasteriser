@@ -154,6 +154,30 @@ GUI_Paint.c.s:
 	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/GUI_Paint.c.s
 .PHONY : GUI_Paint.c.s
 
+GUI_Paint_BAK.o: GUI_Paint_BAK.c.o
+.PHONY : GUI_Paint_BAK.o
+
+# target to build an object file
+GUI_Paint_BAK.c.o:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/GUI_Paint_BAK.c.o
+.PHONY : GUI_Paint_BAK.c.o
+
+GUI_Paint_BAK.i: GUI_Paint_BAK.c.i
+.PHONY : GUI_Paint_BAK.i
+
+# target to preprocess a source file
+GUI_Paint_BAK.c.i:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/GUI_Paint_BAK.c.i
+.PHONY : GUI_Paint_BAK.c.i
+
+GUI_Paint_BAK.s: GUI_Paint_BAK.c.s
+.PHONY : GUI_Paint_BAK.s
+
+# target to generate assembly for a file
+GUI_Paint_BAK.c.s:
+	cd /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build && $(MAKE) $(MAKESILENT) -f lib/GUI/CMakeFiles/GUI.dir/build.make lib/GUI/CMakeFiles/GUI.dir/GUI_Paint_BAK.c.s
+.PHONY : GUI_Paint_BAK.c.s
+
 home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.o: home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o
 .PHONY : home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.o
 
@@ -1558,6 +1582,9 @@ help:
 	@echo "... GUI_Paint.o"
 	@echo "... GUI_Paint.i"
 	@echo "... GUI_Paint.s"
+	@echo "... GUI_Paint_BAK.o"
+	@echo "... GUI_Paint_BAK.i"
+	@echo "... GUI_Paint_BAK.s"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.o"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.i"
 	@echo "... home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.s"

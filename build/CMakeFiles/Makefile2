@@ -2569,12 +2569,12 @@ CMakeFiles/main.dir/clean:
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/depend
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=79 "Built target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num= "Built target bs2_default"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
@@ -2586,7 +2586,7 @@ bs2_default: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/rule
 # codegen rule for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=79 "Finished codegen for target bs2_default"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num= "Finished codegen for target bs2_default"
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/codegen
 
 # clean rule for target.
@@ -2606,7 +2606,7 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all: pico-sdk/src
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_bin.dir/rule
@@ -2638,7 +2638,7 @@ pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all: pico-sdk
 
 # Build rule for subdir invocation for target.
 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default_library.dir/rule
@@ -2766,7 +2766,7 @@ lib/Config/CMakeFiles/Config.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles
 
 # Build rule for subdir invocation for target.
 lib/Config/CMakeFiles/Config.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/Config/CMakeFiles/Config.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : lib/Config/CMakeFiles/Config.dir/rule
@@ -2799,7 +2799,7 @@ lib/GUI/CMakeFiles/GUI.dir/all: lib/Config/CMakeFiles/Config.dir/all
 
 # Build rule for subdir invocation for target.
 lib/GUI/CMakeFiles/GUI.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 27
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/GUI/CMakeFiles/GUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : lib/GUI/CMakeFiles/GUI.dir/rule
@@ -2832,7 +2832,7 @@ lib/LCD/CMakeFiles/LCD.dir/all: lib/Config/CMakeFiles/Config.dir/all
 
 # Build rule for subdir invocation for target.
 lib/LCD/CMakeFiles/LCD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 27
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/LCD/CMakeFiles/LCD.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : lib/LCD/CMakeFiles/LCD.dir/rule
@@ -2865,7 +2865,7 @@ lib/Rasteriser/CMakeFiles/Rasteriser.dir/all: lib/Config/CMakeFiles/Config.dir/a
 
 # Build rule for subdir invocation for target.
 lib/Rasteriser/CMakeFiles/Rasteriser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 27
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/Rasteriser/CMakeFiles/Rasteriser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : lib/Rasteriser/CMakeFiles/Rasteriser.dir/rule
@@ -2893,7 +2893,7 @@ lib/Touch/CMakeFiles/Touch.dir/all: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/b
 lib/Touch/CMakeFiles/Touch.dir/all: lib/Config/CMakeFiles/Config.dir/all
 	$(MAKE) $(MAKESILENT) -f lib/Touch/CMakeFiles/Touch.dir/build.make lib/Touch/CMakeFiles/Touch.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/Touch/CMakeFiles/Touch.dir/build.make lib/Touch/CMakeFiles/Touch.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target Touch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=66,67,68,69,70,71,72,73,74,75,76,77,78,79 "Built target Touch"
 .PHONY : lib/Touch/CMakeFiles/Touch.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2910,7 +2910,7 @@ Touch: lib/Touch/CMakeFiles/Touch.dir/rule
 # codegen rule for target.
 lib/Touch/CMakeFiles/Touch.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f lib/Touch/CMakeFiles/Touch.dir/build.make lib/Touch/CMakeFiles/Touch.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=66,67,68,69,70,71,72,73,74,75,76,77,78 "Finished codegen for target Touch"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles --progress-num=66,67,68,69,70,71,72,73,74,75,76,77,78,79 "Finished codegen for target Touch"
 .PHONY : lib/Touch/CMakeFiles/Touch.dir/codegen
 
 # clean rule for target.
@@ -2931,7 +2931,7 @@ lib/QMI8658/CMakeFiles/QMI8658.dir/all: lib/Config/CMakeFiles/Config.dir/all
 
 # Build rule for subdir invocation for target.
 lib/QMI8658/CMakeFiles/QMI8658.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 27
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/QMI8658/CMakeFiles/QMI8658.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles 0
 .PHONY : lib/QMI8658/CMakeFiles/QMI8658.dir/rule

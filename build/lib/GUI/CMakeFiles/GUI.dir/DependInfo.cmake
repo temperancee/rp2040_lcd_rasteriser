@@ -150,6 +150,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/GUI_Paint.c" "lib/GUI/CMakeFiles/GUI.dir/GUI_Paint.c.o" "gcc" "lib/GUI/CMakeFiles/GUI.dir/GUI_Paint.c.o.d"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/lib/GUI/GUI_Paint_BAK.c" "lib/GUI/CMakeFiles/GUI.dir/GUI_Paint_BAK.c.o" "gcc" "lib/GUI/CMakeFiles/GUI.dir/GUI_Paint_BAK.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c" "lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o" "gcc" "lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c" "lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o" "gcc" "lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c" "lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c.o" "gcc" "lib/GUI/CMakeFiles/GUI.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c.o.d"

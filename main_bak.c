@@ -1,9 +1,11 @@
 ﻿#include <stdint.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 
 #include "DEV_Config.h"
 #include "GUI_Paint.h"
 #include "lcd.h"
-
 #include "rasteriser.h"
 #include "settings.h"
 #include "types/fixed-point.h"
@@ -12,29 +14,49 @@
 #include "types/vector.h"
 #include "cube.h"
 
-static uint16_t FBuffer[LCD_SCREEN_SIZE] = {0};
-volatile static uint16_t SFBuffer[LCD_SCREEN_SIZE] = {0};
 
+// static uint16_t FBuffer[LCD_1IN28_WIDTH * LCD_1IN28_HEIGHT] = {0};
+//
+// void init(void)
+// {
+//     LCD_1IN28_Init(HORIZONTAL);
+//     LCD_1IN28_Clear(WHITE);
+//
+//     DEV_SET_PWM(100);
+//     /*1.Create a new image cache named IMAGE_RGB and fill it with white*/
+//     Paint_NewImage((uint8_t *)FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT, ROTATE_0, WHITE);
+//     // Use 65k colour
+//     Paint_SetScale(65);
+//     // Set background to white
+//     Paint_Clear(WHITE);
+// }
 
-void pixel_test()
+uint16_t *init(void)
 {
-    Paint_SetPixel(0, 120, RED);
-    Paint_SetPixel(0, 125, BLUE);
-    Paint_SetPixel(0, 20, BLACK);
-    Paint_SetPixel(0, 220, BLACK);
-    Paint_SetPixel(50, 120, RED);
-    Paint_SetPixel(50, 125, BLUE);
-    Paint_SetPixel(50, 20, BLACK);
-    Paint_SetPixel(50, 220, BLACK);
-    Paint_SetPixel(100, 120, RED);
-    Paint_SetPixel(100, 125, BLUE);
-    Paint_SetPixel(100, 20, BLACK);
-    Paint_SetPixel(100, 220, BLACK);
-    LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(100000000);
+    LCD_1IN28_Init(HORIZONTAL);
+    LCD_1IN28_Clear(WHITE);
+
+    DEV_SET_PWM(100);
+    // This is a 16bit colour depth LCD, so 2 bytes per pixel
+    uint32_t Imagesize = LCD_1IN28_HEIGHT * LCD_1IN28_WIDTH * 2;
+    // This is our framebuffer
+    uint16_t *FBuffer;
+    if ((FBuffer = (uint16_t *)malloc(Imagesize)) == NULL)
+    {
+        printf("Framebuffer malloc failed! Not enough memory.");
+        exit(0);
+    }
+
+    /*1.Create a new image cache named IMAGE_RGB and fill it with white*/
+    Paint_NewImage((uint8_t *)FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT, ROTATE_0, WHITE);
+    // Use 65k colour
+    Paint_SetScale(65);
+    // Set background to white
+    Paint_Clear(WHITE);
+    return FBuffer;
 }
 
-void simple_square()
+void simple_square(uint16_t *FBuffer)
 {
     vertex vertices[] = {
         (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.7)}, (col3ub) {255, 0, 0}},
@@ -64,7 +86,7 @@ void simple_square()
     DEV_Delay_ms(1000000);
 }
 
-void triangle_board()
+void triangle_board(uint16_t *FBuffer)
 {
 
     vertex vertices[3] = {
@@ -91,7 +113,8 @@ void triangle_board()
     DEV_Delay_ms(1000000);
 }
 
-void spin_rectangle()
+
+void spin_rectangle(uint16_t *FBuffer)
 {
     vertex vertices[] = {
         // (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.5), FLOAT_TO_Q16(-0.5)}, (col3ub) {230, 39, 120}},
@@ -144,7 +167,7 @@ void spin_rectangle()
 }
 
 
-void spin_cube()
+void spin_cube(uint16_t *FBuffer)
 {
 
     int time = 0;
@@ -189,27 +212,28 @@ int main(void)
         return -1;
     }
 
-    LCD_1IN28_Init(HORIZONTAL);
-    LCD_1IN28_Clear(WHITE);
+    // Initialise scene 
+    uint16_t *fb = init();
+    // init();
 
-    DEV_SET_PWM(100);
 
-    // Initialise framebuffer for writing
-    Paint_NewImage((uint8_t *)FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT, WHITE);
-    // Set background to white
-    Paint_Clear(WHITE);
-
-    // Push the framebuffer to the display
-    LCD_1IN28_Display(FBuffer);
+    // Wait, so we can reflash in case of errors
     DEV_Delay_ms(1000);
 
-    /* Draw */
-    spin_cube();
-    // triangle_board();
-    // simple_square();
-    // spin_rectangle();
+    // Push the framebuffer to the display
+    LCD_1IN28_Display(fb);
+    DEV_Delay_ms(1000);
 
-
+    // Draw function
+    // triangle_board(FBuffer);
+    // simple_square(fb);
+    spin_cube(fb);
+    // spin_rectangle(FBuffer);
+    
+    
+    /* Module Exit */
+    // free(FBuffer);
+    // FBuffer = NULL;
     DEV_Module_Exit();
     return 0;
 }
