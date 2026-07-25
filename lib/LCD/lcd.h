@@ -1,15 +1,10 @@
 /*****************************************************************************
-* | File      	:   LCD_1IN28.h
-* | Author      :   Waveshare team
+* | File      	:   lcd.h
+* | Author      :   Waveshare team, edited by temperancee
 * | Function    :   Hardware underlying interface
 * | Info        :
 *                Used to shield the underlying layers of each master 
 *                and enhance portability
-*----------------
-* |	This version:   V1.0
-* | Date        :   2020-12-16
-* | Info        :   Basic version
-*
 ******************************************************************************/
 #ifndef __LCD_1IN28_H
 #define __LCD_1IN28_H	
@@ -22,6 +17,11 @@
 
 #define HORIZONTAL 0
 #define VERTICAL   1
+
+enum {
+    INTER_REG_ENABLE1 = 0xFE,
+    INTER_REG_ENABLE2 = 0xEF,
+};
 
 typedef struct {
 	uint16_t WIDTH;

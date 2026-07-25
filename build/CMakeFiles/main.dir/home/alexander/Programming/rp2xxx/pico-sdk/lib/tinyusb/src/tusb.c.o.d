@@ -81,4 +81,5 @@ CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/t
  /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
  /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd_pvt.h \
- /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_private.h
+ /home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_private.h \
+ /usr/arm-none-eabi/include/ctype.h

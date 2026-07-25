@@ -7,33 +7,14 @@ typedef struct {
     uint8_t r, g, b;
 } col3ub;
 
-static inline col3ub hex_to_col3(uint16_t hex)
+
+// Converts col3ub to an 8 bit RBG332 colour
+static inline uint8_t col3_to_hex(col3ub col)
 {
-    // Extract the 5 red bits, 6 green bits, and 5 blue bits
-    uint8_t r = hex >> 11;
-    uint8_t g = 0x07ff & (hex >> 5);
-    uint8_t b = 0x001f & hex;
-
-    // Normalise
-    float r_norm = (float) r / 31;
-    float g_norm = (float) g / 63;
-    float b_norm = (float) b / 31;
-
-    return (col3ub) {r_norm, g_norm, b_norm};
-}
-
-
-static inline uint16_t col3_to_hex(col3ub col)
-{
-    uint8_t r = (col.r*31)/255;
-    uint8_t g = (col.g*63)/255;
-    uint8_t b = (col.b*31)/255;
-
-    uint16_t x = r << 11;
-    uint16_t y = x | (g << 5);
-    uint16_t z = y | b;
-
-    return z;
+    uint8_t r = (col.r*7)/255;
+    uint8_t g = (col.g*7)/255;
+    uint8_t b = (col.b*3)/255;
+    return (r << 5) | (g << 2) | b;
 }
 
 #endif  // _COLOUR_H_

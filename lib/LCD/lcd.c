@@ -1,21 +1,19 @@
 /*****************************************************************************
-* | File      	:   LCD_1IN28.c
-* | Author      :   Waveshare team
+* | File      	:   lcd.c
+* | Author      :   Waveshare team, edited by temperancee
 * | Function    :   Hardware underlying interface
 * | Info        :
 *                Used to shield the underlying layers of each master
 *                and enhance portability
-*----------------
-* |	This version:   V1.0
-* | Date        :   2020-12-16
-* | Info        :   Basic version
-*
 ******************************************************************************/
 #include "lcd.h"
 #include "DEV_Config.h"
 #include <hardware/dma.h>
 
 LCD_1IN28_ATTRIBUTES LCD_1IN28;
+
+
+
 
 
 /******************************************************************************
@@ -80,33 +78,33 @@ parameter:
 ******************************************************************************/
 static void LCD_1IN28_InitReg(void)
 {
-    LCD_1IN28_SendCommand(0xEF);
+    LCD_1IN28_SendCommand(INTER_REG_ENABLE2);
     LCD_1IN28_SendCommand(0xEB);
-    LCD_1IN28_SendData_8Bit(0x14); 
-	
-    LCD_1IN28_SendCommand(0xFE);			 
-    LCD_1IN28_SendCommand(0xEF); 
+    LCD_1IN28_SendData_8Bit(0x14);
 
-    LCD_1IN28_SendCommand(0xEB);	
-    LCD_1IN28_SendData_8Bit(0x14); 
+    LCD_1IN28_SendCommand(INTER_REG_ENABLE1);
+    LCD_1IN28_SendCommand(INTER_REG_ENABLE2);
 
-    LCD_1IN28_SendCommand(0x84);			
-    LCD_1IN28_SendData_8Bit(0x40); 
+    LCD_1IN28_SendCommand(0xEB);
+    LCD_1IN28_SendData_8Bit(0x14);
 
-    LCD_1IN28_SendCommand(0x85);			
-    LCD_1IN28_SendData_8Bit(0xFF); 
+    LCD_1IN28_SendCommand(0x84);
+    LCD_1IN28_SendData_8Bit(0x40);
 
-    LCD_1IN28_SendCommand(0x86);			
-    LCD_1IN28_SendData_8Bit(0xFF); 
-
-    LCD_1IN28_SendCommand(0x87);			
+    LCD_1IN28_SendCommand(0x85);
     LCD_1IN28_SendData_8Bit(0xFF);
 
-    LCD_1IN28_SendCommand(0x88);			
+    LCD_1IN28_SendCommand(0x86);
+    LCD_1IN28_SendData_8Bit(0xFF);
+
+    LCD_1IN28_SendCommand(0x87);
+    LCD_1IN28_SendData_8Bit(0xFF);
+
+    LCD_1IN28_SendCommand(0x88);
     LCD_1IN28_SendData_8Bit(0x0A);
 
-    LCD_1IN28_SendCommand(0x89);			
-    LCD_1IN28_SendData_8Bit(0x21); 
+    LCD_1IN28_SendCommand(0x89);
+    LCD_1IN28_SendData_8Bit(0x21);
 
     LCD_1IN28_SendCommand(0x8A);			
     LCD_1IN28_SendData_8Bit(0x00); 
@@ -243,7 +241,7 @@ static void LCD_1IN28_InitReg(void)
     LCD_1IN28_SendData_8Bit(0x18);
     LCD_1IN28_SendData_8Bit(0x0F);
     LCD_1IN28_SendData_8Bit(0x71);
-    LCD_1IN28_SendData_8Bit(0xEF);
+    LCD_1IN28_SendData_8Bit(INTER_REG_ENABLE2);
     LCD_1IN28_SendData_8Bit(0x70); 
     LCD_1IN28_SendData_8Bit(0x70);
 
@@ -411,13 +409,22 @@ void LCD_1IN28_Clear(uint16_t Color)
     }
 }
 
+// Helper function
+// Converts an RBG332 8 bit colour to a RGB565 16 bit colour
+inline uint16_t colour_8_to_16(uint8_t colour)
+{
+    uint16_t r = (colour & 0b11100000) >> 3;
+    uint16_t b = ((colour & 0b00011100) >> 2) * 9;
+    uint16_t g = (colour & 0b0000011) * 10;
+    return (r << 11) | (g << 5) | b;
+}
+
 /******************************************************************************
-function :	Sends the image buffer in RAM to displays
+function :	Sends the image buffer in RAM to display
 parameter:
 ******************************************************************************/
 void LCD_1IN28_Display(uint16_t *Image)
 {
-
 
     LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
     DEV_Digital_Write(LCD_DC_PIN, 1);

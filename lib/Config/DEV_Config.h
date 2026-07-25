@@ -49,7 +49,16 @@
 #define LCD_MOSI_PIN    (11)
 #define LCD_MISO_PIN    (12)
 #define LCD_RST_PIN     (13)
+
+// When debugging, we run this code on a Pico W
+// The Pico W does not expose GPIO25, so we have
+// to reassign it. 
+// This check determines if we are running on a Pico W
+#if defined(CYW43_WL_GPIO_LED_PIN)
+#define LCD_BL_PIN      (15)
+#else
 #define LCD_BL_PIN      (25)
+#endif
 
 #define Touch_INT_PIN   (21)
 #define Touch_RST_PIN   (22)

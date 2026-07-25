@@ -14,7 +14,7 @@
 
 static uint16_t FBuffer[LCD_SCREEN_SIZE] = {0};
 
-void pixel_test()
+void pixel_test(void)
 {
     Paint_SetPixel(0, 120, RED);
     Paint_SetPixel(0, 125, BLUE);
@@ -32,7 +32,7 @@ void pixel_test()
     DEV_Delay_ms(100000000);
 }
 
-void simple_square()
+void simple_square(void)
 {
     vertex vertices[] = {
         (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.7), FLOAT_TO_Q16(-0.7)}, (col3ub) {255, 0, 0}},
@@ -62,7 +62,7 @@ void simple_square()
     DEV_Delay_ms(1000000);
 }
 
-void triangle_board()
+void triangle_board(void)
 {
 
     vertex vertices[3] = {
@@ -89,7 +89,7 @@ void triangle_board()
     DEV_Delay_ms(1000000);
 }
 
-void spin_rectangle()
+void spin_rectangle(void)
 {
     vertex vertices[] = {
         // (vertex) {(vec3q16) {FLOAT_TO_Q16(-0.5), FLOAT_TO_Q16(-0.5)}, (col3ub) {230, 39, 120}},
@@ -142,7 +142,7 @@ void spin_rectangle()
 }
 
 
-void spin_cube()
+void spin_cube(void)
 {
 
     int time = 0;

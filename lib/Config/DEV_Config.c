@@ -39,12 +39,12 @@ uint slice_num;
 /**
  * delay x ms
  **/
-void DEV_Delay_ms(uint32_t xms)
+inline void DEV_Delay_ms(uint32_t xms)
 {
     sleep_ms(xms);
 }
 
-void DEV_Delay_us(uint32_t xus)
+inline void DEV_Delay_us(uint32_t xus)
 {
     sleep_us(xus);
 }
@@ -70,12 +70,12 @@ void DEV_GPIO_Init(void)
 /**
  * GPIO read and write
  **/
-void DEV_Digital_Write(uint16_t Pin, uint8_t Value)
+inline void DEV_Digital_Write(uint16_t Pin, uint8_t Value)
 {
     gpio_put(Pin, Value);
 }
 
-uint8_t DEV_Digital_Read(uint16_t Pin)
+inline uint8_t DEV_Digital_Read(uint16_t Pin)
 {
     return gpio_get(Pin);
 }
@@ -83,35 +83,27 @@ uint8_t DEV_Digital_Read(uint16_t Pin)
 /**
  * SPI
  **/
-void DEV_SPI_WriteByte(spi_inst_t *SPI_PORT,uint8_t Value)
+inline void DEV_SPI_WriteByte(spi_inst_t *SPI_PORT,uint8_t Value)
 {
     spi_write_blocking(SPI_PORT, &Value, 1);
 }
 
-void DEV_SPI_Write_nByte(spi_inst_t *SPI_PORT,uint8_t pData[], uint32_t Len)
+inline void DEV_SPI_Write_nByte(spi_inst_t *SPI_PORT,uint8_t pData[], uint32_t Len)
 {
     spi_write_blocking(SPI_PORT, pData, Len);
-}
-
-/**
- * DMA SPI
- **/
-void DEV_DMA_SPI_Write_nByte(spi_inst_t *SPI_PORT, uint32_t pData[], uint32_t len)
-{
-
 }
 
 /**
  * I2C
  **/
 
-void DEV_I2C_Write_Byte(i2c_inst_t *I2C_PORT,uint8_t addr, uint8_t reg, uint8_t Value)
+inline void DEV_I2C_Write_Byte(i2c_inst_t *I2C_PORT,uint8_t addr, uint8_t reg, uint8_t Value)
 {
     uint8_t data[2] = {reg, Value};
     i2c_write_blocking(I2C_PORT, addr, data, 2, false);
 }
 
-void DEV_I2C_Write_nByte(i2c_inst_t *I2C_PORT,uint8_t addr, uint8_t *pData, uint32_t Len)
+inline void DEV_I2C_Write_nByte(i2c_inst_t *I2C_PORT,uint8_t addr, uint8_t *pData, uint32_t Len)
 {
     i2c_write_blocking(I2C_PORT, addr, pData, Len, false);
 }
@@ -148,7 +140,7 @@ void DEV_GPIO_Mode(uint16_t Pin, uint16_t Mode)
 /**
  * KEY Config
  **/
-void DEV_KEY_Config(uint16_t Pin)
+inline void DEV_KEY_Config(uint16_t Pin)
 {
     gpio_init(Pin);
     gpio_pull_up(Pin);
@@ -171,7 +163,7 @@ void DEV_SET_PWM(uint8_t Value)
 /**
  * IRQ
  **/
-void DEV_IRQ_SET(uint gpio, uint32_t events, gpio_irq_callback_t callback)
+inline void DEV_IRQ_SET(uint gpio, uint32_t events, gpio_irq_callback_t callback)
 {
     gpio_set_irq_enabled_with_callback(gpio,events,true,callback);
 }
