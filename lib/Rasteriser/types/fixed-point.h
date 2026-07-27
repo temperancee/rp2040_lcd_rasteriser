@@ -15,8 +15,26 @@ typedef int32_t q16;
 // precomputed at compile time (especially important for the float conversion!)
 // Note the float conversion performs rounding
 
+/**
+ * @brief Transform a Q16.16 number to an integer, truncating the fractional part
+ * @param x - a Q16.16 number to truncate
+ * @return x as an int
+ */
 #define Q16_TO_INT(x) ( (int32_t) (x >> 16) )
+
+/**
+ * @brief Transform an int to a Q16.16 fixed point number
+ * @param x - an int
+ * @return x as a Q16.16
+ */
 #define INT_TO_Q16(x) ( (q16) (x << 16) )
+
+/**
+ * @brief Transform a float to a Q16.16 fixed point number. This function is a macro so floating point numbers can be
+ * entered for ease of programming, but be stored in fixed-point format for computational efficiency
+ * @param x - a float
+ * @return x as a Q16.16
+ */
 #define FLOAT_TO_Q16(f) ( (q16) ((f >= 0.f) ?  f * (float)Q16_ONE + 0.5f : f * (float)Q16_ONE - 0.5f) )
 
 // WARNING: NOT TO BE USED AT RUNTIME - for testing only
@@ -38,11 +56,22 @@ static double q16_to_double(q16 x)
 // Conversion functions for variables whose values can only be known
 // at runtime
 
+
+/**
+ * @brief Convert Q16.16 fixed point number to int
+ * @param x - the Q16.16 number to convert
+ * @return x as an int
+ */
 static inline int32_t q16_to_int(q16 x)
 {
     return x >> 16;
 }
 
+/**
+ * @brief Convert an int to a Q16.16 fixed point number
+ * @param x - the int to convert, must be no more than 16 bits long
+ * @return x as a Q16.16 int
+ */
 static inline q16 int_to_q16(int32_t x)
 {
     return x << 16;
@@ -51,21 +80,45 @@ static inline q16 int_to_q16(int32_t x)
 // Operations
 
 // TODO: Introduce the more efficient ASM multiplication as used in RP2040 DOOM
+/**
+ * @brief Multiply two Q16.16 fixed point numbers together
+ * @param x - a Q16.16 fixed point number
+ * @param y - a Q16.16 fixed point number
+ * @return x*y
+ */
 static inline q16 q16_mul(q16 x, q16 y)
 {
     return (q16) ( (((int64_t) x) * y) >> Q16_SHIFT );
 }
 
+/**
+ * @brief Divide a Q16.16 fixed point number by another Q16.16
+ * @param x - a Q16.16 fixed point number
+ * @param y - a Q16.16 fixed point number
+ * @return x divided by y
+ */
 static inline q16 q16_div(q16 x, q16 y)
 {
     return (q16) ( (((int64_t) x) << Q16_SHIFT) / y );
 }
 
+/**
+ * @brief Return the maximum of two Q16.16 numbers
+ * @param x - a Q16.16 fixed point number
+ * @param y - a Q16.16 fixed point number
+ * @return The bigger of the two numbers
+ */
 static inline q16 maxq16(q16 x, q16 y)
 {
     return (x > y) ? x : y;
 }
 
+/**
+ * @brief Return the minimum of two Q16.16 numbers
+ * @param x - a Q16.16 fixed point number
+ * @param y - a Q16.16 fixed point number
+ * @return The lesser of the two numbers
+ */
 static inline q16 minq16(q16 x, q16 y)
 {
     return (x < y) ? x : y;

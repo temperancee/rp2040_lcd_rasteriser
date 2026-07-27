@@ -12,6 +12,8 @@ typedef struct {
     uint16_t Height;
     uint16_t Colour;
     uint16_t Scale;
+    uint16_t WidthByte;
+    uint16_t HeightByte;
 } PAINT;
 extern PAINT Paint;
 
@@ -40,7 +42,7 @@ extern PAINT Paint;
 
 void Paint_NewImage(uint8_t *image, uint16_t Width, uint16_t Height, uint8_t Color);
 void Paint_SelectImage(uint8_t *image);
-void Paint_SetPixel(uint16_t Xpoint, uint16_t Ypoint, uint8_t Color);
+void Paint_SetPixel(uint16_t X, uint16_t Y, uint16_t Colour);
 void Paint_SetScale(uint8_t scale);
 void Paint_Clear(uint8_t Color);
 

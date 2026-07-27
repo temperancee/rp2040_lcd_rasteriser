@@ -21,6 +21,9 @@ void Paint_NewImage(uint8_t *image, uint16_t Width, uint16_t Height, uint8_t Col
     Paint.Width = Width;
     Paint.Height = Height;
     Paint.Colour = Colour;    
+
+    Paint.WidthByte = Paint.Width/2*3; 
+    Paint.HeightByte = Height;    
 }
 
 /******************************************************************************
@@ -40,16 +43,25 @@ parameter:
     Ypoint : At point Y
     Color  : Painted colors
 ******************************************************************************/
-void Paint_SetPixel(uint16_t Xpoint, uint16_t Ypoint, uint8_t Colour)
+void Paint_SetPixel(uint16_t X, uint16_t Y, uint16_t Colour)
 {
-    if(Xpoint > Paint.Width || Ypoint > Paint.Height){
+    if(X > Paint.Width || Y > Paint.Height){
         Debug("Exceeding display boundaries\r\n");
         return;
     }      
 
-    uint32_t Addr = Xpoint + Ypoint*Paint.Width;
-    Paint.Image[Addr] = Colour;
-
+    // uint32_t Addr = Xpoint*2 + Ypoint*Paint.WidthByte;
+    // // These bit masks truncate the color from 16 bit to 8 bit
+    // Paint.Image[Addr] = 0xff & (Colour>>8);
+    // Paint.Image[Addr+1] = 0xff & Colour;
+    uint32_t Addr = X + (X/2) + Y*Paint.WidthByte;
+    if (X % 2 == 0) {
+        Paint.Image[Addr] = 0xff & (Colour >> 4);
+        Paint.Image[Addr+1] &= 0xff & (Colour << 4);
+    } else if (X % 2 == 1) {
+        Paint.Image[Addr] &= 0xff & (Colour >> 8);
+        Paint.Image[Addr+1] = 0xff & Colour;
+    }
 }
 
 /******************************************************************************
@@ -61,18 +73,15 @@ void Paint_Clear(uint8_t Colour)
 {
     for (uint16_t Y = 0; Y < Paint.Height; Y++) {
         for (uint16_t X = 0; X < Paint.Width; X++ ) {
-            uint32_t Addr = X + Y*Paint.Width;
-            Paint.Image[Addr] = Colour;
+            uint32_t Addr = X + (X/2) + Y*Paint.WidthByte;
+            if (X % 2 == 0) {
+                Paint.Image[Addr] = 0xff & (Colour >> 4);
+                Paint.Image[Addr+1] &= 0xff & (Colour << 4);
+            } else if (X % 2 == 1) {
+                Paint.Image[Addr] &= 0xff & (Colour >> 8);
+                Paint.Image[Addr+1] = 0xff & Colour;
+            }
         }
     }
-    // for (uint16_t Y = 0; Y < Paint.HeightByte; Y++) {
-    //     for (uint16_t X = 0; X < Paint.Width; X++ ) {
-    //         uint32_t Addr = X*2 + Y*Paint.WidthByte;
-    //         // These bit masks may appear pointless, but they
-    //         // truncate the color from 16 bit to 8 bit
-    //         Paint.Image[Addr] = 0xff & (Colour>>8);
-    //         Paint.Image[Addr+1] = 0xff & Colour;
-    //     }
-    // }
 }
 
