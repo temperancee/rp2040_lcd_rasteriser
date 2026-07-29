@@ -16,15 +16,18 @@ Currently, the engine is capable of rendering triangles using Barycentric coordi
 
 In case you want to run this on a [Waveshare LCD without an RP2040](https://www.waveshare.com/wiki/1.28inch_Touch_LCD), here is the pin connection diagram:
 
-I2C_SDA     ->      6
-I2C_SDA     ->      7
-DC          ->      8
-CS          ->      9
-SCK         ->      10
-DIN         ->      11
-RST         ->      12  
-BL          ->      25
-BAT_ADC     ->      29
+| Connection | Pin |
+| --------| ---|
+| I2C_SDA | 6  |
+| I2C_SDA | 7  |
+| DC      | 8  |
+| CS      | 9  |
+| SCK     | 10 |
+| DIN     | 11 |
+| RST     | 12 |
+| BL      | 25 |
+| BAT_ADC | 29 |
+
 
 # Building and running
 
@@ -33,10 +36,14 @@ To build and run this project, you will need
 - `make`
 - A copy of the pico-sdk on your system
 
-Clone the directory: 
+Clone and navigate to the repository: 
 ```
 git clone https://github.com/temperancee/rp2040_lcd_rasteriser.git
 cd rp2040_lcd_rasteriser
+```
+Make sure you have set the PICO_SDK_PATH environment variable to your `pico-sdk` directory
+```
+export PICO_SDK_PATH="path/to/pico-sdk"
 ```
 Then create a build directory and build the project
 ```
@@ -44,7 +51,7 @@ mkdir build
 cmake -DPICO_BOARD=waveshare_rp2040_touch_lcd_1.28 ..
 make
 ```
-Finally, upload the generated `main.uf2` file to your board. This can be done by mounting the board as a USB device, using `picotool`, using `openocd`, and probably some other ways that I don't know about. See [Getting Started with Raspberry Pi Pico-series](https://pip-assets.raspberrypi.com/categories/610-raspberry-pi-pico/documents/RP-008276-DS-2-getting-started-with-pico.pdf) for more information.
+Finally, upload the generated `main.uf2` file to your board. This can be done by mounting the board as a USB device, using `picotool`, using `openocd`, and probably some other ways that I don't know about. See [Getting Started with Raspberry Pi Pico-series](https://pip-assets.raspberrypi.com/categories/610-raspberry-pi-pico/documents/RP-008276-DS-2-getting-started-with-pico.pdf) for information on installing `picotool` or `openocd`, otherwise, press down the BOOTSEL key on your Pico, and it should show up in whatever file explorer you use.
 
 # License
 
