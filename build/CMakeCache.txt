@@ -175,7 +175,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Pico_ePaper_Code
+CMAKE_PROJECT_NAME:STATIC=RP2040_3D_Rasteriser
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -268,7 +268,7 @@ FETCHCONTENT_QUIET:BOOL=ON
 FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
 
 //PICO target board (e.g. pico, pico2)
-PICO_BOARD:STRING=pico_w
+PICO_BOARD:STRING=waveshare_rp2040_touch_lcd_1.28
 
 //PICO board header directories
 PICO_BOARD_HEADER_DIRS:STRING=
@@ -341,6 +341,15 @@ Pico_ePaper_Code_IS_TOP_LEVEL:STATIC=ON
 Pico_ePaper_Code_SOURCE_DIR:STATIC=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd
 
 //Value Computed by CMake
+RP2040_3D_Rasteriser_BINARY_DIR:STATIC=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build
+
+//Value Computed by CMake
+RP2040_3D_Rasteriser_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+RP2040_3D_Rasteriser_SOURCE_DIR:STATIC=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd
+
+//Value Computed by CMake
 pico_sdk_BINARY_DIR:STATIC=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/pico-sdk
 
 //Value Computed by CMake
@@ -392,9 +401,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=/home/alexander/Programming/rp2xxx/rp2040_touch_lcd
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=3
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=4
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=4
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=1
 //ADVANCED property for variable: CMAKE_COLOR_MAKEFILE
 CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 //Path to CMake executable.
@@ -435,10 +444,15 @@ CMAKE_C_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_C_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_RELWITHDEBINFO
 CMAKE_C_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//Set initial state for CMake diagnostics; used to persist state
+// set by command-line options across invocations.
+CMAKE_DIAGNOSTIC_INIT:INTERNAL=CMD_AUTHOR=WARN;CMD_DEPRECATED=WARN;CMD_EXPERIMENTAL=WARN;CMD_INSTALL_ABSOLUTE_DESTINATION=IGNORE;CMD_POLICY=WARN;CMD_UNINITIALIZED=IGNORE;CMD_UNUSED_CLI=WARN
 //ADVANCED property for variable: CMAKE_DLLTOOL
 CMAKE_DLLTOOL-ADVANCED:INTERNAL=1
 //Path to cache edit program executable.
 CMAKE_EDIT_COMMAND:INTERNAL=/usr/bin/ccmake
+//Deprecated.  Use -W[no-]error=deprecated instead.
+CMAKE_ERROR_DEPRECATED:INTERNAL=OFF
 //Executable file format
 CMAKE_EXECUTABLE_FORMAT:INTERNAL=ELF
 //ADVANCED property for variable: CMAKE_EXE_LINKER_FLAGS
@@ -530,6 +544,8 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Deprecated.  Use -W[no-]deprecated instead.
+CMAKE_WARN_DEPRECATED:INTERNAL=ON
 //ADVANCED property for variable: DOXYGEN_DOT_EXECUTABLE
 DOXYGEN_DOT_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: DOXYGEN_EXECUTABLE
@@ -573,7 +589,7 @@ _Python3_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
 _Python3_EXECUTABLE:INTERNAL=/home/alexander/.local/bin/python3.13
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;5;32;64;;;abi3;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/site-packages;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/site-packages
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;5;32;64;<none>;;abi3;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/site-packages;/home/alexander/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=0eb34110ab4c6d2fedda7123b2208305
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=

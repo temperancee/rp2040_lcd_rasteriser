@@ -1,43 +1,33 @@
 cmake_minimum_required(VERSION 3.12)
 include(pico_sdk_import.cmake)
 
-project(Pico_ePaper_Code)
+project(RP2040_3D_Rasteriser)
 pico_sdk_init()
 
-#添加编译子目录
-add_subdirectory(./lib/Config)
-# add_subdirectory(./lib/Fonts)
-add_subdirectory(./lib/GUI)
-add_subdirectory(./lib/LCD)
-add_subdirectory(./lib/Rasteriser)
-add_subdirectory(./lib/Touch)
-add_subdirectory(./lib/QMI8658)
-# add_subdirectory(./examples)
+add_subdirectory(./src/lib/Config)
+add_subdirectory(./src/lib/GUI)
+add_subdirectory(./src/lib/LCD)
+add_subdirectory(./src/lib/Rasteriser)
+add_subdirectory(./src/lib/Touch)
+add_subdirectory(./src/lib/QMI8658)
 
 
+include_directories(./src/lib/Config)
+include_directories(./src/lib/GUI)
+include_directories(./src/lib/LCD)
+include_directories(./src/lib/Rasteriser)
+include_directories(./src/lib/Touch)
+include_directories(./src/lib/QMI8658)
 
-#添加头文件目录
-# include_directories(./examples)
-include_directories(./lib/Config)
-# include_directories(./lib/Fonts)
-include_directories(./lib/GUI)
-include_directories(./lib/LCD)
-include_directories(./lib/Rasteriser)
-include_directories(./lib/Touch)
-include_directories(./lib/QMI8658)
-
-
-
-# 生成可执行文件
-add_executable(main 
-main.c
-)
+add_executable(main ./src/main.c)
 
 # enable usb output, disable uart output
 pico_enable_stdio_usb(main 1)
 pico_enable_stdio_uart(main 1)
+# Disable Pico C SDK float libraries (we use fixed-point only)
+pico_set_float_implementation(main none)
 
 # create map/bin/hex/uf2 file etc.
 pico_add_extra_outputs(main)
 
-target_link_libraries(main LCD Touch QMI8658 GUI Rasteriser Config pico_stdlib hardware_spi hardware_i2c ) # examples Fonts
+target_link_libraries(main LCD Touch QMI8658 GUI Rasteriser Config pico_stdlib hardware_spi hardware_i2c)

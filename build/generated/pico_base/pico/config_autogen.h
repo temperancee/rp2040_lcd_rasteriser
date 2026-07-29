@@ -4,7 +4,7 @@
 
 // based on PICO_CONFIG_HEADER_FILES:
 
-#include "/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/pico_w.h"
+#include "/home/alexander/Programming/rp2xxx/pico-sdk/src/boards/include/boards/waveshare_rp2040_touch_lcd_1.28.h"
 #include "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/cmsis/include/cmsis/rename_exceptions.h"
 
 // based on PICO_RP2040_CONFIG_HEADER_FILES:

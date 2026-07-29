@@ -13,7 +13,7 @@ parameter:
     Rotate  :   ??
     Color   :   Whether the picture is inverted
 ******************************************************************************/
-void Paint_NewImage(uint8_t *image, uint16_t Width, uint16_t Height, uint8_t Colour)
+void Paint_NewImage(uint8_t *image, uint16_t Width, uint16_t Height, uint16_t Colour)
 {
     Paint.Image = NULL;
     Paint.Image = image;
@@ -57,9 +57,9 @@ void Paint_SetPixel(uint16_t X, uint16_t Y, uint16_t Colour)
     uint32_t Addr = X + (X/2) + Y*Paint.WidthByte;
     if (X % 2 == 0) {
         Paint.Image[Addr] = 0xff & (Colour >> 4);
-        Paint.Image[Addr+1] &= 0xff & (Colour << 4);
-    } else if (X % 2 == 1) {
-        Paint.Image[Addr] &= 0xff & (Colour >> 8);
+        Paint.Image[Addr+1] = (Colour << 4 & 0xf0) | (Paint.Image[Addr+1] & 0x0f);
+    } else {
+        Paint.Image[Addr] = (Paint.Image[Addr] & 0xf0) | (Colour >> 8);
         Paint.Image[Addr+1] = 0xff & Colour;
     }
 }
@@ -69,16 +69,16 @@ function: Clear the color of the picture
 parameter:
     Color : Painted colors
 ******************************************************************************/
-void Paint_Clear(uint8_t Colour)
+void Paint_Clear(uint16_t Colour)
 {
     for (uint16_t Y = 0; Y < Paint.Height; Y++) {
         for (uint16_t X = 0; X < Paint.Width; X++ ) {
             uint32_t Addr = X + (X/2) + Y*Paint.WidthByte;
             if (X % 2 == 0) {
                 Paint.Image[Addr] = 0xff & (Colour >> 4);
-                Paint.Image[Addr+1] &= 0xff & (Colour << 4);
-            } else if (X % 2 == 1) {
-                Paint.Image[Addr] &= 0xff & (Colour >> 8);
+                Paint.Image[Addr+1] = (Colour << 4 & 0xf0) | (Paint.Image[Addr+1] & 0x0f);
+            } else {
+                Paint.Image[Addr] = (Paint.Image[Addr] & 0xf0) | (Colour >> 8);
                 Paint.Image[Addr+1] = 0xff & Colour;
             }
         }

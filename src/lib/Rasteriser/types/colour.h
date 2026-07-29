@@ -23,6 +23,11 @@ static inline col3ub hex_to_col3(uint16_t hex)
 }
 
 
+/**
+ * @brief Converts a col3ub colour to a 12 bit colour stored in a uint16_t.
+ * @param col - The colour to convert
+ * @return col in RGB444 format, stored as a uint16_t
+ */
 static inline uint16_t col3_to_hex(col3ub col)
 {
     uint8_t r = (col.r*15)/255;

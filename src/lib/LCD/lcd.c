@@ -132,8 +132,9 @@ static void LCD_1IN28_InitReg(void)
     LCD_1IN28_SendCommand(0x36);
     LCD_1IN28_SendData_8Bit(0x08);//Set as vertical screen
 
+    // BUG: This doesn't actually do anything for this chip
     LCD_1IN28_SendCommand(0x3A);			
-    LCD_1IN28_SendData_8Bit(0x05); 
+    LCD_1IN28_SendData_8Bit(0x0f); // 0x03 for 12 bit colour depth. 0x05 for 16 bit 
 
 
     LCD_1IN28_SendCommand(0x90);			
@@ -409,16 +410,6 @@ void LCD_1IN28_Clear(uint16_t Color)
     }
 }
 
-// Helper function
-// Converts an RBG332 8 bit colour to a RGB565 16 bit colour
-inline uint16_t colour_8_to_16(uint8_t colour)
-{
-    uint16_t r = (colour & 0b11100000) >> 3;
-    uint16_t b = ((colour & 0b00011100) >> 2) * 9;
-    uint16_t g = (colour & 0b0000011) * 10;
-    return (r << 11) | (g << 5) | b;
-}
-
 /******************************************************************************
 function :	Sends the image buffer in RAM to display
 parameter:
@@ -430,16 +421,16 @@ void LCD_1IN28_Display(uint16_t *Image)
     DEV_Digital_Write(LCD_DC_PIN, 1);
 
     // Temporarily widen SPI port to 16 bits for correct endianness of transfer
-    spi_set_format(LCD_SPI_PORT, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+    // spi_set_format(LCD_SPI_PORT, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 
     // DMA Config 
     // By default, the read address increments after each transfer
-    // Our transfer size is 16 bits per transfer, so that makes 240*240 transfers
+    // Our transfer size is 16 bits per transfer, so that makes 240*240*3/2 transfers
     
-    const uint32_t transfer_count = 57600;
+    const uint32_t transfer_count = 86400;
     const uint32_t dma_chan = dma_claim_unused_channel(true);
     dma_channel_config c = dma_channel_get_default_config(dma_chan);
-    channel_config_set_transfer_data_size(&c, DMA_SIZE_16); // The SPI registers are 16 bits on the RP2040
+    channel_config_set_transfer_data_size(&c, DMA_SIZE_8); // The SPI registers are 16 bits on the RP2040
     channel_config_set_dreq(&c, spi_get_dreq(LCD_SPI_PORT, true));
     dma_channel_configure(
         dma_chan,
@@ -457,7 +448,7 @@ void LCD_1IN28_Display(uint16_t *Image)
     }
 
     // Set SPI port back to 8 bits so other commands work
-    spi_set_format(LCD_SPI_PORT, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
+    // spi_set_format(LCD_SPI_PORT, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
 
     // uint16_t j;
     // for (j = 0; j < LCD_1IN28_HEIGHT; j++) {

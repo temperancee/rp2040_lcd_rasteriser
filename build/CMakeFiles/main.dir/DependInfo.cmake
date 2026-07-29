@@ -15,8 +15,7 @@ set(CMAKE_DEPENDS_CHECK_ASM
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o"
-  "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o"
-  "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim_rp2040.S.o"
+  "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_none.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_none.S.o"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/custom_panic_function.S" "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/build/CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/custom_panic_function.S.o"
@@ -41,7 +40,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_FIX_RP2040_USB_DEVICE_ENUMERATION=1"
   "LIB_PICO_FLASH=1"
   "LIB_PICO_FLOAT=1"
-  "LIB_PICO_FLOAT_PICO=1"
+  "LIB_PICO_FLOAT_NONE=1"
   "LIB_PICO_INT64_OPS=1"
   "LIB_PICO_INT64_OPS_PICO=1"
   "LIB_PICO_MALLOC=1"
@@ -73,9 +72,9 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "LIB_PICO_USB_RESET=1"
   "LIB_PICO_UTIL=1"
   "PICO_32BIT=1"
-  "PICO_BOARD=\"pico_w\""
+  [[PICO_BOARD="waveshare_rp2040_touch_lcd_1.28"]]
   "PICO_BUILD=1"
-  "PICO_CMAKE_BUILD_TYPE=\"Debug\""
+  [[PICO_CMAKE_BUILD_TYPE="Debug"]]
   "PICO_COPY_TO_RAM=0"
   "PICO_CXX_ENABLE_EXCEPTIONS=0"
   "PICO_NO_FLASH=0"
@@ -83,7 +82,7 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
   "PICO_ON_DEVICE=1"
   "PICO_RP2040=1"
   "PICO_RP2040_USB_DEVICE_UFRAME_FIX=1"
-  "PICO_TARGET_NAME=\"main\""
+  [[PICO_TARGET_NAME="main"]]
   "PICO_THREAD_LOCAL_EMUTLS_CONFIRMED=1"
   "PICO_THREAD_LOCAL_MODE_PER_THREAD=1"
   "PICO_USE_BLOCKED_RAM=0"
@@ -92,12 +91,12 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/Config"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/GUI"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/LCD"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/Rasteriser"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/Touch"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./lib/QMI8658"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./src/lib/Config"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./src/lib/GUI"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./src/lib/LCD"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./src/lib/Rasteriser"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./src/lib/Touch"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/./src/lib/QMI8658"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_atomic/include"
   "/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_stdlib_headers/include"
@@ -230,8 +229,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_math.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_math.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_math.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_fix/rp2040_usb_device_enumeration/rp2040_usb_device_enumeration.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_flash/flash.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_flash/flash.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_flash/flash.c.o.d"
-  "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o.d"
-  "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_math.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_math.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_math.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_malloc/malloc.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_malloc/malloc.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/common.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/common.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_common/common.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o.d"
@@ -249,7 +246,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_thread_local/thread_local.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o.d"
-  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/main.c" "CMakeFiles/main.dir/main.c.o" "gcc" "CMakeFiles/main.dir/main.c.o.d"
+  "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd/src/main.c" "CMakeFiles/main.dir/src/main.c.o" "gcc" "CMakeFiles/main.dir/src/main.c.o.d"
   "/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o" "gcc" "CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_cxx_options/new_delete.cpp.o.d"
   )
 
