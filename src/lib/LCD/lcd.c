@@ -79,6 +79,8 @@ parameter:
 static void LCD_1IN28_InitReg(void)
 {
     LCD_1IN28_SendCommand(INTER_REG_ENABLE2);
+    // Most of these registers aren't documented in the data sheet,
+    // so I have no idea what they do, nor if some can be removed
     LCD_1IN28_SendCommand(0xEB);
     LCD_1IN28_SendData_8Bit(0x14);
 
@@ -129,11 +131,17 @@ static void LCD_1IN28_InitReg(void)
     LCD_1IN28_SendData_8Bit(0x00);
     LCD_1IN28_SendData_8Bit(0x20);
 
+    // BUG: The manufacturer added comment here says "Set as vertical
+    // screen", but this command is MEMORY_ACCESS_CTRL, and setting
+    // 0x08 means the driver expects colours to be passed in "BGR" 
+    // order, rather than RGB
     LCD_1IN28_SendCommand(0x36);
     LCD_1IN28_SendData_8Bit(0x08);//Set as vertical screen
 
-    // BUG: This doesn't actually do anything for this chip
-    LCD_1IN28_SendCommand(0x3A);			
+    // BUG: This is manufacturer added, yet this Waveshare board
+    // does not use the 8080 MCU or RGB interface, instead using
+    // 4 wire SPI. Thus, this command does nothing.
+    LCD_1IN28_SendCommand(COLMOD);			
     LCD_1IN28_SendData_8Bit(0x0f); // 0x03 for 12 bit colour depth. 0x05 for 16 bit 
 
 
@@ -414,7 +422,7 @@ void LCD_1IN28_Clear(uint16_t Color)
 function :	Sends the image buffer in RAM to display
 parameter:
 ******************************************************************************/
-void LCD_1IN28_Display(uint16_t *Image)
+void LCD_1IN28_Display(uint8_t *Image)
 {
 
     LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);

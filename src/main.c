@@ -12,7 +12,7 @@
 #include "types/vector.h"
 #include "cube.h"
 
-static uint16_t FBuffer[43200];
+static uint16_t FBuffer[28800];
 
 void pixel_test(void)
 {

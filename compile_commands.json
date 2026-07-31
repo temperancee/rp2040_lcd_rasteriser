@@ -3002,7 +3002,31 @@
   {
     "directory": "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd",
     "file": "build/vendor/unity/src/unity.c",
-    "command": "gcc -I\"test/support\" -I\"build/vendor/unity/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/vendor/unity/src/unity.c\" -o \"build/test/out/test_colour/unity.o\" -MMD -MF \"build/test/dependencies/test_colour/unity.d\"",
-    "output": "build/test/out/test_colour/unity.o"
+    "command": "gcc -I\"test/support\" -I\"build/vendor/unity/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/vendor/unity/src/unity.c\" -o \"build/test/out/test_matrix/unity.o\" -MMD -MF \"build/test/dependencies/test_matrix/unity.d\"",
+    "output": "build/test/out/test_matrix/unity.o"
+  },
+  {
+    "directory": "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd",
+    "file": "test/test_gui.c",
+    "command": "gcc -I\"build/test/mocks/test_gui\" -I\"test/support\" -I\"src\" -I\"src/lib\" -I\"src/lib/Rasteriser\" -I\"src/lib/Config\" -I\"src/lib/GUI\" -I\"src/lib/LCD\" -I\"src/lib/QMI8658\" -I\"src/lib/Rasteriser/types\" -I\"src/lib/Touch\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"test/test_gui.c\" -o \"build/test/out/test_gui/test_gui.o\" -MMD -MF \"build/test/dependencies/test_gui/test_gui.d\"",
+    "output": "build/test/out/test_gui/test_gui.o"
+  },
+  {
+    "directory": "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd",
+    "file": "src/lib/GUI/GUI_Paint.c",
+    "command": "gcc -I\"build/test/mocks/test_gui\" -I\"test/support\" -I\"src\" -I\"src/lib\" -I\"src/lib/Rasteriser\" -I\"src/lib/Config\" -I\"src/lib/GUI\" -I\"src/lib/LCD\" -I\"src/lib/QMI8658\" -I\"src/lib/Rasteriser/types\" -I\"src/lib/Touch\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"src/lib/GUI/GUI_Paint.c\" -o \"build/test/out/test_gui/GUI_Paint.o\" -MMD -MF \"build/test/dependencies/test_gui/GUI_Paint.d\"",
+    "output": "build/test/out/test_gui/GUI_Paint.o"
+  },
+  {
+    "directory": "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd",
+    "file": "build/test/runners/test_gui_runner.c",
+    "command": "gcc -I\"build/test/mocks/test_gui\" -I\"test/support\" -I\"src\" -I\"src/lib\" -I\"src/lib/Rasteriser\" -I\"src/lib/Config\" -I\"src/lib/GUI\" -I\"src/lib/LCD\" -I\"src/lib/QMI8658\" -I\"src/lib/Rasteriser/types\" -I\"src/lib/Touch\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/test/runners/test_gui_runner.c\" -o \"build/test/out/test_gui/test_gui_runner.o\" -MMD -MF \"build/test/dependencies/test_gui/test_gui_runner.d\"",
+    "output": "build/test/out/test_gui/test_gui_runner.o"
+  },
+  {
+    "directory": "/home/alexander/Programming/rp2xxx/rp2040_touch_lcd",
+    "file": "src/lib/LCD/lcd.c",
+    "command": "gcc -I\"build/test/mocks/test_gui\" -I\"test/support\" -I\"src\" -I\"src/lib\" -I\"src/lib/Rasteriser\" -I\"src/lib/Config\" -I\"src/lib/GUI\" -I\"src/lib/LCD\" -I\"src/lib/QMI8658\" -I\"src/lib/Rasteriser/types\" -I\"src/lib/Touch\" -I\"build/vendor/unity/src\" -I\"build/vendor/cmock/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"src/lib/LCD/lcd.c\" -o \"build/test/out/test_gui/lcd.o\" -MMD -MF \"build/test/dependencies/test_gui/lcd.d\"",
+    "output": "build/test/out/test_gui/lcd.o"
   }
 ]

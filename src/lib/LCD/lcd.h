@@ -19,6 +19,28 @@
 #define VERTICAL   1
 
 enum {
+    SLEEP_MODE_ON = 0x10,
+    SLEEP_MODE_OFF,
+    PARTIAL_MODE_ON = 0x12, // Draw only to the partial area, designated in PARTIAL_AREA
+    PARTIAL_MODE_OFF,
+    DISPLAY_INVERSION_OFF = 0x20, // Inverts every colour bit, so 0xffff becomes 0x00, and 0xf800 (red) becomes 0x07ff (cyan) (in 16 bit mode)
+    DISPLAY_INVERSION_ON,
+    DISPLAY_OFF = 0x28, // Nothing is displayed, but note, the module doesn't actually turn off and lose power. Also, memory is not emptied or changed.
+    DISPLAY_ON,
+    COLUMN_ADDR_SET = 0x2A, // Defines the area of memory accessible by memory writes from the MCU running this code
+    ROW_ADDR_SET, // As above
+    MEMORY_WRITE = 0x2C,
+    PARTIAL_AREA = 0x30, // Defines the display area in partial mode
+    VERTICAL_SCROLLING_DEF = 0x33, // Not really sure how this works, but I don't think I need it since we aren't scrolling
+    TEARING_EFFECT_LINE_OFF,
+    TEARING_EFFECT_LINE_ON, // "Turn on the output signal from the TE signal line" - our module doesn't use this line
+    MEMORY_ACCESS_CTRL = 0x36, // Defines the scanning direction of frame memory, i.e., rotates/flips the image depending on its value
+    VERTICAL_SCROLLING_START_ADDR = 0x37, // Used with VERTICAL_SCROLLING_DEF: essentially defines how big a scroll is, by defining which row is displayed at the top of the screen after the current top value is scrolled away
+    IDLE_MODE_OFF = 0x38,
+    IDLE_MODE_ON, // In idle mode, only 8 colours are available
+    COLMOD = 0x3A, // Sets the pixel format for MCU or RGB format, which we aren't using, so irrelevant
+    WRITE_MEMORY_CONTINUE = 0x3C, // Writes from the host processor to the LCD's frame memory continuing from the pixel location last written to by WRITE_MEMORY_CONTINUE or MEMORY_WRITE
+
     INTER_REG_ENABLE1 = 0xFE,
     INTER_REG_ENABLE2 = 0xEF,
 };
@@ -32,7 +54,7 @@ extern LCD_1IN28_ATTRIBUTES LCD_1IN28;
 
 void LCD_1IN28_Init(uint8_t Scan_dir);
 void LCD_1IN28_Clear(uint16_t Color);
-void LCD_1IN28_Display(uint16_t *Image);
+void LCD_1IN28_Display(uint8_t *Image);
 void LCD_1IN28_DisplayWindows(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t *Image);
 void LCD_1IN28_DisplayPoint(uint16_t X, uint16_t Y, uint16_t Color);
 #endif // __LCD_1IN28_H	
