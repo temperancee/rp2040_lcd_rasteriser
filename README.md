@@ -1,5 +1,8 @@
 # 3D Rasteriser for the RP2040
 
+> [!WARNING]  
+> The code on the main branch is a work in progress, and currently does not work. Please navigate to the [colour_depth_65k](https://github.com/temperancee/rp2040_lcd_rasteriser/tree/colour_depth_65k) branch for a working version of this project.
+
 This project runs a 3D software rasteriser on the [Waveshare RP2040-Touch-LCD-1.28](https://www.waveshare.com/wiki/RP2040-Touch-LCD-1.28#GUI_API_Details), a $240 \times 240$ LCD screen controlled by a RP2040 microcontroller. The rasteriser is written in C using the Pico C/C++ SDK. The driver for the LCD is the one included by the manufacturer, with some slight modifications to readability, and a change to how the framebuffer is sent to the board. My code uses DMA driven SPI instead of standard SPI (although, currently, this is blocking DMA due to memory constraints, but I am actively working on this).
 
 Here is a demo of a cube spinning in 3D space, viewed under an orthographic projection:
@@ -52,6 +55,20 @@ cmake -DPICO_BOARD=waveshare_rp2040_touch_lcd_1.28 ..
 make
 ```
 Finally, upload the generated `main.uf2` file to your board. This can be done by mounting the board as a USB device, using `picotool`, using `openocd`, and probably some other ways that I don't know about. See [Getting Started with Raspberry Pi Pico-series](https://pip-assets.raspberrypi.com/categories/610-raspberry-pi-pico/documents/RP-008276-DS-2-getting-started-with-pico.pdf) for information on installing `picotool` or `openocd`, otherwise, press down the BOOTSEL key on your Pico, and it should show up in whatever file explorer you use.
+
+# Testing
+
+If you would like to run the unit tests before compiling the code, you will need [Ceedling](https://www.throwtheswitch.org/ceedling). This can be installed via RubyGems
+```
+gem install ceedling
+```
+or
+```
+gem install --no-document ceedling
+```
+if the first command fails.
+
+Once Ceedling is installed, simply navigate to the top level directory of this repository, and run `ceedling`. All tests should pass.
 
 # License
 

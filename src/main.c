@@ -12,7 +12,7 @@
 #include "types/vector.h"
 #include "cube.h"
 
-static uint16_t FBuffer[28800];
+static uint8_t FBuffer[57600];
 
 void pixel_test(void)
 {
@@ -193,7 +193,7 @@ int main(void)
     DEV_SET_PWM(100);
 
     // Initialise framebuffer for writing
-    Paint_NewImage((uint8_t *)FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT, WHITE);
+    Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);
     // Set background to white
     Paint_Clear(WHITE);
 

@@ -428,14 +428,11 @@ void LCD_1IN28_Display(uint8_t *Image)
     LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
     DEV_Digital_Write(LCD_DC_PIN, 1);
 
-    // Temporarily widen SPI port to 16 bits for correct endianness of transfer
-    // spi_set_format(LCD_SPI_PORT, 16, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-
     // DMA Config 
     // By default, the read address increments after each transfer
     // Our transfer size is 16 bits per transfer, so that makes 240*240*3/2 transfers
     
-    const uint32_t transfer_count = 86400;
+    const uint32_t transfer_count = 57600;
     const uint32_t dma_chan = dma_claim_unused_channel(true);
     dma_channel_config c = dma_channel_get_default_config(dma_chan);
     channel_config_set_transfer_data_size(&c, DMA_SIZE_8); // The SPI registers are 16 bits on the RP2040
@@ -455,13 +452,6 @@ void LCD_1IN28_Display(uint8_t *Image)
         tight_loop_contents();
     }
 
-    // Set SPI port back to 8 bits so other commands work
-    // spi_set_format(LCD_SPI_PORT, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
-
-    // uint16_t j;
-    // for (j = 0; j < LCD_1IN28_HEIGHT; j++) {
-    //     DEV_SPI_Write_nByte(LCD_SPI_PORT,(uint8_t *)&Image[j*LCD_1IN28_WIDTH], LCD_1IN28_WIDTH*2);
-    // }
 }
 
 void LCD_1IN28_DisplayWindows(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t *Image)
