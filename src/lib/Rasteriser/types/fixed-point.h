@@ -88,7 +88,34 @@ static inline q16 int_to_q16(int32_t x)
  */
 static inline q16 q16_mul(q16 x, q16 y)
 {
+#if PICO_ON_DEVICE
+    uint32_t tmp1, tmp2, tmp3;
+    __asm__ volatile (
+    ".syntax unified\n"
+    "asrs   %[r_tmp1], %[r_y], #16 \n" // r_tmp1 = y_high
+    "uxth   %[r_tmp2], %[r_x]      \n" // r_tmp2 = x_low
+    "muls   %[r_tmp2], %[r_tmp1]   \n" // r_tmp2 = y_high * x_low
+    "asrs   %[r_tmp3], %[r_x], #16 \n" // r_tmp3 = x_high
+    "muls   %[r_tmp1], %[r_tmp3]   \n" // r_tmp1 = y_high * x_high
+    "uxth   %[r_y], %[r_y]         \n" // r_y = y_low
+    "uxth   %[r_x], %[r_x]         \n" // r_x = x_low
+    "muls   %[r_x], %[r_y]         \n" // r_x = x_low * y_low
+    "muls   %[r_y], %[r_tmp3]      \n" // r_y = y_low * x_high
+    "add    %[r_y], %[r_tmp2]      \n" // r_y = y_low * x_high + y_high * x_low
+    "lsls   %[r_tmp1], #16         \n" // r_tmp1 = (y_high * x_high) << 16
+    "lsrs   %[r_x], #16            \n" // r_x = (x_low * y_low) >> 16
+    "add    %[r_x], %[r_y]         \n" // r_x = (y_low * x_high + y_high * x_low) + ((x_low * y_low) >> 16)
+    "add    %[r_x], %[r_tmp1]      \n" // r_x = ((y_high * x_high) << 16) + (y_low * x_high + y_high * x_low) + ((x_low * y_low) >> 16) = x * y
+    : [r_x] "+l" (x), [r_y] "+l" (y), [r_tmp1] "=&l" (tmp1), [r_tmp2] "=&l" (tmp2), [r_tmp3] "=&l" (tmp3)
+    :
+    );
+    // The "l" part means we can only access the low registers, i.e. r0-r7, since uxth, asrs, and muls only work on these registers
+    // "+l" means we can read and write to the registers storing x and y
+    // "=&l" means tmpx are allocated to registers other than the ones storing x and y (since we don't want these overwritten)
+    return x;
+#else
     return (q16) ( (((int64_t) x) * y) >> Q16_SHIFT );
+#endif
 }
 
 /**
