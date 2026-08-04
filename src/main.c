@@ -1,8 +1,9 @@
 ﻿#include <stdint.h>
 
-#include "DEV_Config.h"
 #include "GUI_Paint.h"
+#include "PWM.h"
 #include "lcd.h"
+#include "Delay.h"
 
 #include "rasteriser.h"
 #include "settings.h"
@@ -29,7 +30,7 @@ void pixel_test(void)
     Paint_SetPixel(100, 20, BLACK);
     Paint_SetPixel(100, 220, BLACK);
     LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(100000000);
+    Delay_ms(100000000);
 }
 
 void simple_square(void)
@@ -59,7 +60,7 @@ void simple_square(void)
     );
     // Push the framebuffer to the display
     LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(1000000);
+    Delay_ms(1000000);
 }
 
 void triangle_board(void)
@@ -86,7 +87,7 @@ void triangle_board(void)
     }
     // Push the framebuffer to the display
     LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(1000000);
+    Delay_ms(1000000);
 }
 
 void spin_rectangle(void)
@@ -181,37 +182,39 @@ void spin_cube(void)
 
 int main(void)
 {
-    // Initialises GPIOs, SPI, I2C, ADC, PWM, etc.
-    if (DEV_Module_Init() != 0)
-    {
-        return -1;
-    }
+    // NOTE: I think this can be deleted
+    // // Initialises GPIOs, SPI, I2C, ADC, PWM, etc.
+    // if (DEV_Module_Init() != 0)
+    // {
+    //     return -1;
+    // }
 
-    LCD_1IN28_Init(HORIZONTAL);
-    LCD_1IN28_Clear(WHITE);
+    LCD_1IN28_Init(HORIZONTAL, 10);
+    Delay_ms(1000);
+    uint32_t slice_num = PWM_GPIO_to_Slice_Num(LCD_BL_PIN);
+    PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 100);
+    Delay_ms(1000);
+    PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 50);
+    LCD_1IN28_Clear(0xffff);
 
-    DEV_SET_PWM(100);
+    // Initialise framebuffer
+    // Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);
+    // // // Set background to white
+    // Paint_Clear(RED);
+    //
+    // // Push the framebuffer to the display
+    // LCD_1IN28_Display(FBuffer);
+    Delay_ms(1000000000);
 
-    // Initialise framebuffer for writing
-    Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);
-    // Set background to white
-    Paint_Clear(WHITE);
-
-    // Push the framebuffer to the display
-    LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(1000);
-
-    Paint_Clear(RED);
-    LCD_1IN28_Display(FBuffer);
-    DEV_Delay_ms(1000);
+    // Paint_Clear(RED);
+    // LCD_1IN28_Display(FBuffer);
+    // Delay_ms(1000);
 
     /* Draw */
-    spin_cube();
+    // spin_cube();
     // triangle_board();
     // simple_square();
     // spin_rectangle();
 
-
-    DEV_Module_Exit();
     return 0;
 }

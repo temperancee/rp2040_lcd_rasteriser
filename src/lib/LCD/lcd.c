@@ -7,13 +7,17 @@
 *                and enhance portability
 ******************************************************************************/
 #include "lcd.h"
-#include "DEV_Config.h"
-#include <hardware/dma.h>
+#include "PWM.h"
+#include "SPI.h"
+#include "STDIO.h"
+#include "GPIO.h"
+#include "Delay.h"
+
+#include <stdint.h>
+#include <hardware/spi.h>
+#include "hardware/dma.h"
 
 LCD_1IN28_ATTRIBUTES LCD_1IN28;
-
-
-
 
 
 /******************************************************************************
@@ -22,13 +26,14 @@ parameter:
 ******************************************************************************/
 static void LCD_1IN28_Reset(void)
 {
-    DEV_Digital_Write(LCD_RST_PIN, 1);
-    DEV_Delay_ms(100);
-    DEV_Digital_Write(LCD_RST_PIN, 0);
-    DEV_Delay_ms(100);
-    DEV_Digital_Write(LCD_RST_PIN, 1);
-    DEV_Digital_Write(LCD_CS_PIN, 0);
-    DEV_Delay_ms(100);
+    GPIO_Write(LCD_RST_PIN, 1);
+    Delay_ms(100);
+    GPIO_Write(LCD_RST_PIN, 0);
+    Delay_ms(100);
+    GPIO_Write(LCD_RST_PIN, 1);
+    // Set CS low forever since the LCD is the only SPI slave 
+    GPIO_Write(LCD_CS_PIN, 0);
+    Delay_ms(100);
 }
 
 /******************************************************************************
@@ -38,10 +43,8 @@ parameter:
 ******************************************************************************/
 static void LCD_1IN28_SendCommand(uint8_t Reg)
 {
-    DEV_Digital_Write(LCD_DC_PIN, 0);
-    //DEV_Digital_Write(LCD_CS_PIN, 0);
-    DEV_SPI_WriteByte(LCD_SPI_PORT,Reg);
-    //DEV_Digital_Write(LCD_CS_PIN, 1);
+    GPIO_Write(LCD_DC_PIN, 0);
+    SPI_Write_Byte(LCD_SPI_PORT, Reg);
 }
 
 /******************************************************************************
@@ -51,10 +54,8 @@ parameter:
 ******************************************************************************/
 static void LCD_1IN28_SendData_8Bit(uint8_t Data)
 {
-    DEV_Digital_Write(LCD_DC_PIN, 1);
-    //DEV_Digital_Write(LCD_CS_PIN, 0);
-    DEV_SPI_WriteByte(LCD_SPI_PORT,Data);
-    //DEV_Digital_Write(LCD_CS_PIN, 1);
+    GPIO_Write(LCD_DC_PIN, 1);
+    SPI_Write_Byte(LCD_SPI_PORT, Data);
 }
 
 /******************************************************************************
@@ -64,11 +65,9 @@ parameter:
 ******************************************************************************/
 static void LCD_1IN28_SendData_16Bit(uint16_t Data)
 {
-    DEV_Digital_Write(LCD_DC_PIN, 1);
-    //DEV_Digital_Write(LCD_CS_PIN, 0);
-    DEV_SPI_WriteByte(LCD_SPI_PORT,Data >> 8);
-    DEV_SPI_WriteByte(LCD_SPI_PORT,Data);
-   // DEV_Digital_Write(LCD_CS_PIN, 1);
+    GPIO_Write(LCD_DC_PIN, 1);
+    SPI_Write_Byte(LCD_SPI_PORT, Data >> 8);
+    SPI_Write_Byte(LCD_SPI_PORT, Data);
 	
 }
 
@@ -318,9 +317,9 @@ static void LCD_1IN28_InitReg(void)
     LCD_1IN28_SendCommand(0x21);
 
     LCD_1IN28_SendCommand(0x11);
-    DEV_Delay_ms(120);
+    Delay_ms(120);
     LCD_1IN28_SendCommand(0x29);
-    DEV_Delay_ms(20);
+    Delay_ms(20);
 }
 
 /********************************************************************************
@@ -351,22 +350,55 @@ static void LCD_1IN28_SetAttributes(uint8_t Scan_dir)
     LCD_1IN28_SendData_8Bit(MemoryAccessReg);	//0x08 set RGB
 }
 
-/********************************************************************************
-function :	Initialize the lcd
-parameter:
-********************************************************************************/
-void LCD_1IN28_Init(uint8_t Scan_dir)
+/**
+ * @brief Initialise the LCD
+ * @param scan_dir - scan direction, HORIZONTAL is standard
+ * @param brightness - Screen brightness - a value between 0-100
+ */
+void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness)
 {
-    //Turn on the backlight
-    //DEV_SET_PWM(100);
+
+    STDIO_INIT_ALL();
+
+    /* GPIO Initialisation */
+    GPIO_Mode(LCD_RST_PIN, GPIO_MODE_OUT);
+    GPIO_Mode(LCD_DC_PIN, GPIO_MODE_OUT);
+    GPIO_Mode(LCD_CS_PIN, GPIO_MODE_OUT);
+    GPIO_Mode(LCD_BL_PIN, GPIO_MODE_OUT);
+    // Set CS high (so no peripheral selected for writing/reading)
+    // GPIO_Write(LCD_CS_PIN, 1);
+    // Set DC=0, so LCD in command mode
+    GPIO_Write(LCD_DC_PIN, 0);
+    // Set BL=1. This sets LEDK=0, I think, so in the
+    // language of the LCD's datasheet, BC=0, and the display has
+    // no light
+    GPIO_Write(LCD_BL_PIN, 1);
+
+    /* PWM Initialisation */
+    GPIO_Set_Function(LCD_BL_PIN, GPIO_FUNCTION_PWM);
+    uint32_t slice_num = PWM_GPIO_to_Slice_Num(LCD_BL_PIN);
+    PWM_Set_Wrap(slice_num, 100);
+    PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 0);
+    PWM_Set_Clkdiv(slice_num, 50);
+    PWM_Set_Enabled(slice_num, true);
+    
+    /* SPI Initialisation */
+    SPI_Init(LCD_SPI_PORT, 40000 * 1000);
+    GPIO_Set_Function(LCD_CLK_PIN, GPIO_FUNCTION_SPI);
+    GPIO_Set_Function(LCD_MOSI_PIN, GPIO_FUNCTION_SPI);
+
+    /* Reset and configure registers */
     //Hardware reset
     LCD_1IN28_Reset();
 
     //Set the resolution and scanning method of the screen
-    LCD_1IN28_SetAttributes(Scan_dir);
+    LCD_1IN28_SetAttributes(scan_dir);
     
-    //Set the initialization register
+    // Initialises register values
     LCD_1IN28_InitReg();
+
+    /* Turn on the backlight at 50% brightness */
+    PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, brightness);
 }
 
 /********************************************************************************
@@ -402,19 +434,27 @@ parameter:
 ******************************************************************************/
 void LCD_1IN28_Clear(uint16_t Color)
 {
-    uint16_t j;
-    uint16_t Image[LCD_1IN28_WIDTH*LCD_1IN28_HEIGHT];
-    
-    Color = ((Color<<8)&0xff00)|(Color>>8);
-   
-    for (j = 0; j < LCD_1IN28_HEIGHT*LCD_1IN28_WIDTH; j++) {
-        Image[j] = Color;
-    }
-    
+    // uint16_t j;
+    // uint16_t row[LCD_1IN28_WIDTH];
+    //
+    // Color = ((Color<<8)&0xff00)|(Color>>8);
+    //
+    // for (j = 0; j < LCD_1IN28_WIDTH; j++) {
+    //     row[j] = Color;
+    //     // row[j] = 0xffff;
+    // }
+
+    // WARNING: This function still uses 16 bit colour, and sends
+    // framebuffers via CPU controlled SPI
+
     LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
-    DEV_Digital_Write(LCD_DC_PIN, 1);;
-    for(j = 0; j < LCD_1IN28_HEIGHT; j++){
-        DEV_SPI_Write_nByte(LCD_SPI_PORT,(uint8_t *)&Image[j*LCD_1IN28_WIDTH], LCD_1IN28_WIDTH*2);
+    GPIO_Write(LCD_DC_PIN, 1);
+    for(int j = 0; j < LCD_1IN28_HEIGHT; j++) {
+        for(int i = 0; i < LCD_1IN28_WIDTH; i++) {
+        // SPI_Write_n_Bytes(LCD_SPI_PORT, (uint8_t *)row, LCD_1IN28_WIDTH*2);
+            SPI_Write_Byte(LCD_SPI_PORT, 0xff);
+            SPI_Write_Byte(LCD_SPI_PORT, 0xff);
+        }
     }
 }
 
@@ -426,7 +466,7 @@ void LCD_1IN28_Display(uint8_t *Image)
 {
 
     LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
-    DEV_Digital_Write(LCD_DC_PIN, 1);
+    GPIO_Write(LCD_DC_PIN, 1);
 
     // DMA Config 
     // By default, the read address increments after each transfer
@@ -436,11 +476,11 @@ void LCD_1IN28_Display(uint8_t *Image)
     const uint32_t dma_chan = dma_claim_unused_channel(true);
     dma_channel_config c = dma_channel_get_default_config(dma_chan);
     channel_config_set_transfer_data_size(&c, DMA_SIZE_8); // The SPI registers are 16 bits on the RP2040
-    channel_config_set_dreq(&c, spi_get_dreq(LCD_SPI_PORT, true));
+    channel_config_set_dreq(&c, spi_get_dreq(spi1, true));
     dma_channel_configure(
         dma_chan,
         &c,
-        &spi_get_hw(LCD_SPI_PORT)->dr, // write address - not certain of what spi_get_hw does - it seems to simply return a pointer to the passed SPI instance if it's hardware spi, and do nothing if not
+        &spi_get_hw(spi1)->dr, // write address - not certain of what spi_get_hw does - it seems to simply return a pointer to the passed SPI instance if it's hardware spi, and do nothing if not
         Image, // read address
         dma_encode_transfer_count(transfer_count), // element count
         true  //  start transfer immediately
@@ -448,25 +488,25 @@ void LCD_1IN28_Display(uint8_t *Image)
 
     // Wait for it to finish
     dma_channel_wait_for_finish_blocking(dma_chan);
-    while (spi_is_busy(LCD_SPI_PORT)) {
+    while (spi_is_busy(spi1)) {
         tight_loop_contents();
     }
 
 }
 
-void LCD_1IN28_DisplayWindows(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t *Image)
-{
-    // display
-    uint32_t Addr = 0;
-
-    uint16_t j;
-    LCD_1IN28_SetWindows(Xstart, Ystart, Xend , Yend);
-    DEV_Digital_Write(LCD_DC_PIN, 1);;
-    for (j = Ystart; j < Yend; j++) {
-        Addr = Xstart + j * LCD_1IN28_WIDTH ;
-        DEV_SPI_Write_nByte(LCD_SPI_PORT,(uint8_t *)&Image[Addr], (Xend-Xstart)*2);
-    }
-}
+// void LCD_1IN28_DisplayWindows(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t *Image)
+// {
+//     // display
+//     uint32_t Addr = 0;
+//
+//     uint16_t j;
+//     LCD_1IN28_SetWindows(Xstart, Ystart, Xend , Yend);
+//     GPIO_Write(LCD_DC_PIN, 1);;
+//     for (j = Ystart; j < Yend; j++) {
+//         Addr = Xstart + j * LCD_1IN28_WIDTH ;
+//         SPI_Write_n_Bytes(LCD_SPI_PORT,(uint8_t *)&Image[Addr], (Xend-Xstart)*2);
+//     }
+// }
 
 void LCD_1IN28_DisplayPoint(uint16_t X, uint16_t Y, uint16_t Color)
 {

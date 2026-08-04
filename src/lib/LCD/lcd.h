@@ -10,6 +10,7 @@
 #define __LCD_1IN28_H	
 	
 #include <stdint.h>
+#include "SPI.h"
 
 #define LCD_1IN28_HEIGHT 240
 #define LCD_1IN28_WIDTH 240
@@ -17,6 +18,28 @@
 
 #define HORIZONTAL 0
 #define VERTICAL   1
+
+enum {
+    LCD_SPI_PORT = SPI_PORT_1
+};
+
+enum{
+    LCD_DC_PIN = 8, // DC is data or command. DC=1 means data selected.
+    LCD_CS_PIN = 9,
+    LCD_CLK_PIN = 10,
+    LCD_MOSI_PIN = 11,
+    LCD_MISO_PIN = 12,
+    LCD_RST_PIN = 13,
+// When debugging, we run this code on a Pico W
+// The Pico W does not expose GPIO25, so we have
+// to reassign it. 
+// This check determines if we are running on a Pico W
+#if defined(CYW43_WL_GPIO_LED_PIN)
+    LCD_BL_PIN  = 15,
+#else
+    LCD_BL_PIN = 25,
+#endif
+};
 
 enum {
     SLEEP_MODE_ON = 0x10,
@@ -52,9 +75,9 @@ typedef struct {
 } LCD_1IN28_ATTRIBUTES;
 extern LCD_1IN28_ATTRIBUTES LCD_1IN28;
 
-void LCD_1IN28_Init(uint8_t Scan_dir);
+void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness);
 void LCD_1IN28_Clear(uint16_t Color);
 void LCD_1IN28_Display(uint8_t *Image);
-void LCD_1IN28_DisplayWindows(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t *Image);
+// void LCD_1IN28_DisplayWindows(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t *Image);
 void LCD_1IN28_DisplayPoint(uint16_t X, uint16_t Y, uint16_t Color);
 #endif // __LCD_1IN28_H	

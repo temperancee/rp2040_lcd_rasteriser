@@ -1,6 +1,5 @@
 aux_source_directory(. DIR_Rasteriser_SRCS)
 
-include_directories(../Config)
-
+# include_directories(../Hardware)
 add_library(Rasteriser ${DIR_Rasteriser_SRCS})
-target_link_libraries(Rasteriser PUBLIC Config)
+target_link_libraries(Rasteriser PUBLIC)
