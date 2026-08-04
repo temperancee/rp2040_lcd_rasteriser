@@ -28,9 +28,9 @@ In case you want to run this on a [Waveshare LCD without an RP2040](https://www.
 | SCK     | 10 |
 | DIN     | 11 |
 | RST     | 12 |
-| BL      | 25 |
-| BAT_ADC | 29 |
+| BL      | 15 |
 
+Note, the code is currently only configured to use pin 15 for the BL pin if you run this on a Pico W. You will have to navigate to lib/Config/DEV_Config.h and edit the macro code if you want to run this on a non-Pico W RP2040 device that isn't the integrated Waveshare LCD board.
 
 # Building and running
 
