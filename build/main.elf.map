@@ -4784,7 +4784,7 @@ END GROUP
 OUTPUT(main.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x00000000    0x3ee48
+.debug_info     0x00000000    0x3ee53
  .debug_info    0x00000000     0x1346 CMakeFiles/main.dir/main.c.o
  .debug_info    0x00001346     0x22d6 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
  .debug_info    0x0000361c      0x12e CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/platform.c.o
@@ -4839,12 +4839,12 @@ LOAD linker stubs
  .debug_info    0x00033b12     0x1e48 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
  .debug_info    0x0003595a      0x401 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
  .debug_info    0x00035d5b     0x4df1 lib/LCD/libLCD.a(LCD_1in28.c.o)
- .debug_info    0x0003ab4c      0x28b lib/GUI/libGUI.a(GUI_Paint.c.o)
- .debug_info    0x0003add7      0x22d lib/Rasteriser/libRasteriser.a(cube.c.o)
- .debug_info    0x0003b004     0x1658 lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
- .debug_info    0x0003c65c     0x26c0 lib/Config/libConfig.a(DEV_Config.c.o)
- .debug_info    0x0003ed1c       0x3c /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_info    0x0003ed58       0xf0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .debug_info    0x0003ab4c      0x296 lib/GUI/libGUI.a(GUI_Paint.c.o)
+ .debug_info    0x0003ade2      0x22d lib/Rasteriser/libRasteriser.a(cube.c.o)
+ .debug_info    0x0003b00f     0x1658 lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
+ .debug_info    0x0003c667     0x26c0 lib/Config/libConfig.a(DEV_Config.c.o)
+ .debug_info    0x0003ed27       0x3c /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_info    0x0003ed63       0xf0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
 
 .debug_abbrev   0x00000000     0xaa81
  .debug_abbrev  0x00000000      0x30a CMakeFiles/main.dir/main.c.o
@@ -4909,7 +4909,7 @@ LOAD linker stubs
  .debug_abbrev  0x0000a9eb       0x96 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
 
 .debug_loclists
-                0x00000000    0x20f80
+                0x00000000    0x20f6b
  .debug_loclists
                 0x00000000     0x18fb CMakeFiles/main.dir/main.c.o
  .debug_loclists
@@ -5001,11 +5001,11 @@ LOAD linker stubs
  .debug_loclists
                 0x0001f1f1      0x11a lib/GUI/libGUI.a(GUI_Paint.c.o)
  .debug_loclists
-                0x0001f30b     0x10cb lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
+                0x0001f30b     0x10b6 lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
  .debug_loclists
-                0x000203d6      0xb48 lib/Config/libConfig.a(DEV_Config.c.o)
+                0x000203c1      0xb48 lib/Config/libConfig.a(DEV_Config.c.o)
  .debug_loclists
-                0x00020f1e       0x62 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+                0x00020f09       0x62 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
 
 .debug_aranges  0x00000000     0x1900
  .debug_aranges
@@ -5242,188 +5242,188 @@ LOAD linker stubs
  .debug_rnglists
                 0x00005bb5       0x13 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
 
-.debug_line     0x00000000    0x2e400
- .debug_line    0x00000000     0x2883 CMakeFiles/main.dir/main.c.o
- .debug_line    0x00002883     0x1cfc CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
- .debug_line    0x0000457f      0x236 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/platform.c.o
- .debug_line    0x000047b5      0x22d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
- .debug_line    0x000049e2      0x931 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o
- .debug_line    0x00005313      0x4d2 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
- .debug_line    0x000057e5      0x397 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
- .debug_line    0x00005b7c     0x18f7 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
- .debug_line    0x00007473      0x2c4 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c.o
- .debug_line    0x00007737     0x1412 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/mutex.c.o
- .debug_line    0x00008b49      0x40e CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o
- .debug_line    0x00008f57     0x36d0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/time.c.o
- .debug_line    0x0000c627     0x1f2a CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
- .debug_line    0x0000e551     0x1006 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
- .debug_line    0x0000f557     0x2a99 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
- .debug_line    0x00011ff0      0x508 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
- .debug_line    0x000124f8      0x7e2 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
- .debug_line    0x00012cda      0x321 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
- .debug_line    0x00012ffb      0x41d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
- .debug_line    0x00013418      0x360 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
- .debug_line    0x00013778      0x301 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
- .debug_line    0x00013a79      0x7ca CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
- .debug_line    0x00014243      0x5a7 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
- .debug_line    0x000147ea      0x108 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
- .debug_line    0x000148f2      0x2ee CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
- .debug_line    0x00014be0      0x44d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
- .debug_line    0x0001502d      0x51f CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
- .debug_line    0x0001554c       0x5d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
- .debug_line    0x000155a9       0x61 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
- .debug_line    0x0001560a      0x3c6 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
- .debug_line    0x000159d0      0x374 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
- .debug_line    0x00015d44       0x94 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
- .debug_line    0x00015dd8      0x15f CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
- .debug_line    0x00015f37     0x1ef5 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_printf/printf.c.o
- .debug_line    0x00017e2c       0xa3 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
- .debug_line    0x00017ecf      0x8af CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
- .debug_line    0x0001877e     0x1537 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
- .debug_line    0x00019cb5      0xe92 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
- .debug_line    0x0001ab47     0x12b1 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
- .debug_line    0x0001bdf8      0x411 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
- .debug_line    0x0001c209      0x813 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
- .debug_line    0x0001ca1c      0xf70 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
- .debug_line    0x0001d98c      0x58d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o
- .debug_line    0x0001df19     0x22ef CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
- .debug_line    0x00020208     0x10db CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
- .debug_line    0x000212e3     0x2886 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd.c.o
- .debug_line    0x00023b69      0x67b CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
- .debug_line    0x000241e4     0x11d1 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
- .debug_line    0x000253b5     0x12bf CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/tusb.c.o
- .debug_line    0x00026674     0x197c CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
- .debug_line    0x00027ff0     0x179a CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
- .debug_line    0x0002978a     0x133a CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
- .debug_line    0x0002aac4      0x3cc CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
- .debug_line    0x0002ae90     0x13a4 lib/LCD/libLCD.a(LCD_1in28.c.o)
- .debug_line    0x0002c234      0x260 lib/GUI/libGUI.a(GUI_Paint.c.o)
- .debug_line    0x0002c494      0x15d lib/Rasteriser/libRasteriser.a(cube.c.o)
- .debug_line    0x0002c5f1      0xd27 lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
- .debug_line    0x0002d318      0xe6e lib/Config/libConfig.a(DEV_Config.c.o)
- .debug_line    0x0002e186       0x4a /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
- .debug_line    0x0002e1d0      0x230 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+.debug_line     0x00000000    0x2e406
+ .debug_line    0x00000000     0x2889 CMakeFiles/main.dir/main.c.o
+ .debug_line    0x00002889     0x1cfc CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_line    0x00004585      0x236 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_line    0x000047bb      0x22d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_line    0x000049e8      0x931 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_line    0x00005319      0x4d2 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_line    0x000057eb      0x397 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_line    0x00005b82     0x18f7 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_line    0x00007479      0x2c4 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_line    0x0000773d     0x1412 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_line    0x00008b4f      0x40e CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_line    0x00008f5d     0x36d0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/time.c.o
+ .debug_line    0x0000c62d     0x1f2a CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_line    0x0000e557     0x1006 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+ .debug_line    0x0000f55d     0x2a99 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_line    0x00011ff6      0x508 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_line    0x000124fe      0x7e2 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_line    0x00012ce0      0x321 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_line    0x00013001      0x41d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_line    0x0001341e      0x360 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_line    0x0001377e      0x301 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_line    0x00013a7f      0x7ca CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_line    0x00014249      0x5a7 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_line    0x000147f0      0x108 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_line    0x000148f8      0x2ee CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_line    0x00014be6      0x44d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_line    0x00015033      0x51f CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_line    0x00015552       0x5d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_line    0x000155af       0x61 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_line    0x00015610      0x3c6 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_line    0x000159d6      0x374 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_line    0x00015d4a       0x94 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_line    0x00015dde      0x15f CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_line    0x00015f3d     0x1ef5 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_line    0x00017e32       0xa3 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_line    0x00017ed5      0x8af CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_line    0x00018784     0x1537 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_line    0x00019cbb      0xe92 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+ .debug_line    0x0001ab4d     0x12b1 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_line    0x0001bdfe      0x411 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_line    0x0001c20f      0x813 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_line    0x0001ca22      0xf70 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_line    0x0001d992      0x58d CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o
+ .debug_line    0x0001df1f     0x22ef CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_line    0x0002020e     0x10db CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_line    0x000212e9     0x2886 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_line    0x00023b6f      0x67b CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_line    0x000241ea     0x11d1 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_line    0x000253bb     0x12bf CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_line    0x0002667a     0x197c CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_line    0x00027ff6     0x179a CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+ .debug_line    0x00029790     0x133a CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+ .debug_line    0x0002aaca      0x3cc CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+ .debug_line    0x0002ae96     0x13a4 lib/LCD/libLCD.a(LCD_1in28.c.o)
+ .debug_line    0x0002c23a      0x260 lib/GUI/libGUI.a(GUI_Paint.c.o)
+ .debug_line    0x0002c49a      0x15d lib/Rasteriser/libRasteriser.a(cube.c.o)
+ .debug_line    0x0002c5f7      0xd27 lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
+ .debug_line    0x0002d31e      0xe6e lib/Config/libConfig.a(DEV_Config.c.o)
+ .debug_line    0x0002e18c       0x4a /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_line    0x0002e1d6      0x230 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
 
-.debug_str      0x00000000     0xa589
- .debug_str     0x00000000     0xa589 CMakeFiles/main.dir/main.c.o
+.debug_str      0x00000000     0xa58f
+ .debug_str     0x00000000     0xa58f CMakeFiles/main.dir/main.c.o
                                 0x9f2 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
                                 0xcca (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/platform.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2040/pico_platform/platform.c.o
                                 0x1fb (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_platform_panic/panic.c.o
                                 0x202 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/hardware_claim/claim.c.o
                                 0x385 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
                                 0x32e (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_sync_spin_lock/sync_spin_lock.c.o
                                 0x241 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
                                 0xaf1 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/lock_core.c.o
                                 0x20d (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/mutex.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/mutex.c.o
                                 0x7e8 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_sync/critical_section.c.o
                                 0x2cd (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/time.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/common/pico_time/time.c.o
                                0x11ef (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
                                 0xa30 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
                                 0xffa (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
                                 0xed2 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
                                 0x46c (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
                                 0x3c4 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_ticks/ticks.c.o
                                 0x28f (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
                                 0x354 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
                                 0x244 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
                                 0x294 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init.c.o
                                 0x7c7 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_runtime_init/runtime_init_clocks.c.o
                                 0x49c (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
                                  0xa0 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_divider/divider_hardware.S.o
                                  0xa3 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_aeabi_rp2040.S.o
                                  0xa5 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_init_rom_rp2040.c.o
                                 0x2e9 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim_rp2040.S.o
                                  0xab (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
                                  0xa9 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_aeabi_rp2040.S.o
                                  0xa3 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_float/float_init_rom_rp2040.c.o
                                 0x2ae (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
                                  0xa0 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_standard_binary_info/standard_binary_info.c.o
                                 0x3fe (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_printf/printf.c.o
                                 0x4e6 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_crt0/crt0.S.o
                                  0x94 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_clib_interface/newlib_interface.c.o
                                 0x783 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio/stdio.c.o
                                 0xf2e (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.o
                                0x1071 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.o
                                 0xf37 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.o
                                0x1046 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.o
                                 0x273 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
                                 0x81f (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/pico_usb_reset/usb_reset.c.o
                                 0xe8b (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.o
                                0x1389 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.o
                                 0xb8d (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd.c.o
                                0x1b33 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/device/usbd_control.c.o
                                 0x6de (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.o
                                0x176d (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/tusb.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/tusb.c.o
                                 0xe1f (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.o
                                 0x62b (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
                                 0x762 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
                                0x1400 (size before relaxing)
- .debug_str     0x0000a589        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
+ .debug_str     0x0000a58f        0x0 CMakeFiles/main.dir/home/alexander/Programming/rp2xxx/pico-sdk/src/rp2_common/hardware_adc/adc.c.o
                                 0x421 (size before relaxing)
- .debug_str     0x0000a589        0x0 lib/LCD/libLCD.a(LCD_1in28.c.o)
+ .debug_str     0x0000a58f        0x0 lib/LCD/libLCD.a(LCD_1in28.c.o)
                                 0x934 (size before relaxing)
- .debug_str     0x0000a589        0x0 lib/GUI/libGUI.a(GUI_Paint.c.o)
-                                0x260 (size before relaxing)
- .debug_str     0x0000a589        0x0 lib/Rasteriser/libRasteriser.a(cube.c.o)
+ .debug_str     0x0000a58f        0x0 lib/GUI/libGUI.a(GUI_Paint.c.o)
+                                0x266 (size before relaxing)
+ .debug_str     0x0000a58f        0x0 lib/Rasteriser/libRasteriser.a(cube.c.o)
                                 0x228 (size before relaxing)
- .debug_str     0x0000a589        0x0 lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
+ .debug_str     0x0000a58f        0x0 lib/Rasteriser/libRasteriser.a(rasteriser.c.o)
                                 0x3fc (size before relaxing)
- .debug_str     0x0000a589        0x0 lib/Config/libConfig.a(DEV_Config.c.o)
+ .debug_str     0x0000a58f        0x0 lib/Config/libConfig.a(DEV_Config.c.o)
                                0x10d8 (size before relaxing)
- .debug_str     0x0000a589        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_str     0x0000a58f        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
                                  0xba (size before relaxing)
- .debug_str     0x0000a589        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+ .debug_str     0x0000a58f        0x0 /usr/lib/gcc/arm-none-eabi/16.1.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
                                 0x1d7 (size before relaxing)
 
 .comment        0x00000000       0x1e
