@@ -12,15 +12,49 @@ The RP2040 has two Cortex-M0+ processor cores, which lack floating point units (
 
 Currently, the engine is capable of rendering triangles using Barycentric coordinates, and interpolating vertex colours across each triangle. Meshes can be manipulated using homogenous transformations as seen above, where the cube has had two rotations applied: one around the Y axis, and one around the Z axis, at a different rate.
 
-# Running
+## Pin connection
+In case you want to run this on a Waveshare LCD without an RP2040, here is the pin connection diagram:
 
-Once you have cloned the repository, you can upload the current `main.uf2` file by using `picotool` to flash your own Waveshare RP2040 1.28 LCD Display.
+| Connection | Pin |
+| --------| ---|
+| I2C_SDA | 6  |
+| I2C_SDA | 7  |
+| DC      | 8  |
+| CS      | 9  |
+| SCK     | 10 |
+| DIN     | 11 |
+| RST     | 12 |
+| BL      | 15 |
 
-# Building 
 
-If you want to modify the code and build your changes, navigate to `build/` and run `cmake -DPICO_BOARD=waveshare_rp2040_touch_lcd_1.28 ..`, then run `make`. This will generate a new `main.uf2` which you can flash, again by using `picotool`.
+Note, the code is currently only configured to use pin 15 for the BL pin if you run this on a Pico W. You will have to navigate to `lib/Config/DEV_Config.h` and edit the macro code if you want to run this on a non-Pico W RP2040 device that isn't the integrated Waveshare LCD board.
 
-This repository contains all the Pico C/C++ SDK files needed to build this project.
+
+
+# Building and running
+
+To build and run this project, you will need
+- `cmake`
+- `make`
+- A copy of the pico-sdk on your system
+
+Clone and navigate to the repository: 
+```
+git clone --single-branch --branch colour_depth_65k https://github.com/temperancee/rp2040_lcd_rasteriser.git
+cd rp2040_lcd_rasteriser
+```
+Make sure you have set the PICO_SDK_PATH environment variable to your `pico-sdk` directory
+```
+export PICO_SDK_PATH="path/to/pico-sdk"
+```
+Then create a build directory and build the project
+```
+mkdir build
+cmake -DPICO_BOARD=waveshare_rp2040_touch_lcd_1.28 ..
+make
+```
+Finally, upload the generated `main.uf2` file to your board. This can be done by mounting the board as a USB device, using `picotool`, using `openocd`, and probably some other ways that I don't know about. See [Getting Started with Raspberry Pi Pico-series](https://pip-assets.raspberrypi.com/categories/610-raspberry-pi-pico/documents/RP-008276-DS-2-getting-started-with-pico.pdf) for information on installing `picotool` or `openocd`, otherwise, press down the BOOTSEL key on your Pico, and it should show up in whatever file explorer you use.
+
 
 # License
 
