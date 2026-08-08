@@ -15,6 +15,8 @@
 
 #include <stdint.h>
 #include <hardware/spi.h>
+#include <hardware/adc.h>
+#include <hardware/i2c.h>
 #include "hardware/dma.h"
 
 LCD_1IN28_ATTRIBUTES LCD_1IN28;
@@ -374,6 +376,12 @@ void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness)
     // no light
     GPIO_Write(LCD_BL_PIN, 1);
 
+
+    // ADC
+    adc_init();
+    adc_gpio_init(BAT_ADC_PIN);
+    adc_select_input(BAR_CHANNEL);
+
     /* PWM Initialisation */
     GPIO_Set_Function(LCD_BL_PIN, GPIO_FUNCTION_PWM);
     uint32_t slice_num = PWM_GPIO_to_Slice_Num(LCD_BL_PIN);
@@ -386,6 +394,13 @@ void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness)
     SPI_Init(LCD_SPI_PORT, 40000 * 1000);
     GPIO_Set_Function(LCD_CLK_PIN, GPIO_FUNCTION_SPI);
     GPIO_Set_Function(LCD_MOSI_PIN, GPIO_FUNCTION_SPI);
+
+    // I2C Config
+    i2c_init(SENSOR_I2C_PORT, 400 * 1000);
+    gpio_set_function(DEV_SDA_PIN, GPIO_FUNC_I2C);
+    gpio_set_function(DEV_SCL_PIN, GPIO_FUNC_I2C);
+    gpio_pull_up(DEV_SDA_PIN);
+    gpio_pull_up(DEV_SCL_PIN);
 
     /* Reset and configure registers */
     //Hardware reset
