@@ -195,7 +195,7 @@ int main(void)
     PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 100);
     Delay_ms(1000);
     PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 50);
-    LCD_1IN28_Clear(0xffff);
+    LCD_1IN28_Clear(GRED);
 
     // Initialise framebuffer
     // Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);

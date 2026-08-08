@@ -14,7 +14,6 @@
 #include "Delay.h"
 
 #include <stdint.h>
-#include <hardware/spi.h>
 #include <hardware/adc.h>
 #include <hardware/i2c.h>
 #include "hardware/dma.h"
@@ -70,7 +69,6 @@ static void LCD_1IN28_SendData_16Bit(uint16_t Data)
     GPIO_Write(LCD_DC_PIN, 1);
     SPI_Write_Byte(LCD_SPI_PORT, Data >> 8);
     SPI_Write_Byte(LCD_SPI_PORT, Data);
-	
 }
 
 /******************************************************************************
@@ -139,11 +137,11 @@ static void LCD_1IN28_InitReg(void)
     LCD_1IN28_SendCommand(0x36);
     LCD_1IN28_SendData_8Bit(0x08);//Set as vertical screen
 
-    // BUG: This is manufacturer added, yet this Waveshare board
-    // does not use the 8080 MCU or RGB interface, instead using
-    // 4 wire SPI. Thus, this command does nothing.
+    // Sets the colour depth
+    // I thought this command did nothing, but it actually breaks
+    // everything if set incorrectly
     LCD_1IN28_SendCommand(COLMOD);			
-    LCD_1IN28_SendData_8Bit(0x0f); // 0x03 for 12 bit colour depth. 0x05 for 16 bit 
+    LCD_1IN28_SendData_8Bit(0x03); // 0x03 for 12 bit colour depth. 0x05 for 16 bit 
 
 
     LCD_1IN28_SendCommand(0x90);			
@@ -377,11 +375,6 @@ void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness)
     GPIO_Write(LCD_BL_PIN, 1);
 
 
-    // ADC
-    adc_init();
-    adc_gpio_init(BAT_ADC_PIN);
-    adc_select_input(BAR_CHANNEL);
-
     /* PWM Initialisation */
     GPIO_Set_Function(LCD_BL_PIN, GPIO_FUNCTION_PWM);
     uint32_t slice_num = PWM_GPIO_to_Slice_Num(LCD_BL_PIN);
@@ -394,13 +387,6 @@ void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness)
     SPI_Init(LCD_SPI_PORT, 40000 * 1000);
     GPIO_Set_Function(LCD_CLK_PIN, GPIO_FUNCTION_SPI);
     GPIO_Set_Function(LCD_MOSI_PIN, GPIO_FUNCTION_SPI);
-
-    // I2C Config
-    i2c_init(SENSOR_I2C_PORT, 400 * 1000);
-    gpio_set_function(DEV_SDA_PIN, GPIO_FUNC_I2C);
-    gpio_set_function(DEV_SCL_PIN, GPIO_FUNC_I2C);
-    gpio_pull_up(DEV_SDA_PIN);
-    gpio_pull_up(DEV_SCL_PIN);
 
     /* Reset and configure registers */
     //Hardware reset
@@ -449,15 +435,15 @@ parameter:
 ******************************************************************************/
 void LCD_1IN28_Clear(uint16_t Color)
 {
-    // uint16_t j;
-    // uint16_t row[LCD_1IN28_WIDTH];
-    //
-    // Color = ((Color<<8)&0xff00)|(Color>>8);
-    //
-    // for (j = 0; j < LCD_1IN28_WIDTH; j++) {
-    //     row[j] = Color;
-    //     // row[j] = 0xffff;
-    // }
+    uint16_t j;
+    uint16_t row[LCD_1IN28_WIDTH];
+
+    Color = ((Color<<8)&0xff00)|(Color>>8);
+
+    for (j = 0; j < LCD_1IN28_WIDTH; j++) {
+        row[j] = Color;
+        // row[j] = 0xffff;
+    }
 
     // WARNING: This function still uses 16 bit colour, and sends
     // framebuffers via CPU controlled SPI
@@ -465,11 +451,11 @@ void LCD_1IN28_Clear(uint16_t Color)
     LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
     GPIO_Write(LCD_DC_PIN, 1);
     for(int j = 0; j < LCD_1IN28_HEIGHT; j++) {
-        for(int i = 0; i < LCD_1IN28_WIDTH; i++) {
-        // SPI_Write_n_Bytes(LCD_SPI_PORT, (uint8_t *)row, LCD_1IN28_WIDTH*2);
-            SPI_Write_Byte(LCD_SPI_PORT, 0xff);
-            SPI_Write_Byte(LCD_SPI_PORT, 0xff);
-        }
+        // for(int i = 0; i < LCD_1IN28_WIDTH; i++) {
+        SPI_Write_n_Bytes(LCD_SPI_PORT, (uint8_t *)row, LCD_1IN28_WIDTH*2);
+        //     SPI_Write_Byte(LCD_SPI_PORT, 0xf8);
+        //     SPI_Write_Byte(LCD_SPI_PORT, 0x00);
+        // }
     }
 }
 

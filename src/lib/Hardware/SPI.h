@@ -2,7 +2,7 @@
 #define _SPI_H_
 
 #include <stdint.h>
-#include "hardware/spi.h"
+#include <hardware/spi.h>
 
 // This enum and array provide the modules which include this
 // file to pass a port, without having to expose the hardware/spi.h
