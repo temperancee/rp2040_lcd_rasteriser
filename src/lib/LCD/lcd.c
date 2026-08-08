@@ -14,8 +14,6 @@
 #include "Delay.h"
 
 #include <stdint.h>
-#include <hardware/adc.h>
-#include <hardware/i2c.h>
 #include "hardware/dma.h"
 
 LCD_1IN28_ATTRIBUTES LCD_1IN28;
@@ -141,7 +139,7 @@ static void LCD_1IN28_InitReg(void)
     // I thought this command did nothing, but it actually breaks
     // everything if set incorrectly
     LCD_1IN28_SendCommand(COLMOD);			
-    LCD_1IN28_SendData_8Bit(0x03); // 0x03 for 12 bit colour depth. 0x05 for 16 bit 
+    LCD_1IN28_SendData_8Bit(0x05); // 0x03 for 12 bit colour depth. 0x05 for 16 bit 
 
 
     LCD_1IN28_SendCommand(0x90);			
@@ -442,7 +440,6 @@ void LCD_1IN28_Clear(uint16_t Color)
 
     for (j = 0; j < LCD_1IN28_WIDTH; j++) {
         row[j] = Color;
-        // row[j] = 0xffff;
     }
 
     // WARNING: This function still uses 16 bit colour, and sends
@@ -451,11 +448,7 @@ void LCD_1IN28_Clear(uint16_t Color)
     LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
     GPIO_Write(LCD_DC_PIN, 1);
     for(int j = 0; j < LCD_1IN28_HEIGHT; j++) {
-        // for(int i = 0; i < LCD_1IN28_WIDTH; i++) {
         SPI_Write_n_Bytes(LCD_SPI_PORT, (uint8_t *)row, LCD_1IN28_WIDTH*2);
-        //     SPI_Write_Byte(LCD_SPI_PORT, 0xf8);
-        //     SPI_Write_Byte(LCD_SPI_PORT, 0x00);
-        // }
     }
 }
 
