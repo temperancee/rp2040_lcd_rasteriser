@@ -47,7 +47,7 @@ void Paint_SetPixel(uint16_t X, uint16_t Y, uint8_t Colour)
 
 /**
  * @brief Fill the picture with Colour
- * @param Colour - the colour to fill the image with
+ * @param Colour - RGB332 colour to fill the image with
  */
 void Paint_Clear(uint8_t Colour)
 {

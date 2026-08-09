@@ -14,8 +14,6 @@
 #include "Delay.h"
 
 #include <stdint.h>
-#include <hardware/adc.h>
-#include <hardware/i2c.h>
 #include "hardware/dma.h"
 
 LCD_1IN28_ATTRIBUTES LCD_1IN28;
@@ -141,7 +139,7 @@ static void LCD_1IN28_InitReg(void)
     // I thought this command did nothing, but it actually breaks
     // everything if set incorrectly
     LCD_1IN28_SendCommand(COLMOD);			
-    LCD_1IN28_SendData_8Bit(0x03); // 0x03 for 12 bit colour depth. 0x05 for 16 bit 
+    LCD_1IN28_SendData_8Bit(0x05); // 0x05 for 16 bit colour depth (any other value causes an error)
 
 
     LCD_1IN28_SendCommand(0x90);			

@@ -27,6 +27,6 @@ void tearDown(void) {}
 void test_lcd_display_white(void)
 {
     // LCD_Display(fbuffer, SPI_PORT) // SPI_PORT is a fake address (Dependecy Injection)
-    TEST_ASSERT(1==1);
+    TEST_ASSERT(1);
 }
 

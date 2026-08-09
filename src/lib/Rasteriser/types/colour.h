@@ -24,21 +24,17 @@ static inline col3ub hex_to_col3(uint16_t hex)
 
 
 /**
- * @brief Converts a col3ub colour to a 12 bit colour stored in a uint16_t.
+ * @brief Converts a col3ub colour to an 8 bit colour
  * @param col - The colour to convert
- * @return col in RGB444 format, stored as a uint16_t
+ * @return col in RGB332 format
  */
-static inline uint16_t col3_to_hex(col3ub col)
+static inline uint8_t col3_to_hex(col3ub col)
 {
-    uint8_t r = (col.r*15)/255;
-    uint8_t g = (col.g*15)/255;
-    uint8_t b = (col.b*15)/255;
+    uint8_t r = (col.r*7)/255;
+    uint8_t g = (col.g*7)/255;
+    uint8_t b = (col.b*3)/255;
 
-    uint16_t x = r << 8;
-    uint16_t y = x | (g << 4);
-    uint16_t z = y | b;
-
-    return z;
+    return (r << 5) | (g << 2) | b;
 }
 
 #endif  // _COLOUR_H_

@@ -1,7 +1,6 @@
 ﻿#include <stdint.h>
 
 #include "GUI_Paint.h"
-#include "PWM.h"
 #include "lcd.h"
 #include "Delay.h"
 
@@ -13,7 +12,7 @@
 #include "types/vector.h"
 #include "cube.h"
 
-static uint8_t FBuffer[57600];
+static uint8_t FBuffer[LCD_8_BIT_FBUFFER_SIZE];
 
 void pixel_test(void)
 {
@@ -182,28 +181,15 @@ void spin_cube(void)
 
 int main(void)
 {
-    // NOTE: I think this can be deleted
-    // // Initialises GPIOs, SPI, I2C, ADC, PWM, etc.
-    // if (DEV_Module_Init() != 0)
-    // {
-    //     return -1;
-    // }
-
-    LCD_1IN28_Init(HORIZONTAL, 10);
-    Delay_ms(1000);
-    uint32_t slice_num = PWM_GPIO_to_Slice_Num(LCD_BL_PIN);
-    PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 100);
-    Delay_ms(1000);
-    PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 50);
-    LCD_1IN28_Clear(GRED);
-
+    LCD_1IN28_Init(HORIZONTAL, 50);
     // Initialise framebuffer
-    // Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);
-    // // // Set background to white
-    // Paint_Clear(RED);
-    //
-    // // Push the framebuffer to the display
+    Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);
+    // Set background to white
+    Paint_Clear(WHITE);
+
+    // Push the framebuffer to the display
     // LCD_1IN28_Display(FBuffer);
+    LCD_1IN28_Clear(0xffff);
     Delay_ms(1000000000);
 
     // Paint_Clear(RED);

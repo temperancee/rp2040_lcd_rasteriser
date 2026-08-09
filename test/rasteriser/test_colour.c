@@ -11,7 +11,7 @@ void tearDown(void) {} // Every test file requires this function;
 void test_col3_to_hex_white(void)
 {
     col3ub colour = {255, 255, 255};
-    TEST_ASSERT_EQUAL(0xFFF, col3_to_hex(colour)); // Foo_Function1() is under test (Unity assertion):
+    TEST_ASSERT_EQUAL(0xFF, col3_to_hex(colour)); // Foo_Function1() is under test (Unity assertion):
                                               //  (a) Calls Bar_AndGrill() from bar.h
                                               //  (b) Returns a byte compared to 0xFF
 }
@@ -21,7 +21,7 @@ void test_col3_to_hex_white(void)
 void test_col3_to_hex_black(void)
 {
     col3ub colour = {0, 0, 0};
-    TEST_ASSERT_EQUAL(0x000, col3_to_hex(colour)); // Foo_Function1() is under test (Unity assertion):
+    TEST_ASSERT_EQUAL(0x00, col3_to_hex(colour)); // Foo_Function1() is under test (Unity assertion):
                                               //  (a) Calls Bar_AndGrill() from bar.h
                                               //  (b) Returns a byte compared to 0xFF
 }
@@ -31,7 +31,7 @@ void test_col3_to_hex_black(void)
 void test_col3_to_hex_middle_value(void)
 {
     col3ub colour = {17, 100, 204};
-    TEST_ASSERT_EQUAL(0x15c, col3_to_hex(colour)); // Foo_Function1() is under test (Unity assertion):
+    TEST_ASSERT_EQUAL(0x0a, col3_to_hex(colour)); // Foo_Function1() is under test (Unity assertion):
                                               //  (a) Calls Bar_AndGrill() from bar.h
                                               //  (b) Returns a byte compared to 0xFF
 }

@@ -6,7 +6,7 @@
  *            Globals            *
  *********************************/
 
-uint16_t fb[28800];
+uint8_t fb[57600];
 
 /********************************
  *     Set up and tear down     *
@@ -14,7 +14,7 @@ uint16_t fb[28800];
 
 void setUp(void) 
 {
-    Paint_NewImage((uint8_t *) fb, 240, 240);
+    Paint_NewImage(fb, 240, 240);
 }
 
 void tearDown(void) {} 
@@ -34,8 +34,8 @@ void paint_clear_helper(uint8_t colour)
 
 void paint_setpixel_helper(uint8_t x, uint8_t y, uint8_t colour)
 {
-    Paint_SetPixel(x, y, 0xff);
-    TEST_ASSERT_EQUAL_UINT8_MESSAGE(0xff, Paint.Image[x + y*Paint.WidthByte], "Paint_SetPixel failed");
+    Paint_SetPixel(x, y, colour);
+    TEST_ASSERT_EQUAL_UINT8_MESSAGE(colour, Paint.Image[x + y*Paint.WidthByte], "Paint_SetPixel failed");
 }
 
 /*********************************
