@@ -181,8 +181,11 @@ void spin_cube(void)
 
 int main(void)
 {
-    // Debug infinite sleep fix
+#ifdef NDEBUG
+#else
+    // Prevents GDB from hanging on sleep/busy_until functions
     timer_hw->dbgpause = 0;
+#endif
 
     LCD_1IN28_Init(HORIZONTAL, 50);
     // Initialise framebuffer
@@ -193,6 +196,8 @@ int main(void)
     // Push the framebuffer to the display
     // LCD_1IN28_Display(FBuffer);
     LCD_1IN28_Clear(0xffff);
+    Delay_ms(1000);
+    LCD_1IN28_Clear(0xf800);
     Delay_ms(1000000000);
 
     // Paint_Clear(RED);
