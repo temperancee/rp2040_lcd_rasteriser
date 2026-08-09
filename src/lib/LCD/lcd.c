@@ -14,7 +14,6 @@
 #include "Delay.h"
 
 #include <stdint.h>
-#include "hardware/dma.h"
 
 LCD_1IN28_ATTRIBUTES LCD_1IN28;
 
@@ -464,32 +463,32 @@ parameter:
 void LCD_1IN28_Display(uint8_t *Image)
 {
 
-    LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
-    GPIO_Write(LCD_DC_PIN, 1);
-
-    // DMA Config 
-    // By default, the read address increments after each transfer
-    // Our transfer size is 16 bits per transfer, so that makes 240*240*3/2 transfers
-    
-    const uint32_t transfer_count = 57600;
-    const uint32_t dma_chan = dma_claim_unused_channel(true);
-    dma_channel_config c = dma_channel_get_default_config(dma_chan);
-    channel_config_set_transfer_data_size(&c, DMA_SIZE_8); // The SPI registers are 16 bits on the RP2040
-    channel_config_set_dreq(&c, spi_get_dreq(spi1, true));
-    dma_channel_configure(
-        dma_chan,
-        &c,
-        &spi_get_hw(spi1)->dr, // write address - not certain of what spi_get_hw does - it seems to simply return a pointer to the passed SPI instance if it's hardware spi, and do nothing if not
-        Image, // read address
-        dma_encode_transfer_count(transfer_count), // element count
-        true  //  start transfer immediately
-    );
-
-    // Wait for it to finish
-    dma_channel_wait_for_finish_blocking(dma_chan);
-    while (spi_is_busy(spi1)) {
-        tight_loop_contents();
-    }
+    // LCD_1IN28_SetWindows(0, 0, LCD_1IN28_WIDTH, LCD_1IN28_HEIGHT);
+    // GPIO_Write(LCD_DC_PIN, 1);
+    //
+    // // DMA Config 
+    // // By default, the read address increments after each transfer
+    // // Our transfer size is 16 bits per transfer, so that makes 240*240*3/2 transfers
+    //
+    // const uint32_t transfer_count = 57600;
+    // const uint32_t dma_chan = dma_claim_unused_channel(true);
+    // dma_channel_config c = dma_channel_get_default_config(dma_chan);
+    // channel_config_set_transfer_data_size(&c, DMA_SIZE_8); // The SPI registers are 16 bits on the RP2040
+    // channel_config_set_dreq(&c, spi_get_dreq(spi1, true));
+    // dma_channel_configure(
+    //     dma_chan,
+    //     &c,
+    //     &spi_get_hw(spi1)->dr, // write address - not certain of what spi_get_hw does - it seems to simply return a pointer to the passed SPI instance if it's hardware spi, and do nothing if not
+    //     Image, // read address
+    //     dma_encode_transfer_count(transfer_count), // element count
+    //     true  //  start transfer immediately
+    // );
+    //
+    // // Wait for it to finish
+    // dma_channel_wait_for_finish_blocking(dma_chan);
+    // while (spi_is_busy(spi1)) {
+    //     tight_loop_contents();
+    // }
 
 }
 

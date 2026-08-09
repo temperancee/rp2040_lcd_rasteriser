@@ -181,6 +181,9 @@ void spin_cube(void)
 
 int main(void)
 {
+    // Debug infinite sleep fix
+    timer_hw->dbgpause = 0;
+
     LCD_1IN28_Init(HORIZONTAL, 50);
     // Initialise framebuffer
     Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);

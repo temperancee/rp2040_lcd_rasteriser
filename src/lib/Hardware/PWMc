@@ -1,0 +1,28 @@
+
+#include "PWM.h"
+#include <hardware/pwm.h>
+
+uint32_t PWM_GPIO_to_Slice_Num(uint32_t pin)
+{
+    return pwm_gpio_to_slice_num(pin);
+}
+
+void PWM_Set_Wrap(uint32_t slice_num, uint16_t wrap)
+{
+    pwm_set_wrap(slice_num, wrap);
+}
+
+void PWM_Set_Chan_Level(uint32_t slice_num, uint32_t chan, uint16_t level)
+{
+    pwm_set_chan_level(slice_num, chan, level);
+}
+
+// void PWM_Set_Clkdiv(uint32_t slice_num, uint8_t divider)
+// {
+//     pwm_set_clkdiv(slice_num, (float) divider);
+// }
+
+void PWM_Set_Enabled(uint32_t slice_num, bool enabled)
+{
+    pwm_set_enabled(slice_num, enabled);
+}

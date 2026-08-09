@@ -1,5 +1,8 @@
+#include "lcd.h"
+#include "GUI_Paint.h"
 #include "unity.h"
 // #include "lcd.h"
+#include "mock_GPIO.h"
 
 
 /***********************************
@@ -30,3 +33,9 @@ void test_lcd_display_white(void)
     TEST_ASSERT(1);
 }
 
+void test_lcd_clear_white(void)
+{
+    GPIO_Write_Expect(LCD_DC_PIN, 1);
+
+    LCD_1IN28_Clear(WHITE);
+}

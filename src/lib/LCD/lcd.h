@@ -35,11 +35,11 @@ enum{
 // The Pico W does not expose GPIO25, so we have
 // to reassign it. 
 // This check determines if we are running on a Pico W
-#if defined(CYW43_WL_GPIO_LED_PIN)
+// #if defined(CYW43_WL_GPIO_LED_PIN)
     LCD_BL_PIN  = 15,
-#else
-    LCD_BL_PIN = 25,
-#endif
+// #else
+    // LCD_BL_PIN = 25,
+// #endif
 };
 
 enum {
