@@ -1,6 +1,11 @@
 #include "Delay.h"
 #include <pico/time.h>
 
+void GDB_Fix(void)
+{
+    timer_hw->dbgpause = 0;
+}
+
 void Delay_ms(uint32_t xms)
 {
 #ifdef NDEBUG

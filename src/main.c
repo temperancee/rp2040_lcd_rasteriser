@@ -184,7 +184,7 @@ int main(void)
 #ifdef NDEBUG
 #else
     // Prevents GDB from hanging on sleep/busy_until functions
-    timer_hw->dbgpause = 0;
+    GDB_Fix();
 #endif
 
     LCD_1IN28_Init(HORIZONTAL, 50);
