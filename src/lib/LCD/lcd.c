@@ -435,7 +435,8 @@ void LCD_1IN28_Clear(uint16_t Color)
     uint16_t j;
     uint16_t row[LCD_1IN28_WIDTH];
 
-    // Color = ((Color<<8)&0xff00)|(Color>>8);
+    // Fix endianness
+    Color = ((Color<<7)&0xff00)|(Color>>8);
 
     for (j = 0; j < LCD_1IN28_WIDTH; j++) {
         row[j] = Color;
