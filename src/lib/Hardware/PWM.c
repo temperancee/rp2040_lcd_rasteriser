@@ -17,10 +17,15 @@ void PWM_Set_Chan_Level(uint32_t slice_num, uint32_t chan, uint16_t level)
     pwm_set_chan_level(slice_num, chan, level);
 }
 
-// void PWM_Set_Clkdiv(uint32_t slice_num, uint8_t divider)
-// {
-//     pwm_set_clkdiv(slice_num, (float) divider);
-// }
+/**
+ * @brief Set PWM clock divider
+ * @param slice_num - the PWM slice number
+ * @param divider - the integer divider
+ */
+void PWM_Set_Clkdiv_Int(uint32_t slice_num, uint8_t divider)
+{
+    pwm_set_clkdiv_int_frac4(slice_num, divider, 0);
+}
 
 void PWM_Set_Enabled(uint32_t slice_num, bool enabled)
 {

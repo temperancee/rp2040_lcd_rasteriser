@@ -5,34 +5,16 @@
 #include <stdint.h>
 #include <hardware/pwm.h>
 
+// Mimic PWM_CHAN_A/B from the SDK
 enum {
-    PWM_CHANNEL_A = PWM_CHAN_A,
-    PWM_CHANNEL_B = PWM_CHAN_B
+    PWM_CHANNEL_A = 0, 
+    PWM_CHANNEL_B = 1
 };
 
-static inline uint32_t PWM_GPIO_to_Slice_Num(uint32_t pin)
-{
-    return pwm_gpio_to_slice_num(pin);
-}
-
-static inline void PWM_Set_Wrap(uint32_t slice_num, uint16_t wrap)
-{
-    pwm_set_wrap(slice_num, wrap);
-}
-
-static inline void PWM_Set_Chan_Level(uint32_t slice_num, uint32_t chan, uint16_t level)
-{
-    pwm_set_chan_level(slice_num, chan, level);
-}
-
-static inline void PWM_Set_Clkdiv(uint32_t slice_num, uint8_t divider)
-{
-    pwm_set_clkdiv(slice_num, (float) divider);
-}
-
-static inline void PWM_Set_Enabled(uint32_t slice_num, bool enabled)
-{
-    pwm_set_enabled(slice_num, enabled);
-}
+uint32_t PWM_GPIO_to_Slice_Num(uint32_t pin);
+void PWM_Set_Wrap(uint32_t slice_num, uint16_t wrap);
+void PWM_Set_Chan_Level(uint32_t slice_num, uint32_t chan, uint16_t level);
+void PWM_Set_Clkdiv_Int(uint32_t slice_num, uint8_t divider);
+void PWM_Set_Enabled(uint32_t slice_num, bool enabled);
 
 #endif // _PWM_H_

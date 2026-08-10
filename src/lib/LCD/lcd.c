@@ -377,7 +377,7 @@ void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness)
     uint32_t slice_num = PWM_GPIO_to_Slice_Num(LCD_BL_PIN);
     PWM_Set_Wrap(slice_num, 100);
     PWM_Set_Chan_Level(slice_num, PWM_CHANNEL_B, 0);
-    PWM_Set_Clkdiv(slice_num, 50);
+    PWM_Set_Clkdiv_Int(slice_num, 50);
     PWM_Set_Enabled(slice_num, true);
     
     /* SPI Initialisation */
