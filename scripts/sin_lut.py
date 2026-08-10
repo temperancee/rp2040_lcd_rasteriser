@@ -4,14 +4,14 @@ import os
 def generate_sins():
     sins = ""
     for i in range(180):
-        sins += f"    FLOAT_TO_Q16({sin(i/2 * pi/180)})"
+        sins += f"    FLOAT_TO_Q16({sin(i/2 * pi/180)}),"
         if i != 179:
             sins += "\n"
     return sins
 
 
 string = f"""
-static const q16 sin_lut[180] = {{
+static const q16 sin_lut[181] = {{
 {generate_sins()}
 }};
 """

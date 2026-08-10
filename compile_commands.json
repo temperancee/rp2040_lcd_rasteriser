@@ -1406,8 +1406,8 @@
   {
     "directory": "/home/alexander/Programming/rp2xxx/rp2040_lcd_rasteriser",
     "file": "build/vendor/unity/src/unity.c",
-    "command": "gcc -I\"test/support\" -I\"build/vendor/unity/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/vendor/unity/src/unity.c\" -o \"build/test/out/test_matrix/unity.o\" -MMD -MF \"build/test/dependencies/test_matrix/unity.d\"",
-    "output": "build/test/out/test_matrix/unity.o"
+    "command": "gcc -I\"test/support\" -I\"build/vendor/unity/src\" -D\"TEST\" -D\"UNITY_EXCLUDE_FLOAT\" -D\"CMOCK_MOCK_PREFIX=mock_\" -D\"UNITY_USE_COMMAND_LINE_ARGS\" -DGNU_COMPILER -g -c \"build/vendor/unity/src/unity.c\" -o \"build/test/out/test_colour/unity.o\" -MMD -MF \"build/test/dependencies/test_colour/unity.d\"",
+    "output": "build/test/out/test_colour/unity.o"
   },
   {
     "directory": "/home/alexander/Programming/rp2xxx/rp2040_lcd_rasteriser",

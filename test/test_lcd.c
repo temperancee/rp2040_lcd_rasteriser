@@ -16,6 +16,7 @@
  ********************************/
 
 static uint8_t fbuffer[57600];
+uint32_t addr_base;
 
 /********************************
  *     Set up and tear down     *
@@ -23,7 +24,7 @@ static uint8_t fbuffer[57600];
 
 void setUp(void) 
 {
-
+    addr_base = 0x20006000;
 }
 
 void tearDown(void) {} 
@@ -33,35 +34,27 @@ void tearDown(void) {}
  *            Helpers            *
  *********************************/
 
-void set_windows_expectance(void)
-{
-}
 
 /*********************************
  *             Tests             *
  *********************************/
 
-void test_lcd_display_white(void)
+
+/* Colour LUT */
+void test_clut_entry_address_index_0(void)
 {
-    // LCD_Display(fbuffer, SPI_PORT) // SPI_PORT is a fake address (Dependecy Injection)
-    TEST_ASSERT(1);
+    TEST_ASSERT_EQUAL_UINT32(0x20006000, clut_entry_addr(addr_base, 0));
 }
 
-/**
- * @brief Test that the device sends the right number of white pixels
- *        and toggles the D/C pin correctly
- * This test feels a bit pointless since it is essentially a copy of the function
-*/
-void test_lcd_clear_white(void)
+void test_clut_entry_address_index_1(void)
 {
-    uint16_t row[LCD_1IN28_WIDTH];
-    memset(row, 0xffff, sizeof(row));
-
-
-    GPIO_Write_Expect(LCD_DC_PIN, 1);
-    for(int j = 0; j < LCD_1IN28_HEIGHT; j++) {
-        SPI_Write_n_Bytes_Expect(LCD_SPI_PORT, (uint8_t *)row, LCD_1IN28_WIDTH*2);
-    }
-
-    lcd_clear(0xffff);
+    TEST_ASSERT_EQUAL_UINT32(0x20006002, clut_entry_addr(addr_base, 1));
 }
+
+void test_clut_entry_address_index_255(void)
+{
+    TEST_ASSERT_EQUAL_UINT32(0x200061fe, clut_entry_addr(addr_base, 255));
+}
+
+
+/* DMA */

@@ -427,29 +427,21 @@ void lcd_init(uint8_t scan_dir, uint8_t brightness)
 function :	Clear screen
 parameter:
 ******************************************************************************/
-void lcd_clear(uint16_t Color)
+
+void lcd_clear(uint16_t colour)
 {
-    uint16_t j;
     uint16_t row[LCD_1IN28_WIDTH];
 
-    // Fix endianness
-    Color = ((Color<<7)&0xff00)|(Color>>8);
-
-    for (j = 0; j < LCD_1IN28_WIDTH; j++) {
-        row[j] = Color;
-        // row[j] = 0xffff;
-    }
+    colour = ((colour<<7)&0xff00)|(colour>>8);
+    for (int j = 0; j < LCD_1IN28_WIDTH; j++)
+        row[j] = colour;
 
     // WARNING: This function still uses 16 bit colour, and sends
     // framebuffers via CPU controlled SPI
 
     GPIO_Write(LCD_DC_PIN, 1);
     for(int j = 0; j < LCD_1IN28_HEIGHT; j++) {
-        // for(int i = 0; i < LCD_1IN28_WIDTH; i++) {
         SPI_Write_n_Bytes(LCD_SPI_PORT, (uint8_t *)row, LCD_1IN28_WIDTH*2);
-        //     SPI_Write_Byte(LCD_SPI_PORT, 0xf8);
-        //     SPI_Write_Byte(LCD_SPI_PORT, 0x00);
-        // }
     }
 }
 
@@ -457,6 +449,13 @@ void lcd_clear(uint16_t Color)
 function :	Sends the image buffer in RAM to display
 parameter:
 ******************************************************************************/
+
+
+uint32_t clut_entry_addr(uint32_t addr_base, uint8_t index) {
+    return addr_base | (index << 1);
+}
+
+
 void lcd_display(uint8_t *Image)
 {
 
