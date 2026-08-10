@@ -76,9 +76,7 @@ typedef struct {
 } LCD_1IN28_ATTRIBUTES;
 extern LCD_1IN28_ATTRIBUTES LCD_1IN28;
 
-void LCD_1IN28_Init(uint8_t scan_dir, uint8_t brightness);
-void LCD_1IN28_Clear(uint16_t Color);
-void LCD_1IN28_Display(uint8_t *Image);
-// void LCD_1IN28_DisplayWindows(uint16_t Xstart, uint16_t Ystart, uint16_t Xend, uint16_t Yend, uint16_t *Image);
-void LCD_1IN28_DisplayPoint(uint16_t X, uint16_t Y, uint16_t Color);
+void lcd_init(uint8_t scan_dir, uint8_t brightness);
+void lcd_clear(uint16_t Color);
+void lcd_display(uint8_t *Image);
 #endif // __LCD_1IN28_H	
