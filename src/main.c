@@ -12,7 +12,7 @@
 #include "types/vector.h"
 #include "cube.h"
 
-static uint8_t FBuffer[LCD_8_BIT_FBUFFER_SIZE];
+static uint8_t FBuffer[LCD_8_BIT_FBUFFER_SIZE*2];
 
 void pixel_test(void)
 {
@@ -28,7 +28,7 @@ void pixel_test(void)
     Paint_SetPixel(100, 125, BLUE);
     Paint_SetPixel(100, 20, BLACK);
     Paint_SetPixel(100, 220, BLACK);
-    LCD_1IN28_Display(FBuffer);
+    lcd_display(FBuffer);
     Delay_ms(100000000);
 }
 
@@ -58,7 +58,7 @@ void simple_square(void)
          }
     );
     // Push the framebuffer to the display
-    LCD_1IN28_Display(FBuffer);
+    lcd_display(FBuffer);
     Delay_ms(1000000);
 }
 
@@ -85,7 +85,7 @@ void triangle_board(void)
         );
     }
     // Push the framebuffer to the display
-    LCD_1IN28_Display(FBuffer);
+    lcd_display(FBuffer);
     Delay_ms(1000000);
 }
 
@@ -131,7 +131,7 @@ void spin_rectangle(void)
         );
 
         /* Push the framebuffer to the display */
-        LCD_1IN28_Display(FBuffer);
+        lcd_display(FBuffer);
 
         if (time == 720) {
             time = 1;
@@ -169,7 +169,7 @@ void spin_cube(void)
         );
 
         /* Push the framebuffer to the display */
-        LCD_1IN28_Display(FBuffer);
+        lcd_display(FBuffer);
 
         if (time == 720) {
             time = time_incr;
@@ -179,6 +179,7 @@ void spin_cube(void)
     }
 }
 
+
 int main(void)
 {
 #ifdef NDEBUG
@@ -187,17 +188,17 @@ int main(void)
     GDB_Fix();
 #endif
 
-    LCD_1IN28_Init(HORIZONTAL, 50);
+    lcd_init(HORIZONTAL, 50);
     // Initialise framebuffer
     Paint_NewImage(FBuffer, LCD_1IN28.WIDTH, LCD_1IN28.HEIGHT);
     // Set background to white
-    Paint_Clear(WHITE);
 
+
+    lcd_clear(0xffff);
+    lcd_clear(0xf800);
     // Push the framebuffer to the display
-    // LCD_1IN28_Display(FBuffer);
-    LCD_1IN28_Clear(0xffff);
     Delay_ms(1000);
-    LCD_1IN28_Clear(0xf800);
+    // lcd_display(FBuffer);
     Delay_ms(1000000000);
 
     // Paint_Clear(RED);

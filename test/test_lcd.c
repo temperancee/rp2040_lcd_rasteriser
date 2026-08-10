@@ -57,4 +57,3 @@ void test_clut_entry_address_index_255(void)
 }
 
 
-/* DMA */

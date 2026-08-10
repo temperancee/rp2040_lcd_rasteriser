@@ -59,3 +59,13 @@ void Paint_Clear(uint8_t Colour)
     }
 }
 
+// void Paint_Clear_16_bit(uint16_t Colour)
+// {
+//     for (uint16_t Y = 0; Y < Paint.Height; Y++) {
+//         for (uint16_t X = 0; X < Paint.Width; X++ ) {
+//             uint32_t Addr = X*2 + Y*Paint.WidthByte*2;
+//             Paint.Image[Addr] = (Colour >> 8) & 0xff;
+//             Paint.Image[Addr+1] = Colour & 0xff;
+//         }
+//     }
+// }

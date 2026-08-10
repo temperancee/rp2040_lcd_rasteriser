@@ -44,4 +44,5 @@ void Paint_SelectImage(uint8_t *image);
 void Paint_SetPixel(uint16_t X, uint16_t Y, uint8_t Colour);
 void Paint_Clear(uint8_t Colour);
 
+// void Paint_Clear_16_bit(uint16_t Colour);
 #endif
